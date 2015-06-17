@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+build
+dist
+bower_components
+reports
+django/static
+**/*.pyc
+.idea/
+.idea/workspace.xml
+.tmp
+.sass-cache
+.DS_Store
+
+site.min.css

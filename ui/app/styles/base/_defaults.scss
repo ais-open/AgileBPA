@@ -1,0 +1,27 @@
+body, html {
+    background: $dark;
+    color: $light;
+    font-family: $font-main;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.tall {
+    height: 100%;
+    min-height: 100% !important;
+}

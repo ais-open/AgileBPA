@@ -1,0 +1,8 @@
+{
+  "name": "AgileBPA-ui",
+  "version": "1.0.0",
+  "dependencies": {
+    "momentjs": "~2.10.3"
+  },
+  "devDependencies": {}
+}
