@@ -13,3 +13,4 @@ django/static
 .DS_Store
 
 site.min.css
+
