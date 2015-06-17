@@ -18,5 +18,9 @@
   "homepage": "https://github.com/AppliedIS/AgileBPA",
   "dependencies": {
     "hapi": "^8.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.3"
   }
 }
