@@ -1,0 +1,22 @@
+{
+  "name": "AgileBPA-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AppliedIS/AgileBPA"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AppliedIS/AgileBPA/issues"
+  },
+  "homepage": "https://github.com/AppliedIS/AgileBPA",
+  "dependencies": {
+    "hapi": "^8.6.1"
+  }
+}
