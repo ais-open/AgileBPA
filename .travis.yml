@@ -1,0 +1,22 @@
+language: node_js
+install:
+  - cd $TRAVIS_BUILD_DIR/ui
+  - npm install
+  - cd $TRAVIS_BUILD_DIR/server
+  - npm install
+script:
+  - cd $TRAVIS_BUILD_DIR/ui
+  #- npm test
+  - cd $TRAVIS_BUILD_DIR/server
+  #- npm test
+  - cd $TRAVIS_BUILD_DIR
+sudo: required
+deploy:
+  edge: true
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: kyle.linden@appliedis.com
+  password:
+    secure: TTulug0FtbvfMXRG27KNDeFapUC1hcIYJbJQ3j6rT8OatkJe1vz5YxZbvgLZb61jSAOu4TNHb0A8qwl0dqrBalIURdIV/yBO7YLl2EGzLdxeJ8op6kDMYKctdg+XRIOFyMqgV9q3NJvzpb5WdB4DZ5QGL9YUPEtYSCNIlKho4VFzEgt4O6VSQzS6YRaWt5ZQrzjkPk6cUBSzodyDBlnfjhj8UAcEashaK8OvLTeIduagfrbJKKDMLwCf6mlfwQqlVz7vGMMQ9T//nCi1347AC6QBqETMbtW9bfDZJorfSGcdSnT6sT+ZmF+9fuqBj/U3CmY3zPgCXyIg6d4UoW8DsTN+dsCSdbDo7XxCq8gCSKGZIVbk9dJHe4jas+VROTAfKFYy3DsowKkBNjdqqQbXAvA+o6oRsu4+iVHK0wnrLBQ/XFpeN9OsFPWURVmV4UKAFVJGcplQD5/c9qvG4xfBmvqZxqPxPD7Da4OYUgF8zaZn1gAdIsOJMOf6Oqazr8rVsNTPM8dSzH71RCUytCfFRGfXprHGavi9aKa1st6h3mzUqjEAA0Q4BqlMRxCW4om454SmoeNWDTHjFowwgRWhg6z7nwp4gudJ09KEl2YqxQDNbyF3aKimkn0bsqPH8fTYwkQ2l++ea/jJT2HdBiD8taEeudKm9pTYo7en4qoxGpw=
+  organization: AIS
+  space: development
