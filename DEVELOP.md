@@ -26,12 +26,10 @@ Finally, you can run the user interface locally by running:
 > gulp
 
 ## Server
-To run the server, make sure you have gulp and bower installed
+To run the server, make sure you have gulp installed
 globally.
 
 > npm install -g gulp
-
-> npm install -g bower
 
 Then install dependencies by opening a terminal, going into
 the server directory, and executing:
