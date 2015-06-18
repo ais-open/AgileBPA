@@ -40,4 +40,4 @@ Finally, you can run the server locally by running:
 
 > gulp
 
-The server by default will run on port 3000. You can change this by setting an environment variable named `PORT` with the port number you would like to use.
+The server by default will run on port 3000. You can change this by setting an environment variable named `VCAP_APP_PORT` with the port number you would like to use.
