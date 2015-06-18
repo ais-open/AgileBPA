@@ -1,4 +1,0 @@
----
-applications:
-- name: AgileBPA-server
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
