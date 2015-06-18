@@ -8,8 +8,11 @@ var concat      = require('gulp-concat');
 var cp          = require('child_process');
 var debug       = require('gulp-debug');
 var fs          = require('fs');
+var gaze        = require('gaze');
 var imagemin    = require('gulp-imagemin');
 var jasmine     = require('gulp-jasmine');
+var karma       = require('gulp-karma');
+var mbf         = require('main-bower-files');
 var minifyCSS   = require('gulp-minify-css');
 var moment      = require('moment');
 var os          = require("os");
@@ -26,29 +29,44 @@ var wiredep     = require('wiredep').stream;
 
 gulp.task('default', ['develop']);
 gulp.task('develop', ['browser-sync', 'watch']);
-gulp.task('build', ['sass', 'babel', 'vendor']);
-gulp.task('test', ['runtests']);
+gulp.task('build', ['sass', 'js', 'vendor']);
+gulp.task('test', ['build', 'runtests']);
+
 
 gulp.task('watch', function () {
+
     gulp.watch('app/styles/**/*.scss', ['sass']);
-    gulp.watch('app/modules/**/*.js', ['babel']);
+    gulp.watch('app/modules/**/*.js', ['js']);
     gulp.watch([
-        'app/index.html',
-        'app/images/*',
-        'app/scripts/*.js',
-        'app/styles/*.min.css'
-    ], ['reload']);
-    gulp.watch('bower.json', ['bower']);
+        'spec/**/*.js',
+        'app/scripts/*.js'
+    ], {
+        debounceDelay: 5000
+    }, ['runtests']);
 });
 
 // Initial setup... Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['build'], function() {
+gulp.task('browser-sync-prepare', ['sass', 'js', 'vendor']);
+gulp.task('browser-sync', ['browser-sync-prepare'], function() {
     browserSync({
         port: 9000,
+        files: [
+            'app/index.html',
+            'app/fonts/*',
+            'app/images/*',
+            'app/modules/**/*.html',
+            'app/scripts/vendor.min.js',
+            'app/scripts/main.js',
+            'app/styles/*.min.css'
+        ],
+        watchOptions: {
+            ignoreInitial: true
+        },
         server: {
             baseDir: 'app'
         }
     });
+
 });
 
 gulp.task('reload', [], function() {
@@ -73,31 +91,41 @@ gulp.task('sass', function () {
 });
 
 gulp.task('vendor', function() {
-    gulp.src([
-    ])
-    .pipe(sourcemaps.init())
-    .pipe(minifyCSS())
-    .pipe(concat('vendor.min.css'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('app/styles'));
+    // thanks @esvendsen !!!
+    var jsRegex = (/.*\.js$/i),
+        cssRegex = (/.*\.css$/i);
+
+	gulp.src(mbf({ filter: jsRegex }))
+        .pipe(sourcemaps.init())
+        .pipe(concat('vendor.js'))
+        //.pipe(gulp.dest('app/scripts'))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('app/scripts'));
+
+    gulp.src(mbf({ filter: cssRegex }))
+        .pipe(concat('vendor.css'))
+        .pipe(gulp.dest('app/styles'));
 });
 
-gulp.task('babel', function() {
+gulp.task('js', function() {
     //gulp.src('app/src/main.js')
-    gulp.src('app/src/**/*.js')
+    gulp.src('app/modules/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(babel())
         .pipe(concat('main.js'))
         //.pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
+        //.pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/scripts'));
 });
 
 gulp.task('runtests', function() {
-    return gulp.src('spec/test.js')
-        .pipe(jasmine({
-            verbose: true,
-            includeStackTrace: true
-        }));
+    gulp.src('karmaconf')
+        .pipe(karma({
+            configFile: 'karma.conf.js'
+        }))
+        .on('error', function(err) {
+            console.log(err);
+            this.emit('end');
+        });
 });
