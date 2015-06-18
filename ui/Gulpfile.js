@@ -9,6 +9,7 @@ var cp          = require('child_process');
 var debug       = require('gulp-debug');
 var fs          = require('fs');
 var imagemin    = require('gulp-imagemin');
+var jasmine     = require('gulp-jasmine');
 var minifyCSS   = require('gulp-minify-css');
 var moment      = require('moment');
 var os          = require("os");
@@ -26,7 +27,7 @@ var wiredep     = require('wiredep').stream;
 gulp.task('default', ['develop']);
 gulp.task('develop', ['browser-sync', 'watch']);
 gulp.task('build', ['sass', 'babel', 'vendor']);
-
+gulp.task('test', ['runtests']);
 
 gulp.task('watch', function () {
     gulp.watch('app/styles/**/*.scss', ['sass']);
@@ -91,4 +92,12 @@ gulp.task('babel', function() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/scripts'));
+});
+
+gulp.task('runtests', function() {
+    return gulp.src('spec/test.js')
+        .pipe(jasmine({
+            verbose: true,
+            includeStackTrace: true
+        }));
 });
