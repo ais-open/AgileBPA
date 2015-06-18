@@ -12,5 +12,6 @@ django/static
 .sass-cache
 .DS_Store
 
-site.min.css
-
+ui/app/styles/site.min.css
+ui/app/scripts/main*.js
+ui/app/scripts/vendor*.js
