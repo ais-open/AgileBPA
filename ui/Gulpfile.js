@@ -8,7 +8,6 @@ var concat      = require('gulp-concat');
 var cp          = require('child_process');
 var debug       = require('gulp-debug');
 var fs          = require('fs');
-var gaze        = require('gaze');
 var imagemin    = require('gulp-imagemin');
 var jasmine     = require('gulp-jasmine');
 var karma       = require('gulp-karma');
@@ -70,10 +69,6 @@ gulp.task('browser-sync', function() {
         }
     });
 
-});
-
-gulp.task('reload', [], function() {
-    browserSync.reload();
 });
 
 // Build sass into a single site.min.css
