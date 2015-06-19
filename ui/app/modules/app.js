@@ -21,6 +21,10 @@ app.config(function($routeProvider) {
         controller: '18fMainPageController',
         templateUrl: 'modules/pages/18fMainPageTemplate.html'
     })
+    .when('/about', {
+        controller: '18fAboutPageController',
+        templateUrl: 'modules/pages/18fAboutPageTemplate.html'
+    })
     .otherwise({
         redirectTo: '/'
     });
