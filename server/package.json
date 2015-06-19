@@ -18,7 +18,7 @@
   "homepage": "https://github.com/AppliedIS/AgileBPA",
   "dependencies": {
     "hapi": "^8.6.1",
-    "jasmine": "^2.3.1",
+    "lodash": "^3.9.3",
     "mongoose": "^4.0.5",
     "request": "^2.58.0"
   },
