@@ -1,5 +1,20 @@
 
-<ul>
-    <li><a href="#/">Home</a></li>
-    <li><a href="#/about">About</a></li>
-</ul>
+<header class="navigation" role="banner">
+
+    <div class="navigation-wrapper">
+
+        <a class="logo">
+            <img src="images/logo.png" alt="AgileBPA Logo">
+        </a>
+
+        <a class="navigation-menu-button" ng-click="toggleMenu()">MENU</a>
+
+        <nav role="navigation">
+            <ul class="navigation-menu" ng-class="{ true:'show', false:''}[menuOn]">
+                <li class="nav-link"><a href="#/">Medications</a></li>
+                <li class="nav-link"><a href="#/about">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>

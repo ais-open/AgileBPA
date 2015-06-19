@@ -104,6 +104,8 @@ gulp.task('vendor-css', function() {
     var cssRegex = (/.*\.css$/i);
     return gulp.src(mbf({ filter: cssRegex }))
         .pipe(concat('vendor.css'))
+        .pipe(minifyCSS())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('app/styles'));
 });
 

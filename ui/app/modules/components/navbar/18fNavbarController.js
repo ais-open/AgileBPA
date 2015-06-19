@@ -1,8 +1,11 @@
+// See http://refills.bourbon.io/#navigation
 angular.module('18f').controller('18fNavbarController', function($scope) {
     'use strict';
 
-    var initialize = function() {
-        console.log('navigation initializing...');
+    $scope.menuOn = false;
+
+    $scope.toggleMenu = function() {
+        $scope.menuOn = !$scope.menuOn;
     };
-    initialize();
+
 });
