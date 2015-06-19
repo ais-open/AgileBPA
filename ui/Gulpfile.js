@@ -15,11 +15,12 @@ var karma       = require('gulp-karma');
 var mbf         = require('main-bower-files');
 var minifyCSS   = require('gulp-minify-css');
 var moment      = require('moment');
-var os          = require("os");
+var os          = require('os');
 var pkg         = require('./package.json');
 var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
 var rimraf      = require('rimraf');
+var runSequence = require('run-sequence');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
@@ -28,13 +29,17 @@ var wiredep     = require('wiredep').stream;
 
 
 gulp.task('default', ['develop']);
-gulp.task('develop', ['browser-sync', 'watch']);
 gulp.task('build', ['sass', 'js', 'vendor']);
-gulp.task('test', ['build', 'runtests']);
+gulp.task('test', function() {
+    runSequence('build', 'runtests');
+});
+
+gulp.task('develop', function() {
+    runSequence('build', ['watch', 'browser-sync']);
+});
 
 
 gulp.task('watch', function () {
-
     gulp.watch('app/styles/**/*.scss', ['sass']);
     gulp.watch('app/modules/**/*.js', ['js']);
     gulp.watch([
@@ -45,9 +50,7 @@ gulp.task('watch', function () {
     }, ['runtests']);
 });
 
-// Initial setup... Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync-prepare', ['sass', 'js', 'vendor']);
-gulp.task('browser-sync', ['browser-sync-prepare'], function() {
+gulp.task('browser-sync', function() {
     browserSync({
         port: 9000,
         files: [
@@ -90,27 +93,27 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/styles'));
 });
 
-gulp.task('vendor', function() {
-    // thanks @esvendsen !!!
-    var jsRegex = (/.*\.js$/i),
-        cssRegex = (/.*\.css$/i);
-
-	gulp.src(mbf({ filter: jsRegex }))
+// thanks @esvendsen !!!
+gulp.task('vendor', ['vendor-js', 'vendor-css']);
+gulp.task('vendor-js', function() {
+    var jsRegex = (/.*\.js$/i);
+    return gulp.src(mbf({ filter: jsRegex }))
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         //.pipe(gulp.dest('app/scripts'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('app/scripts'));
-
-    gulp.src(mbf({ filter: cssRegex }))
+});
+gulp.task('vendor-css', function() {
+    var cssRegex = (/.*\.css$/i);
+    return gulp.src(mbf({ filter: cssRegex }))
         .pipe(concat('vendor.css'))
         .pipe(gulp.dest('app/styles'));
 });
 
 gulp.task('js', function() {
-    //gulp.src('app/src/main.js')
-    gulp.src('app/modules/**/*.js')
+    return gulp.src('app/modules/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         //.pipe(uglify())
@@ -120,7 +123,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('runtests', function() {
-    gulp.src('karmaconf')
+    return gulp.src('karmaconf')
         .pipe(karma({
             configFile: 'karma.conf.js'
         }))
