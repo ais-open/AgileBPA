@@ -3,3 +3,5 @@ applications:
 - name: AgileBPA-server
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   path: ./server
+  env:
+    NODE_ENV: production

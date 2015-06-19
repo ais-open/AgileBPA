@@ -1,8 +1,12 @@
 'use strict';
 
+// Set default node environment to development
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 var Hapi = require('hapi');
+var config = require('./config');
 var server = new Hapi.Server();
-server.connection({port: parseInt(process.env.VCAP_APP_PORT, 10) || 3000});
+server.connection({ port: config.port });
 
 server.route(require('./routes'));
 
