@@ -25,6 +25,14 @@ app.config(function($routeProvider) {
         controller: '18fAboutPageController',
         templateUrl: 'modules/pages/18fAboutPageTemplate.html'
     })
+    .when('/profile/create', {
+        controller: '18fUserAddPageController',
+        templateUrl: 'modules/pages/user/18fUserAddPageTemplate.html'
+    })
+    .when('/profile', {
+        controller: '18fUserProfilePageController',
+        templateUrl: 'modules/pages/user/18fUserProfilePageTemplate.html'
+    })
     .otherwise({
         redirectTo: '/'
     });

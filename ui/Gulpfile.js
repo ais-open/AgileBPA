@@ -53,7 +53,7 @@ gulp.task('browser-sync', function() {
     browserSync({
         port: 9000,
         files: [
-            'app/index.html',
+            'app/*.html',
             'app/fonts/*',
             'app/images/*',
             'app/modules/**/*.html',

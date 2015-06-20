@@ -3,9 +3,9 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-@import 'base/colors',
-        'base/fonts',
-        'base/defaults',
+@import 'defaults/colors',
+        'defaults/fonts',
+        'defaults/defaults',
         'components/navbar',
         'pages/main'
 ;
