@@ -2,6 +2,7 @@
 
 var Hello = require('./api/hello');
 var User = require('./api/user');
+var Drug = require('./api/drug');
 
 module.exports = [
     {
@@ -18,5 +19,10 @@ module.exports = [
         method: 'POST',
         path: "/api/user/{token}",
         config: User.addDrugToUser
+    },
+    {
+        method: 'GET',
+        path: '/api/drug',
+        config: Drug.searchDrug
     }
 ];
