@@ -59,8 +59,7 @@ gulp.task('browser-sync', function() {
             'app/fonts/*',
             'app/images/*',
             'app/modules/**/*.html',
-            'app/scripts/vendor.min.js',
-            'app/scripts/main.js',
+            'app/scripts/*.js',
             'app/styles/*.min.css'
         ],
         watchOptions: {
