@@ -8,7 +8,10 @@ module.exports = {
     getUserByToken: {
         handler: function(request, reply) {
             service.getUserByToken(request.params.token, function(user) {
-               reply(user);
+                if(user)
+                    reply(user);
+                else
+                    reply().code(404);
             });
         }
     },
