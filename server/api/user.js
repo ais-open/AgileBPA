@@ -4,6 +4,12 @@ var userModel = require('../models/user')();
 var service = require('../services/userService')(userModel);
 var Joi = require('joi');
 
+var userPayloadScheme = Joi.object().keys({
+    firstName: Joi.string(),
+    lastName: Joi.string(),
+    email: Joi.string().email()
+});
+
 module.exports = {
     getUserByToken: {
         handler: function(request, reply) {
@@ -25,11 +31,7 @@ module.exports = {
             });
         },
         validate: {
-            payload: Joi.object().keys({
-                firstName: Joi.string(),
-                lastName: Joi.string(),
-                email: Joi.string().email()
-            })
+            payload: userPayloadScheme.requiredKeys('firstName', 'lastName', 'email')
         }
     },
     updateUser: {
@@ -42,6 +44,9 @@ module.exports = {
                 else
                     reply(err.message).code(500);
             });
+        },
+        validate: {
+            payload: userPayloadScheme.optionalKeys('firstName', 'lastName', 'email')
         }
     },
     addDrugToUser: {
