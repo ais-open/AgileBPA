@@ -5,14 +5,34 @@
 <div class="row">
     <div class="col-lg-6">
         <div class="form-group">
-            <label for="inputProfileFirstName">First Name</label>
-            <input type="text" class="form-control" id="inputProfileFirstName" />
+            <label for="inputProfileFirstName">
+                First Name
+                <span class="text-danger"
+                    ng-if="inputs.firstName.error">
+                    - {{ inputs.firstName.error }}
+                </span>
+            </label>
+            <input type="text"
+                class="form-control"
+                id="inputProfileFirstName"
+                name="inputProfileFirstName"
+                ng-model="inputs.firstName.value" />
         </div>
     </div>
     <div class="col-lg-6">
         <div class="form-group">
-            <label for="inputProfileLastName">Last Name</label>
-            <input type="text" class="form-control" id="inputProfileLastName" />
+            <label for="inputProfileLastName">
+                Last Name
+                <span class="text-danger"
+                    ng-if="inputs.lastName.error">
+                    - {{ inputs.lastName.error }}
+                </span>
+            </label>
+            <input type="text"
+                class="form-control"
+                id="inputProfileLastName"
+                name="inputProfileLastName"
+                ng-model="inputs.lastName.value" />
         </div>
     </div>
 </div>
@@ -22,13 +42,33 @@
     <div class="col-lg-12">
         <!-- Email -->
         <div class="form-group">
-            <label for="inputProfileEmail">Email</label>
-            <input type="email" class="form-control" id="inputProfileEmail" />
+            <label for="inputProfileEmail">
+                Email
+                <span class="text-danger"
+                    ng-if="inputs.email.error">
+                    - {{ inputs.email.error }}
+                </span>
+            </label>
+            <input type="email"
+                class="form-control"
+                id="inputProfileEmail"
+                name="inputProfileEmail"
+                ng-model="inputs.email.value" />
         </div>
         <!-- Email Confirmation -->
         <div class="form-group">
-            <label for="inputProfileEmailConf">Re-enter Email</label>
-            <input type="email" class="form-control" id="inputProfileEmailConf" />
+            <label for="inputProfileEmailConf">
+                Re-enter Email
+                <span class="text-danger"
+                    ng-if="inputs.emailConf.error">
+                    - {{ inputs.emailConf.error }}
+                </span>
+            </label>
+            <input type="email"
+                class="form-control"
+                id="inputProfileEmailConf"
+                name="inputProfileEmailConf"
+                ng-model="inputs.emailConf.value" />
         </div>
     </div>
 </div>
@@ -38,8 +78,15 @@
     <div class="col-lg-12">
         <div class="checkbox">
             <label>
-                <input type="checkbox" id="inputProfileTerms" />
+                <input type="checkbox"
+                    id="inputProfileTerms"
+                    name="inputProfileTerms"
+                    ng-model="inputs.terms.value" />
                 By clicking this you agree to our Terms and have read our Policy.
+                <span class="text-danger"
+                    ng-if="inputs.terms.error">
+                    - {{ inputs.terms.error }}
+                </span>
             </label>
         </div>
     </div>
@@ -48,7 +95,7 @@
 <!-- Submit Button -->
 <div class="row">
     <div class="col-lg-12">
-        <button class="btn btn-lg pull-right" type="submit">
+        <button class="btn btn-lg pull-right" ng-click="saveProfile()">
             Sign Up
         </button>
     </div>

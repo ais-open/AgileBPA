@@ -21,6 +21,11 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             required: true,
             value: '',
             error: ''
+        },
+        terms: {
+            required: true,
+            value: false,
+            error: ''
         }
     };
 
@@ -33,6 +38,8 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
 
         // Check required fields
         angular.forEach($scope.inputs, function(input) {
+            input.error = ''; // reset
+
             if (!input.required) {
                 // no need to check this one for empty strings
                 return; // continue;
@@ -48,6 +55,10 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             }
         });
 
+        if (!$scope.inputs.terms.value) {
+            $scope.inputs.terms.error = 'You should accept our Terms and Conditions.';
+        }
+
         // Make sure emails match
         if ($scope.inputs.email.error === '' &&
             $scope.inputs.emailConf.error === '' &&
@@ -56,14 +67,19 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             $scope.inputs.email.error = 'Emails entries should match.';
             $scope.inputs.emailConf.error = 'Email entries should match.';
             isValid = false;
+            $scope.inputs.email.hasError = true;
+            $scope.inputs.emailConf.hasError = true;
         }
+
 
         return isValid;
     };
 
 
     $scope.saveProfile = function() {
+        console.log('Saving profile!');
         if(!$scope.isInputValid()) {
+            console.log('Inputs: ' + JSON.stringify($scope.inputs));
             return;
         }
         console.log('Saving profile with inputs: ' +
