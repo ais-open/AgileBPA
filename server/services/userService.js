@@ -10,10 +10,11 @@ function UserService(UserModel) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             var user = userDoc.toObject();
             // go lookup drugs in the FDA API
-            var drugIds = _.pluck(user.drugs, 'drugId').join('+');
+            var drugIds = _.pluck(user.drugs, 'drugId').join('+id:');
 
             // call the API
-            var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + drugIds;
+            var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + drugIds + '&limit=' + user.drugs.length;
+            console.log(apiUrl);
             request(apiUrl, function(error, response, bodyRaw) {
                 var body = JSON.parse(bodyRaw);
                 _.each(body.results, function(result) {
