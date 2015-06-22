@@ -1,21 +1,26 @@
 
-<header class="navigation" role="banner">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
 
-    <div class="navigation-wrapper">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">
+                <img src="images/logo.png" alt="AgileBPA Logo" title="AIS Agile BPA" />
+            </a>
+        </div>
 
-        <a class="logo">
-            <img src="images/logo.png" alt="AgileBPA Logo">
-        </a>
-
-        <a class="navigation-menu-button" ng-click="toggleMenu()">MENU</a>
-
-        <nav role="navigation">
-            <ul class="navigation-menu" ng-class="{ true:'show', false:''}[menuOn]">
-                <li class="nav-link"><a href="#/">Medications</a></li>
-                <li class="nav-link"><a href="#/profile">Profile</a></li>
-                <li class="nav-link"><a href="#/about">About</a></li>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ng-href="#/">Medications</a></li>
+                <li><a href="#/profile">Profile</a></li>
+                <li><a href="#/about">About</a></li>
             </ul>
-        </nav>
+        </div>
 
     </div>
-</header>
+</nav>

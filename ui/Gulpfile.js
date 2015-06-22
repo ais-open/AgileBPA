@@ -15,6 +15,7 @@ var mbf         = require('main-bower-files');
 var minifyCSS   = require('gulp-minify-css');
 var moment      = require('moment');
 var os          = require('os');
+var path        = require('path');
 var pkg         = require('./package.json');
 var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
@@ -41,6 +42,7 @@ gulp.task('develop', function() {
 gulp.task('watch', function () {
     gulp.watch('app/styles/**/*.scss', ['sass']);
     gulp.watch('app/modules/**/*.js', ['js']);
+    gulp.watch('bower.json', ['vendor']);
     gulp.watch([
         'spec/**/*.js',
         'app/scripts/*.js'
@@ -74,11 +76,17 @@ gulp.task('browser-sync', function() {
 // Build sass into a single site.min.css
 gulp.task('sass', function () {
     browserSync.notify('Running: sass');
-    gulp.src('app/styles/**/*.scss')
+
+    //var bootstrap = 'app/bower_components/bootstrap-sass/assets/stylesheets';
+    var fontawesome = 'app/bower_components/fontawesome/scss';
+
+    return gulp.src('app/styles/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             onError: browserSync.notify,
-            errLogToConsole: true
+            errLogToConsole: true,
+            //includePaths: [ bootstrap, fontawesome ]
+            includePaths: [fontawesome]
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(minifyCSS())
@@ -89,10 +97,11 @@ gulp.task('sass', function () {
 });
 
 // thanks @esvendsen !!!
-gulp.task('vendor', ['vendor-js', 'vendor-css']);
+gulp.task('vendor', ['vendor-js']);
 gulp.task('vendor-js', function() {
     var jsRegex = (/.*\.js$/i);
     return gulp.src(mbf({ filter: jsRegex }))
+        .pipe(debug())
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         //.pipe(gulp.dest('app/scripts'))
@@ -100,21 +109,13 @@ gulp.task('vendor-js', function() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('app/scripts'));
 });
-gulp.task('vendor-css', function() {
-    var cssRegex = (/.*\.css$/i);
-    return gulp.src(mbf({ filter: cssRegex }))
-        .pipe(concat('vendor.css'))
-        .pipe(minifyCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('app/styles'));
-});
 
 gulp.task('js', function() {
     return gulp.src('app/modules/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         //.pipe(uglify())
-        //.pipe(rename({ suffix: '.min' }))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/scripts'));
 });

@@ -1,0 +1,33 @@
+// Bootstrap navbar-fixed-top fix
+// http://getbootstrap.com/components/#navbar-fixed-top
+body {
+  padding-top: 70px;
+}
+
+// Bootstrap 3 fix for issue:
+// http://stackoverflow.com/questions/18392477/how-to-make-bootstrap-3-fluid-layout-without-horizontal-scrollbar
+.container-fluid {
+  padding: 0 15px;
+}
+
+// Bootstrap 3 file input styling
+// http://www.abeautifulsite.net/blog/2013/08/whipping-file-inputs-into-shape-with-bootstrap-3/
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}

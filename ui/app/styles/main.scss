@@ -1,11 +1,14 @@
 @charset 'utf-8';
 
-@import 'bourbon/bourbon';
-@import 'neat/neat';
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap/theme';
+@import 'font-awesome';
 
 @import 'defaults/colors',
         'defaults/fonts',
         'defaults/defaults',
+        'defaults/bsoverrides',
+        'defaults/forms',
         'components/navbar',
         'pages/main'
 ;
