@@ -14,7 +14,6 @@ function UserService(UserModel) {
 
             // call the API
             var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + drugIds + '&limit=' + user.drugs.length;
-            console.log(apiUrl);
             request(apiUrl, function(error, response, bodyRaw) {
                 var body = JSON.parse(bodyRaw);
                 _.each(body.results, function(result) {
