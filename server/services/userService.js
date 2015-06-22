@@ -74,6 +74,10 @@ function UserService(UserModel) {
         });
     };
 
+    pub.deleteUser = function(token, callback) {
+        UserModel.findOneAndRemove({ 'token' : token }, callback);
+    };
+
     pub.addDrugToUser = function(token, params, callback) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             if(userDoc)

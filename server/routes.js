@@ -26,6 +26,11 @@ module.exports = [
         config: User.updateUser
     },
     {
+        method: 'DELETE',
+        path: "/api/user/{token}",
+        config: User.deleteUser
+    },
+    {
         method: 'POST',
         path: "/api/user/{token}",
         config: User.addDrugToUser

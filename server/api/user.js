@@ -49,6 +49,18 @@ module.exports = {
             payload: userPayloadScheme.optionalKeys('firstName', 'lastName', 'email')
         }
     },
+    deleteUser: {
+        handler: function(request, reply) {
+            service.deleteUser(request.params.token, function(err, user) {
+                if(!err && user)
+                    reply().code(204);
+                else if(!err && !user)
+                    reply().code(404);
+                else
+                    reply(err.message).code(500);
+            });
+        }
+    },
     addDrugToUser: {
         handler: function(request, reply) {
             service.addDrugToUser(request.params.token, request.payload, function(err, user) {
