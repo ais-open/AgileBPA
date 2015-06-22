@@ -36,6 +36,17 @@ function UserService(UserModel) {
         });
     };
 
+    pub.addDrugToUser = function(token, params, callback) {
+        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+            userDoc.drugs = userDoc.drugs || [];
+            userDoc.drugs.push({
+                drugId: params.drugId,
+                userComments: params.userComments
+            });
+            userDoc.save(callback);
+        });
+    };
+
     return pub;
 }
 
