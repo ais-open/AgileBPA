@@ -21,6 +21,11 @@ module.exports = [
         config: User.addUser
     },
     {
+        method: 'PATCH',
+        path: "/api/user/{token}",
+        config: User.updateUser
+    },
+    {
         method: 'POST',
         path: "/api/user/{token}",
         config: User.addDrugToUser

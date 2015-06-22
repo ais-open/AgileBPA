@@ -47,6 +47,26 @@ function UserService(UserModel) {
         user.save(callback);
     };
 
+    pub.updateUser = function(token, params, callback) {
+        UserModel.findOne({ 'token': token }, function(err, userDoc) {
+            if(userDoc)
+            {
+                if(params.firstName)
+                    userDoc.firstName = params.firstName;
+                if(params.lastName)
+                    userDoc.lastName = params.lastName;
+                if(params.email)
+                    userDoc.email = params.email;
+
+                userDoc.save(callback);
+            }
+            else
+            {
+                callback();
+            }
+        });
+    };
+
     pub.addDrugToUser = function(token, params, callback) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             userDoc.drugs = userDoc.drugs || [];

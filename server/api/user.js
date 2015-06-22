@@ -29,6 +29,18 @@ module.exports = {
             })
         }
     },
+    updateUser: {
+        handler: function(request, reply) {
+            service.updateUser(request.params.token, request.payload, function(err, user) {
+                if(!err && user)
+                    reply('http://' + request.info.host + request.path + "/" + user.token).code(200);
+                else if(!err && !user)
+                    reply().code(404);
+                else
+                    reply(err).code(500);
+            });
+        }
+    },
     addDrugToUser: {
         handler: function(request, reply) {
             service.addDrugToUser(request.params.token, request.payload, function(err) {
