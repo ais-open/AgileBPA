@@ -6,7 +6,7 @@ function User() {
     var Schema = mongoose.Schema;
 
     var drugSchema = new Schema({
-        drugId: String,
+        fdaId: String,
         userComments: String
     });
 

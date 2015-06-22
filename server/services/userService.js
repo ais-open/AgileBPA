@@ -10,15 +10,15 @@ function UserService(UserModel) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             var user = userDoc.toObject();
             // go lookup drugs in the FDA API
-            var drugIds = _.pluck(user.drugs, 'drugId').join('+id:');
+            var fdaIds = _.pluck(user.drugs, 'fdaId').join('+id:');
 
             // call the API
-            var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + drugIds + '&limit=' + user.drugs.length;
+            var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + fdaIds + '&limit=' + user.drugs.length;
             request(apiUrl, function(error, response, bodyRaw) {
                 var body = JSON.parse(bodyRaw);
                 _.each(body.results, function(result) {
                     // for each result returned from the API, go find that record in the original results and "hydrate" the drug information
-                    var match = _.find(user.drugs, { 'drugId' : result.id });
+                    var match = _.find(user.drugs, { 'fdaId' : result.id });
                     match.activeIngredients = result.active_ingredient;
                     match.brandName = result.openfda.brand_name;
                     match.genericName = result.openfda.generic_name;
@@ -40,7 +40,7 @@ function UserService(UserModel) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             userDoc.drugs = userDoc.drugs || [];
             userDoc.drugs.push({
-                drugId: params.drugId,
+                fdaId: params.fdaId,
                 userComments: params.userComments
             });
             userDoc.save(callback);

@@ -23,7 +23,7 @@ module.exports = {
         },
         validate: {
             payload: Joi.object().keys({
-                drugId: Joi.string().guid(),
+                fdaId: Joi.string().guid(),
                 userComments: Joi.string()
             })
         }
