@@ -11,7 +11,7 @@ var app = angular.module('18f', [
     'ngRoute',
     'ngSanitize',
 
-    //'ui.bootstrap'
+    'ui.bootstrap'
 ]);
 
 app.config(function($routeProvider) {
