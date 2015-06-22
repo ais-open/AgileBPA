@@ -18,7 +18,7 @@ module.exports = {
                 if(!err)
                     reply('http://' + request.info.host + request.path + "/" + user.token).code(201);
                 else
-                    reply(err).code(500);
+                    reply(err.message).code(500);
             });
         },
         validate: {
@@ -37,17 +37,19 @@ module.exports = {
                 else if(!err && !user)
                     reply().code(404);
                 else
-                    reply(err).code(500);
+                    reply(err.message).code(500);
             });
         }
     },
     addDrugToUser: {
         handler: function(request, reply) {
-            service.addDrugToUser(request.params.token, request.payload, function(err) {
-                if(!err)
+            service.addDrugToUser(request.params.token, request.payload, function(err, user) {
+                if(!err && user)
                     reply('http://' + request.info.host + request.path).code(201);
+                else if(!err && !user)
+                    reply().code(404);
                 else
-                    reply(err).code(500);
+                    reply(err.message).code(500);
             });
         },
         validate: {

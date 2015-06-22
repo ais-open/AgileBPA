@@ -69,12 +69,19 @@ function UserService(UserModel) {
 
     pub.addDrugToUser = function(token, params, callback) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
-            userDoc.drugs = userDoc.drugs || [];
-            userDoc.drugs.push({
-                fdaId: params.fdaId,
-                userComments: params.userComments
-            });
-            userDoc.save(callback);
+            if(userDoc)
+            {
+                userDoc.drugs = userDoc.drugs || [];
+                userDoc.drugs.push({
+                    fdaId: params.fdaId,
+                    userComments: params.userComments
+                });
+                userDoc.save(callback);
+            }
+            else
+            {
+                callback();
+            }
         });
     };
 

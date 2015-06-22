@@ -1,6 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
+var _ = require('lodash');
 
 function User() {
     var Schema = mongoose.Schema;
@@ -16,6 +17,17 @@ function User() {
         email: String,
         token: String,
         drugs: [drugSchema]
+    });
+
+    userSchema.pre('validate', function(next) {
+        var drugsUnique = _.unique(this.drugs, function(drug) { return drug.fdaId; });
+        if(drugsUnique.length !== this.drugs.length) {
+            next(Error("Cannot add the same drug twice"));
+        }
+        else
+        {
+            next();
+        }
     });
 
     var userModel = mongoose.model('user', userSchema);
