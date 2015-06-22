@@ -89,7 +89,7 @@ gulp.task('sass', function () {
             includePaths: [fontawesome]
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(minifyCSS())
+        //.pipe(minifyCSS())
         .pipe(rename('site.min.css'))
         .pipe(sourcemaps.write())
         //.pipe(debug())
