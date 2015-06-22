@@ -17,6 +17,11 @@ module.exports = [
     },
     {
         method: 'POST',
+        path: '/api/user',
+        config: User.addUser
+    },
+    {
+        method: 'POST',
         path: "/api/user/{token}",
         config: User.addDrugToUser
     },

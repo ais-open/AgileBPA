@@ -11,7 +11,9 @@ function User() {
     });
 
     var userSchema = new Schema({
-        name: String,
+        firstName: String,
+        lastName: String,
+        email: String,
         token: String,
         drugs: [drugSchema]
     });

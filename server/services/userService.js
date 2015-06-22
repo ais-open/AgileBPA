@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var request = require('request');
 var config = require('../config');
+var randomstring = require('randomstring');
 
 function UserService(UserModel) {
     var pub = {};
@@ -34,6 +35,16 @@ function UserService(UserModel) {
                 callback(user);
             });
         });
+    };
+
+    pub.addUser = function(params, callback) {
+        var user = new UserModel({
+            firstName: params.firstName,
+            lastName: params.lastName,
+            email: params.email,
+            token: randomstring.generate(8)
+        });
+        user.save(callback);
     };
 
     pub.addDrugToUser = function(token, params, callback) {
