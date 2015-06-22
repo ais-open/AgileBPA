@@ -39,7 +39,7 @@ function UserService(UserModel) {
             }
             else
             {
-                callback();
+                callback(err);
             }
         });
     };
@@ -63,7 +63,7 @@ function UserService(UserModel) {
         UserModel.findOneAndRemove({ 'token' : token }, callback);
     };
 
-    pub.addDrugToUser = function(token, params, callback) {
+    pub.addUserDrug = function(token, params, callback) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             if(userDoc)
             {
@@ -76,7 +76,43 @@ function UserService(UserModel) {
             }
             else
             {
-                callback();
+                callback(err);
+            }
+        });
+    };
+
+    pub.updateUserDrug = function(token, fdaId, params, callback) {
+        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+            if(userDoc) {
+                var userDrugToUpdate = _.find(userDoc.drugs, { 'fdaId' : fdaId });
+                if(userDrugToUpdate) {
+                    userDrugToUpdate.userComments = params.userComments;
+                    userDoc.save(callback);
+                }
+                else {
+                    callback();
+                }
+            }
+            else {
+                callback(err);
+            }
+        });
+    };
+
+    pub.deleteUserDrug = function(token, fdaId, callback) {
+        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+            if(userDoc) {
+                var userDrugToRemove = _.find(userDoc.drugs, { 'fdaId' : fdaId });
+                if(userDrugToRemove) {
+                    userDoc.drugs.splice(userDoc.drugs.indexOf(userDrugToRemove), 1);
+                    userDoc.save(callback);
+                }
+                else {
+                    callback();
+                }
+            }
+            else {
+                callback(err);
             }
         });
     };

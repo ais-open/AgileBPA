@@ -32,8 +32,18 @@ module.exports = [
     },
     {
         method: 'POST',
-        path: "/api/user/{token}",
-        config: User.addDrugToUser
+        path: "/api/user/{token}/drug",
+        config: User.addUserDrug
+    },
+    {
+        method: 'PATCH',
+        path: '/api/user/{token}/drug/{fdaId}',
+        config: User.updateUserDrug
+    },
+    {
+        method: 'DELETE',
+        path: '/api/user/{token}/drug/{fdaId}',
+        config: User.deleteUserDrug
     },
     {
         method: 'GET',

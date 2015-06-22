@@ -61,9 +61,9 @@ module.exports = {
             });
         }
     },
-    addDrugToUser: {
+    addUserDrug: {
         handler: function(request, reply) {
-            service.addDrugToUser(request.params.token, request.payload, function(err, user) {
+            service.addUserDrug(request.params.token, request.payload, function(err, user) {
                 if(!err && user)
                     reply('http://' + request.info.host + request.path).code(201);
                 else if(!err && !user)
@@ -77,6 +77,45 @@ module.exports = {
                 fdaId: Joi.string().guid(),
                 userComments: Joi.string()
             })
+        }
+    },
+    updateUserDrug: {
+        handler: function(request, reply) {
+            service.updateUserDrug(request.params.token, request.params.fdaId, request.payload, function(err, user) {
+                if(!err && user)
+                    reply('http://' + request.info.host + request.path + "/" + user.token).code(200);
+                else if(!err && !user)
+                    reply().code(404);
+                else
+                    reply(err.message).code(500);
+            });
+        },
+        validate: {
+            params: {
+                token: Joi.string(),
+                fdaId: Joi.string().guid()
+            },
+            payload: Joi.object().keys({
+                userComments: Joi.string()
+            })
+        }
+    },
+    deleteUserDrug: {
+        handler: function(request, reply) {
+            service.deleteUserDrug(request.params.token, request.params.fdaId, function(err, user) {
+                if(!err && user)
+                    reply().code(204);
+                else if(!err && !user)
+                    reply().code(404);
+                else
+                    reply(err.message).code(500);
+            });
+        },
+        validate: {
+            params: {
+                token: Joi.string(),
+                fdaId: Joi.string().guid()
+            }
         }
     }
 };
