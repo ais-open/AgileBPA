@@ -14,9 +14,10 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
+    // order here matters! (that's why they're called out seperately!)
     files: [
       'app/scripts/vendor.min.js',
-      'app/scripts/main.js',
+      'app/scripts/main.min.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'spec/**/*.js'
     ],

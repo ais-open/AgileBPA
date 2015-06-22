@@ -92,7 +92,7 @@ gulp.task('sass', function () {
         .pipe(minifyCSS())
         .pipe(rename('site.min.css'))
         .pipe(sourcemaps.write())
-        .pipe(debug())
+        //.pipe(debug())
         .pipe(gulp.dest('app/styles'));
 });
 
@@ -101,7 +101,7 @@ gulp.task('vendor', ['vendor-js']);
 gulp.task('vendor-js', function() {
     var jsRegex = (/.*\.js$/i);
     return gulp.src(mbf({ filter: jsRegex }))
-        .pipe(debug())
+        //.pipe(debug())
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         //.pipe(gulp.dest('app/scripts'))
