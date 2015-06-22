@@ -55,23 +55,8 @@ function UserService(UserModel) {
     };
 
     pub.updateUser = function(token, params, callback) {
-        UserModel.findOne({ 'token': token }, function(err, userDoc) {
-            if(userDoc)
-            {
-                if(params.firstName)
-                    userDoc.firstName = params.firstName;
-                if(params.lastName)
-                    userDoc.lastName = params.lastName;
-                if(params.email)
-                    userDoc.email = params.email;
-
-                userDoc.save(callback);
-            }
-            else
-            {
-                callback();
-            }
-        });
+        var updateObj = _.pick(params, ['firstName', 'lastName', 'email']);
+        UserModel.findOneAndUpdate({ 'token': token }, updateObj, callback);
     };
 
     pub.deleteUser = function(token, callback) {
