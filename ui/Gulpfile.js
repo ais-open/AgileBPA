@@ -18,6 +18,7 @@ var os          = require('os');
 var path        = require('path');
 var pkg         = require('./package.json');
 var prefix      = require('gulp-autoprefixer');
+var proxy       = require('proxy-middleware');
 var rename      = require('gulp-rename');
 var rimraf      = require('rimraf');
 var runSequence = require('run-sequence');
@@ -25,6 +26,7 @@ var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var uncss       = require('gulp-uncss');
+var url         = require('url');
 var wiredep     = require('wiredep').stream;
 
 
@@ -52,6 +54,12 @@ gulp.task('watch', function () {
 });
 
 gulp.task('browser-sync', function() {
+
+    // proxy calls to /api to the server app running on port 3000
+    // (in a seperate terminal, open up the server dir, and run gulp)
+    var proxyOpts = url.parse('http://localhost:3000/api');
+    proxyOpts.route = '/api';
+
     browserSync({
         port: 9000,
         files: [
@@ -66,7 +74,8 @@ gulp.task('browser-sync', function() {
             ignoreInitial: true
         },
         server: {
-            baseDir: 'app'
+            baseDir: 'app',
+            middleware: [proxy(proxyOpts)]
         }
     });
 

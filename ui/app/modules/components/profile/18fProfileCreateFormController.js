@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileCreateFormController', function($scope) {
+angular.module('18f').controller('18fProfileCreateFormController', function($scope, ProfileService) {
     'use strict';
 
     $scope.inputs = {
@@ -31,7 +31,7 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
 
     var isBlank = function(str) {
         return (!str || /^\s*$/.test(str));
-    }
+    };
 
     $scope.isInputValid = function() {
         var isValid = true;
@@ -77,13 +77,16 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
 
 
     $scope.saveProfile = function() {
-        console.log('Saving profile!');
         if(!$scope.isInputValid()) {
-            console.log('Inputs: ' + JSON.stringify($scope.inputs));
             return;
         }
         console.log('Saving profile with inputs: ' +
                     JSON.stringify($scope.inputs));
+        ProfileService.save({
+            'firstName': $scope.inputs.firstName.value,
+            'lastName': $scope.inputs.lastName.value,
+            'email': $scope.inputs.email.value
+        });
     };
 
 });
