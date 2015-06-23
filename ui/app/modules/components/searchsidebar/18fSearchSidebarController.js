@@ -13,7 +13,6 @@ angular.module('18f').controller('18fSearchSidebarController', function($scope,S
         $scope.showSearching = true;
         $scope.showResults = false;
         $scope.results = SearchService.search({ term: $scope.searchTerm },function(){
-            debugger;
             $scope.showSearching = false;
             $scope.showResults = true;
         },function(){
@@ -22,8 +21,6 @@ angular.module('18f').controller('18fSearchSidebarController', function($scope,S
     };
 
     $scope.addUserDrug = function(drug){
-        console.log(drug.fdaId);
-        debugger;
         if($scope.profile){
             ProfileService.addUserDrug({ user: $scope.profile.token },function(){
                 $scope.drug = drug;
