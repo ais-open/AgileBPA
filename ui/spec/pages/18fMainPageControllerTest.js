@@ -7,7 +7,7 @@ describe('18fMainPageController', function() {
 
     beforeEach(module('18f'));
 
-    beforeEach(inject(function(_$rootScope_, _$controller_){
+    beforeEach(inject(function(_$rootScope_, _$controller_) {
         $rootScope = _$rootScope_;
         $scope = $rootScope.$new();
         $controller = _$controller_;

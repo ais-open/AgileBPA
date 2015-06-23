@@ -26,12 +26,16 @@ app.config(function($routeProvider) {
         templateUrl: 'modules/pages/18fAboutPageTemplate.html'
     })
     .when('/profile/create', {
-        controller: '18fUserAddPageController',
-        templateUrl: 'modules/pages/user/18fUserAddPageTemplate.html'
+        controller: '18fProfileCreatePageController',
+        templateUrl: 'modules/pages/profile/18fProfileCreatePageTemplate.html'
+    })
+    .when('/profile/signin', {
+        controller: '18fProfileSignInPageController',
+        templateUrl: 'modules/pages/profile/18fProfileSignInPageTemplate.html'
     })
     .when('/profile', {
-        controller: '18fUserProfilePageController',
-        templateUrl: 'modules/pages/user/18fUserProfilePageTemplate.html'
+        controller: '18fProfilePageController',
+        templateUrl: 'modules/pages/profile/18fProfilePageTemplate.html'
     })
     .otherwise({
         redirectTo: '/'

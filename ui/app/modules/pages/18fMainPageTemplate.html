@@ -3,23 +3,51 @@
         <div class="col-lg-8">
 
 <!-- main content -->
-<ais-search-form></ais-search-form>
 
-<h2>Why My Medicine Cabinet?</h2>
-<p>
-    Looking for a way to stay up to date on the latest drug information?
-    Worried some of your medicines might have negative interactions with each other?
-    With My Medicine Cabinet you can enter all of your medical information and let
-    us do the work for you!
-</p>
+<!-- User is logged in -->
+<div ng-show="profile">
+    <ais-profile show-tools="true"></ais-profile>
 
-<h2>Create a Profile</h2>
-<p>
-    Sign up and we can save your medicine cabinet for you.
-    We can even send you an alert when important information becomes available.
-</p>
+    <h2>Current Medications on Recall</h2>
+    <p>None</p>
 
-<ais-profile-create-form></ais-profile-create-form>
+    <h2>Current Medications</h2>
+    <p>None</p>
+
+    <h2>Add Medication</h2>
+    <p>
+        To add a new medication, enter the name of
+        the medicine in the search box.
+        Once you find the medicine you are
+        looking for, click the Add Medication
+        button.
+    </p>
+    <ais-search-form></ais-search-form>
+
+</div>
+
+<!-- User is not logged in -->
+<div ng-hide="profile">
+
+    <ais-search-form></ais-search-form>
+
+    <h2>Why My Medicine Cabinet?</h2>
+    <p>
+        Looking for a way to stay up to date on the latest drug information?
+        Worried some of your medicines might have negative interactions with each other?
+        With My Medicine Cabinet you can enter all of your medical information and let
+        us do the work for you!
+    </p>
+
+    <h2>Create a Profile</h2>
+    <p>
+        Sign up and we can save your medicine cabinet for you.
+        We can even send you an alert when important information becomes available.
+    </p>
+
+    <ais-profile-create-form></ais-profile-create-form>
+</div>
+
 
         </div><!-- main content -->
 

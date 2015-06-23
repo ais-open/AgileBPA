@@ -22,6 +22,16 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             value: '',
             error: ''
         },
+        password: {
+            required: true,
+            value: '',
+            error: ''
+        },
+        passwordConf: {
+            required: true,
+            value: '',
+            error: ''
+        },
         terms: {
             required: true,
             value: false,
@@ -67,10 +77,17 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             $scope.inputs.email.error = 'Emails entries should match.';
             $scope.inputs.emailConf.error = 'Email entries should match.';
             isValid = false;
-            $scope.inputs.email.hasError = true;
-            $scope.inputs.emailConf.hasError = true;
         }
 
+        // Make sure passwords match
+        if ($scope.inputs.password.error === '' &&
+            $scope.inputs.passwordConf.error === '' &&
+            $scope.inputs.password.value != $scope.inputs.passwordConf.value) {
+
+            $scope.inputs.password.error = 'Password entries should match.';
+            $scope.inputs.passwordConf.error = 'Password entries should match.';
+            isValid = false;
+        }
 
         return isValid;
     };
@@ -85,9 +102,9 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
         ProfileService.save({
             'firstName': $scope.inputs.firstName.value,
             'lastName': $scope.inputs.lastName.value,
-            'email': $scope.inputs.email.value
+            'email': $scope.inputs.email.value,
+            'password': $scope.inputs.password.value
         }, function(result) {
-            console.log('Got profile: ' + JSON.stringify(result));
             SignInService.signIn(result);
         });
     };

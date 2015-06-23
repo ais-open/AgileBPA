@@ -1,0 +1,44 @@
+
+<h2>Sign In to Your Account</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label for="inputProfileEmail">
+                Email Address
+                <span class="text-danger"
+                    ng-if="inputs.email.error">
+                    - {{ inputs.email.error }}
+                </span>
+            </label>
+            <input type="text"
+                class="form-control"
+                id="inputProfileEmail"
+                name="inputProfileEmail"
+                ng-model="inputs.eail.value" />
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label for="inputProfilePassword">
+                Password
+                <span class="text-danger"
+                    ng-if="inputs.password.error">
+                    - {{ inputs.password.error }}
+                </span>
+            </label>
+            <input type="password"
+                class="form-control"
+                id="inputProfilePassword"
+                name="inputProfilePassword"
+                ng-model="inputs.password.value" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-lg pull-right"
+            ng-click="signIn()">
+            Sign In
+        </button>
+    </div>
+</div>
