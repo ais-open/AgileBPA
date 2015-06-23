@@ -73,6 +73,42 @@
     </div>
 </div>
 
+<!-- Password -->
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Email -->
+        <div class="form-group">
+            <label for="inputProfilePassword">
+                Password
+                <span class="text-danger"
+                    ng-if="inputs.password.error">
+                    - {{ inputs.password.error }}
+                </span>
+            </label>
+            <input type="password"
+                class="form-control"
+                id="inputProfilePassword"
+                name="inputProfilePassword"
+                ng-model="inputs.password.value" />
+        </div>
+        <!-- Password Confirmation -->
+        <div class="form-group">
+            <label for="inputProfilePasswordConf">
+                Re-enter Password
+                <span class="text-danger"
+                    ng-if="inputs.passwordConf.error">
+                    - {{ inputs.passwordConf.error }}
+                </span>
+            </label>
+            <input type="password"
+                class="form-control"
+                id="inputProfilePasswordConf"
+                name="inputProfilePasswordConf"
+                ng-model="inputs.passwordConf.value" />
+        </div>
+    </div>
+</div>
+
 <!-- Terms -->
 <div class="row">
     <div class="col-lg-12">
