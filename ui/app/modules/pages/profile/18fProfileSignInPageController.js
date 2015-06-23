@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileSignInPageController', function($scope) {
+angular.module('18f').controller('18fProfileSignInPageController', function($scope, SignInService) {
     'use strict';
 
     $scope.inputs = {
@@ -41,7 +41,13 @@ angular.module('18f').controller('18fProfileSignInPageController', function($sco
         if(!$scope.isInputValid()) {
             return;
         }
-        
+
+        SignInService.authenticate({
+            email: $scope.inputs.email.value,
+            password: $scope.inputs.password.value
+        }).then(function(result) {
+            console.log('Got response: ' + JSON.stringify(result));
+        });
     };
 
 });

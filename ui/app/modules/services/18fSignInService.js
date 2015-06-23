@@ -1,8 +1,21 @@
-angular.module('18f').service('SignInService', function(ProfileService) {
+angular.module('18f').service('SignInService', function(ProfileService, appConfig, $http, $q) {
 
     this.USER_KEY = 'ais.user.token';
 
     var user = null;
+
+    this.authenticate = function(obs) {
+        var deferred = $q.defer();
+        var url = appConfig.api + 'user/authenticate';
+
+        $http.post(url).success(function(data, status, headers, config) {
+            deferred.resolve(data);
+        }).error(function(data, status, headers, config) {
+            deferred.resolve(data);
+        });
+
+        return deferred.promise;
+    };
 
     this.signIn = function(userIn) {
         localStorage[this.USER_KEY] = userIn.token;
