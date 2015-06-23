@@ -4,38 +4,66 @@ var _ = require('lodash');
 var request = require('request');
 var config = require('../config');
 var randomstring = require('randomstring');
+var bcrypt = require('bcryptjs');
 
 function UserService(UserModel) {
-    var pub = {};
+    var pub = {},
+        addFdaDrugInfo;
+
+    addFdaDrugInfo = function(userDoc, callback) {
+        var user = userDoc.toObject();
+        // go lookup drugs in the FDA API
+        var fdaIds = _.pluck(user.drugs, 'fdaId').join('+id:');
+
+        // call the API
+        var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + fdaIds + '&limit=' + user.drugs.length;
+        request(apiUrl, function(error, response, bodyRaw) {
+            var body = JSON.parse(bodyRaw);
+            _.each(body.results, function(result) {
+                // for each result returned from the API, go find that record in the original results and "hydrate" the drug information
+                var match = _.find(user.drugs, { 'fdaId' : result.id });
+                match.activeIngredients = result.active_ingredient;
+                match.brandName = result.openfda.brand_name;
+                match.genericName = result.openfda.generic_name;
+                match.manufacturerName = result.openfda.manufacturer_name;
+                match.inactiveIngredients = result.inactive_ingredient;
+                match.dosage = result.dosage_and_administration;
+                match.usage = result.indications_and_usage;
+                match.purpose = result.purpose;
+                match.warnings = result.warnings;
+                match.whenUsing = result.when_using;
+            });
+
+            callback(user);
+        });
+    };
+
     pub.getUserByToken = function(token, callback) {
         UserModel.findOne({ 'token' : token }, function(err, userDoc) {
             if(userDoc)
             {
-                var user = userDoc.toObject();
-                // go lookup drugs in the FDA API
-                var fdaIds = _.pluck(user.drugs, 'fdaId').join('+id:');
+                addFdaDrugInfo(userDoc, callback);
+            }
+            else
+            {
+                callback(err);
+            }
+        });
+    };
 
-                // call the API
-                var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + fdaIds + '&limit=' + user.drugs.length;
-                request(apiUrl, function(error, response, bodyRaw) {
-                    var body = JSON.parse(bodyRaw);
-                    _.each(body.results, function(result) {
-                        // for each result returned from the API, go find that record in the original results and "hydrate" the drug information
-                        var match = _.find(user.drugs, { 'fdaId' : result.id });
-                        match.activeIngredients = result.active_ingredient;
-                        match.brandName = result.openfda.brand_name;
-                        match.genericName = result.openfda.generic_name;
-                        match.manufacturerName = result.openfda.manufacturer_name;
-                        match.inactiveIngredients = result.inactive_ingredient;
-                        match.dosage = result.dosage_and_administration;
-                        match.usage = result.indications_and_usage;
-                        match.purpose = result.purpose;
-                        match.warnings = result.warnings;
-                        match.whenUsing = result.when_using;
-                    });
-
-                    callback(user);
-                });
+    pub.authenticateUser = function(email, password, callback) {
+        UserModel.findOne({ 'email' : email }, function(err, userDoc) {
+            if(userDoc)
+            {
+                // compare the password
+                if(bcrypt.compareSync(password, userDoc.password))
+                {
+                    addFdaDrugInfo(userDoc, callback);
+                }
+                else
+                {
+                    callback();
+                }
             }
             else
             {
@@ -45,10 +73,14 @@ function UserService(UserModel) {
     };
 
     pub.addUser = function(params, callback) {
+        // encrypt password
+        var salt = bcrypt.genSaltSync(10);
+        var hash = bcrypt.hashSync(params.password, salt);
         var user = new UserModel({
             firstName: params.firstName,
             lastName: params.lastName,
             email: params.email,
+            password: hash,
             token: randomstring.generate(8)
         });
         user.save(callback);

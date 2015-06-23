@@ -7,7 +7,8 @@ var Joi = require('joi');
 var userPayloadScheme = Joi.object().keys({
     firstName: Joi.string(),
     lastName: Joi.string(),
-    email: Joi.string().email()
+    email: Joi.string().email(),
+    password: Joi.string()
 });
 
 module.exports = {
@@ -21,6 +22,22 @@ module.exports = {
             });
         }
     },
+    authenticateUser: {
+        handler: function(request, reply) {
+            service.authenticateUser(request.payload.email, request.payload.password, function(user) {
+                if(user)
+                    reply(user);
+                else
+                    reply().code(401);
+            })
+        },
+        validate: {
+            payload: {
+                email: Joi.string().email(),
+                password: Joi.string()
+            }
+        }
+    },
     addUser: {
         handler: function(request, reply) {
             service.addUser(request.payload, function(err, user) {
@@ -32,7 +49,7 @@ module.exports = {
             });
         },
         validate: {
-            payload: userPayloadScheme.requiredKeys('firstName', 'lastName', 'email')
+            payload: userPayloadScheme.requiredKeys('firstName', 'lastName', 'email', 'password')
         }
     },
     updateUser: {
@@ -47,7 +64,7 @@ module.exports = {
             });
         },
         validate: {
-            payload: userPayloadScheme.optionalKeys('firstName', 'lastName', 'email')
+            payload: userPayloadScheme.optionalKeys('firstName', 'lastName', 'email', 'password')
         }
     },
     deleteUser: {

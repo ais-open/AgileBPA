@@ -49,5 +49,10 @@ module.exports = [
         method: 'GET',
         path: '/api/drug',
         config: Drug.searchDrug
+    },
+    {
+        method: 'POST',
+        path: '/api/user/authenticate',
+        config: User.authenticateUser
     }
 ];
