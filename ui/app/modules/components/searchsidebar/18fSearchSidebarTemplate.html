@@ -16,6 +16,9 @@
     <div ng-show="showSearching">
 
     </div>
+    <div ng-show="drug">
+        {{drug.brandName[0]}} has been added to your list of medications.
+    </div>
     <div ng-show="showResults">
         <h4>Search Results</h4>
         <div ng-repeat="drug in results">
