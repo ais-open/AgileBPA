@@ -1,0 +1,29 @@
+<h3>Find a Drug</h3>
+
+<div>
+    To add a new medication, enter the name of the medicine in the search box. Once you find the medicine you are looking for,
+    click the Add medication button.
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search"
+            name="inputSearchTerm" id="inputSearchTerm" ng-model="searchTerm" />
+
+        <div class="input-group-btn">
+            <button class="btn btn-default"  ng-click="search()">
+                Find a Drug
+            </button>
+        </div>
+    </div>
+    <div ng-show="showSearching">
+
+    </div>
+    <div ng-show="showResults">
+        <h4>Search Results</h4>
+        <div ng-repeat="drug in results">
+            <h4>{{drug.brandName[0]}}</h4>
+            GENERIC NAME(S): {{drug.genericName[0]}}
+            <div>
+                <button class="btn btn-default" ng-click="addUserDrug(drug)">Add Medication</button>
+            </div>
+        <div>
+    </div>
+</div>
