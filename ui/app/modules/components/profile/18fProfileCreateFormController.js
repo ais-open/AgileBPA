@@ -102,8 +102,8 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
         ProfileService.save({
             'firstName': $scope.inputs.firstName.value,
             'lastName': $scope.inputs.lastName.value,
-            'email': $scope.inputs.email.value,
-            'password': $scope.inputs.password.value
+            'email': $scope.inputs.email.value
+            //'password': $scope.inputs.password.value
         }, function(result) {
             SignInService.signIn(result);
         });
