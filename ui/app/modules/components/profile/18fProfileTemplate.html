@@ -15,8 +15,9 @@
                 <p class="details">
                     {{ profile.email }}
                 </p>
-                <p class="tools">
-                    <a href="#/profile/edit">
+
+                <p class="tools" ng-show="showTools">
+                    <a href="#/profile">
                         <i class="glyphicon glyphicon-edit"></i>
                         Edit Profile
                     </a>

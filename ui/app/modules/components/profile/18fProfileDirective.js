@@ -8,6 +8,9 @@ angular.module('18f').directive('aisProfile', function() {
     return {
         restrict: 'EA',
         templateUrl: 'modules/components/profile/18fProfileTemplate.html',
-        controller: '18fProfileController'
+        controller: '18fProfileController',
+        scope: {
+            showTools: '@'
+        }
     };
 });
