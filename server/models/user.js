@@ -14,7 +14,7 @@ function User() {
     var userSchema = new Schema({
         firstName: String,
         lastName: String,
-        email: String,
+        email: { type: [String], index: { unique: true } },
         password: String,
         token: String,
         drugs: [drugSchema]
