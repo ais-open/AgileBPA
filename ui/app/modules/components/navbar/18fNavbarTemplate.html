@@ -19,12 +19,25 @@
             ng-class="{true:'show', false: 'hide'}[menuOn]">
 
             <ul class="nav navbar-nav">
-                <li><a ng-href="#/">Home</a></li>
+                <li><a href="#/">Home</a></li>
                 <li><a href="#/">My Medications</a></li>
                 <li><a href="#/search">Find a Drug</a></li>
                 <li><a href="#/about">About</a></li>
             </ul>
 
+            <ul class="nav navbar-nav navbar-right"
+                ng-show="profile">
+                <li><a href="#/profile">{{ profile.firstName }} {{ profile.lastName }}</a></li>
+                <li><a ng-click="signOut()">Sign Out</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right"
+                ng-hide="profile">
+
+                <!-- TODO: handle sign in/lookups by email
+                <li><a ng-click="signIn()">Sign In</a></li>
+                <li><a href="#/profile/create">Create Profile</a></li> -->
+            </ul>
         </div>
 
     </div>

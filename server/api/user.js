@@ -25,7 +25,8 @@ module.exports = {
         handler: function(request, reply) {
             service.addUser(request.payload, function(err, user) {
                 if(!err)
-                    reply('http://' + request.info.host + request.path + "/" + user.token).code(201);
+                    //reply('http://' + request.info.host + request.path + "/" + user.token).code(201);
+                    reply(user).code(201);
                 else
                     reply(err.message).code(500);
             });

@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileCreateFormController', function($scope, ProfileService) {
+angular.module('18f').controller('18fProfileCreateFormController', function($scope, ProfileService, SignInService) {
     'use strict';
 
     $scope.inputs = {
@@ -86,6 +86,9 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             'firstName': $scope.inputs.firstName.value,
             'lastName': $scope.inputs.lastName.value,
             'email': $scope.inputs.email.value
+        }, function(result) {
+            console.log('Got profile: ' + JSON.stringify(result));
+            SignInService.signIn(result);
         });
     };
 
