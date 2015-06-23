@@ -14,10 +14,10 @@
         </div>
     </div>
     <div ng-show="showSearching">
-
+        <h4>Searching...</h4>
     </div>
     <div ng-show="drug">
-        {{drug.brandName[0]}} has been added to your list of medications.
+        <p>{{drug.brandName[0]}} has been added to your list of medications.</p>
     </div>
     <div ng-show="showResults">
         <h4>Search Results</h4>
@@ -25,7 +25,7 @@
             <h4>{{drug.brandName[0]}}</h4>
             GENERIC NAME(S): {{drug.genericName[0]}}
             <div>
-                <button class="btn btn-default" ng-click="addUserDrug(drug)">Add Medication</button>
+                <button class="btn btn-default" ng-click="addUserDrug(drug)" ng-show="profile">Add Medication</button>
             </div>
         <div>
     </div>

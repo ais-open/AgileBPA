@@ -22,12 +22,14 @@ angular.module('18f').controller('18fSearchSidebarController', function($scope,S
 
     $scope.addUserDrug = function(drug){
         if($scope.profile){
-            ProfileService.addUserDrug({ user: $scope.profile.token },function(){
+            var payload = {
+                fdaId: drug.fdaId,
+                userComments: 'added via Search'
+            };
+            ProfileService.addUserDrug({ user: $scope.profile.token}, payload).$promise.then(function(){            
                 $scope.drug = drug;
                 $scope.showSearching = false;
                 $scope.showResults = false;
-            },function(){
-                console.log('Error searching.');
             });
         }
 
