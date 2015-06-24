@@ -12,13 +12,12 @@ angular.module('18f').controller('18fSearchSidebarController', function($scope,S
         // $scope.drug = null;
         // $scope.showSearching = true;
         // $scope.showResults = false;
-
         return SearchService.search({ term: term }).$promise;
     };
 
     $scope.addUserDrug = function(drug){
-        debugger;
         if($scope.profile){
+            //console.log($scope.profile);
             var payload = {
                 fdaId: drug.fdaId,
                 userComments: 'added via Search'
