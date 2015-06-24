@@ -15,7 +15,12 @@ function UserService(UserModel) {
         // go lookup drugs in the FDA API
         var fdaIds = _.pluck(user.drugs, 'fdaId').join('+id:');
 
-        // call the API
+        // call callback after all AJAX calls are complete (1 for each drug plus 1 more to get all drug details)
+        var done = _.after(user.drugs.length + 1, function() {
+            callback(user);
+        })
+
+        // call the API to get extra drug information
         var apiUrl = config.fdaApi.baseUrl + '/drug/label.json?api_key=' + config.fdaApi.apiKey + '&search=id:' + fdaIds + '&limit=' + user.drugs.length;
         request(apiUrl, function(error, response, bodyRaw) {
             var body = JSON.parse(bodyRaw);
@@ -32,10 +37,23 @@ function UserService(UserModel) {
                 match.purpose = result.purpose;
                 match.warnings = result.warnings;
                 match.whenUsing = result.when_using;
+                match.drugInteractions = result.drug_interactions;
             });
 
-            callback(user);
+            done();
         });
+
+        // call the API to get drug adverse events
+        //https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:metformin+AND+patient.drug.drugcharacterization:1&count=patient.reaction.reactionoutcome
+        _.each(user.drugs, function(drug) {
+            var adverseEventsApiUrl = config.fdaApi.baseUrl + '/drug/event.json?api_key=' + config.fdaApi.apiKey + '&search=patient.drug.openfda.spl_id:' + drug.fdaId + '+AND+patient.drug.drugcharacterization:1&count=patient.reaction.reactionoutcome';
+            request(adverseEventsApiUrl, function(error, reponse, bodyRaw) {
+                var body = JSON.parse(bodyRaw);
+                drug.adverseEvents = body.results;
+                done();
+            });
+        })
+
     };
 
     pub.getUserByToken = function(token, callback) {
