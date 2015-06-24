@@ -4,13 +4,27 @@
     <span ng-show="SignInService.user.drugs">({{ SignInService.user.drugs.length }})</span>
 </h2>
 
-<!-- No medications for user -->
-<p ng-hide="SignInService.user.drugs">
-    None
-</p>
+<div class="medlist">
+    <!-- No medications for user -->
+    <p ng-hide="SignInService.user.drugs">
+        None
+    </p>
 
-<ul class="medications">
-    <li ng-repeat="drug in SignInService.user.drugs">
-        {{ drug.brandName[0] }}
-    </li>
-</ul>
+
+    <div class="medication" ng-repeat="drug in SignInService.user.drugs">
+        <h3>{{ drug.brandName[0] }}</h3>
+        <div class="med-info">
+            <p>
+                Generic Names:
+                <span ng-repeat="nm in drug.genericName">{{ nm }}</span>
+            </p>
+
+            <h4>Adverse Events</h4>
+            <div class="ae" ng-repeat="adverseEvent in drug.adverseEvents">
+                <span class="ae-count">{{ adverseEvent.count }}</span>
+                <span class="ae-name">{{ adverseEvent.display }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
