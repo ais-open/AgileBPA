@@ -1,0 +1,13 @@
+{
+  "firstName": "Joe",
+  "lastName": "User",
+  "email": "foo@bar.com",
+  "password": "p@ssw0rd",
+  "token": "12345",
+  "drugs": [
+    {
+      "fdaId" : "1f1e2252-f884-4294-a0e5-6c4ea7d03c3d",
+      "userComments" : "Back pain"
+    }
+  ]
+}
