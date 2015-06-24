@@ -54,7 +54,6 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
     }
 
     this.refreshProfile = function() {
-        console.log('refreshing profile...');
         var deferred = $q.defer();
         var svc = this;
         svc.loadServerProfile().then(function(u) {
