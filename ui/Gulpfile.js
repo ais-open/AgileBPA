@@ -31,9 +31,9 @@ var wiredep     = require('wiredep').stream;
 
 
 gulp.task('default', ['develop']);
-gulp.task('build', ['sass', 'js', 'vendor']);
+gulp.task('build', ['sass', 'js', 'vendor', 'config-dev']);
 gulp.task('dist', function() {
-    runSequence('build', 'makedist');
+    runSequence('build', 'config-prod', 'makedist');
 });
 gulp.task('test', function() {
     runSequence('build', 'runtests');
@@ -144,4 +144,17 @@ gulp.task('runtests', function() {
             console.log(err);
             this.emit('end');
         });
+});
+
+// Use seperate config files for prod vs dev.
+gulp.task('config-dev', function() {
+    gulp.src('app/scripts/config.dev.js')
+        .pipe(rename('config.js'))
+        .pipe(gulp.dest('app/scripts'));
+});
+
+gulp.task('config-prod', function() {
+    gulp.src('app/scripts/config.prod.js')
+        .pipe(rename('config.js'))
+        .pipe(gulp.dest('app/scripts'));
 });

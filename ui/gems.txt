@@ -1,3 +1,0 @@
-gem install sass
-gem install bourbon
-gem install neat
