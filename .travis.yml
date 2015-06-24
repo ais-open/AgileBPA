@@ -9,6 +9,7 @@ install:
 script:
   - cd $TRAVIS_BUILD_DIR/ui
   - gulp test
+  - gulp dist
   - cd $TRAVIS_BUILD_DIR/server
   #- npm test
   - cd $TRAVIS_BUILD_DIR

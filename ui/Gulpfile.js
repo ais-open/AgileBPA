@@ -32,6 +32,9 @@ var wiredep     = require('wiredep').stream;
 
 gulp.task('default', ['develop']);
 gulp.task('build', ['sass', 'js', 'vendor']);
+gulp.task('dist', function() {
+    runSequence('build', 'makedist');
+});
 gulp.task('test', function() {
     runSequence('build', 'runtests');
 });
@@ -40,6 +43,10 @@ gulp.task('develop', function() {
     runSequence('build', ['watch', 'browser-sync']);
 });
 
+gulp.task('makedist', function() {
+    gulp.src('app/**/*')
+        .pipe(gulp.dest('dist'));
+});
 
 gulp.task('watch', function () {
     gulp.watch('app/styles/**/*.scss', ['sass']);
