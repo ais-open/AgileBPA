@@ -1,12 +1,14 @@
 language: node_js
 install:
   - cd $TRAVIS_BUILD_DIR/ui
+  - npm install -g gulp bower
   - npm install
+  - bower install
   - cd $TRAVIS_BUILD_DIR/server
   - npm install
 script:
   - cd $TRAVIS_BUILD_DIR/ui
-  #- npm test
+  - gulp test
   - cd $TRAVIS_BUILD_DIR/server
   #- npm test
   - cd $TRAVIS_BUILD_DIR
