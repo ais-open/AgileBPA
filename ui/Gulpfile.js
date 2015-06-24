@@ -22,7 +22,6 @@ var pkg         = require('./package.json');
 var prefix      = require('gulp-autoprefixer');
 var proxy       = require('proxy-middleware');
 var rename      = require('gulp-rename');
-var rimraf      = require('rimraf');
 var runSequence = require('run-sequence');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
