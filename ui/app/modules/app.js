@@ -25,6 +25,10 @@ app.config(function($routeProvider) {
         controller: '18fAboutPageController',
         templateUrl: 'modules/pages/18fAboutPageTemplate.html'
     })
+    .when('/meds', {
+        controller: '18fMedsPageController',
+        templateUrl: 'modules/pages/18fMedsPageTemplate.html'
+    })
     .when('/profile/create', {
         controller: '18fProfileCreatePageController',
         templateUrl: 'modules/pages/profile/18fProfileCreatePageTemplate.html'
