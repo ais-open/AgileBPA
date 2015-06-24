@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.2.1",
+    "del": "^1.2.0",
     "gaze": "^0.5.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
@@ -43,8 +44,8 @@
     "moment": "^2.9.0",
     "phantomjs": "^1.9.17",
     "proxy-middleware": "^0.13.0",
-    "rimraf": "^2.3.2",
     "run-sequence": "^1.0.2",
+    "sync-exec": "^0.5.0",
     "wiredep": "^2.2.2"
   }
 }

@@ -7,6 +7,8 @@ var browserSync = require('browser-sync');
 var concat      = require('gulp-concat');
 var cp          = require('child_process');
 var debug       = require('gulp-debug');
+var del         = require('del');
+var execSync    = require('sync-exec');
 var fs          = require('fs');
 var imagemin    = require('gulp-imagemin');
 var jasmine     = require('gulp-jasmine');
@@ -32,20 +34,55 @@ var wiredep     = require('wiredep').stream;
 
 gulp.task('default', ['develop']);
 gulp.task('build', ['sass', 'js', 'vendor', 'config-dev']);
-gulp.task('dist', function() {
-    runSequence('build', 'config-prod', 'makedist');
-});
 gulp.task('test', function() {
     runSequence('build', 'runtests');
 });
+gulp.task('dist', function() {
+    runSequence('build', 'config-prod', 'makedist');
+});
+
 
 gulp.task('develop', function() {
     runSequence('build', ['watch', 'browser-sync']);
 });
 
 gulp.task('makedist', function() {
-    gulp.src('app/**/*')
-        .pipe(gulp.dest('dist'));
+    del(['dist'], function() {
+        fs.mkdirSync('dist');
+
+        gulp.src('app/**/*')
+            .pipe(gulp.dest('dist'));
+
+        var ver = 'dist/version.txt';
+        var now = moment();
+
+        // get current git revision from git.
+        // Requires 'git' command line!!
+        var rev = 'Not Available';
+        var branch = 'Not Available';
+        try {
+            rev = execSync('git rev-parse HEAD').stdout.trim();
+            branch = execSync('git rev-parse --abbrev-ref HEAD').stdout.trim();
+        }
+        catch (err) {
+            console.log('Error running "git rev-parse HEAD"');
+            console.log('    ' + err.message);
+        }
+
+        fs.appendFileSync(ver, '\nMy Medicine Cabinet')
+        fs.appendFileSync(ver, '\n===================');
+        fs.appendFileSync(ver, '\nApplied Information Sciences');
+        fs.appendFileSync(ver, '\n18F Agile BPA Response')
+        fs.appendFileSync(ver, '\nName: AgileBPA');
+        fs.appendFileSync(ver, '\nURL: https://github.com/AppliedIS/AgileBPA');
+        fs.appendFileSync(ver, '\nVersion: ' + pkg.version);
+        fs.appendFileSync(ver, '\nGit Branch: ' + branch);
+        fs.appendFileSync(ver, '\nGit Revision: ' + rev);
+        fs.appendFileSync(ver, '\nBuild Time: ' + now.format('YYYY-MM-DD HH:mm:ss'));
+        fs.appendFileSync(ver, '\nBuild Host: ' + os.hostname() + ' [' + os.platform() + ']');
+        fs.appendFileSync(ver, '\n');
+        fs.appendFileSync(ver, '\n');
+    });
 });
 
 gulp.task('watch', function () {
