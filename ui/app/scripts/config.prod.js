@@ -3,7 +3,7 @@ angular.module('18f').factory('appConfig', function() {
 
     return {
 
-        'api': 'http://agilebpa-server.cfapps.io/api/'
+        'api': 'https://agilebpa-server.cfapps.io/api/'
 
     };
 });

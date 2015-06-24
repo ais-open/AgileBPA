@@ -7,7 +7,13 @@ var config = require('./config');
 
 // Hapi
 var Hapi = require('hapi');
-var server = new Hapi.Server();
+var server = new Hapi.Server({
+    connections: {
+        routes: {
+            cors: true
+        }
+    }
+});
 server.connection({ port: config.port });
 
 // require https in production
