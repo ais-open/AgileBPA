@@ -49,7 +49,30 @@ function UserService(UserModel) {
             var adverseEventsApiUrl = config.fdaApi.baseUrl + '/drug/event.json?api_key=' + config.fdaApi.apiKey + '&search=patient.drug.openfda.spl_id:' + drug.fdaId + '+AND+patient.drug.drugcharacterization:1&count=patient.reaction.reactionoutcome';
             request(adverseEventsApiUrl, function(error, reponse, bodyRaw) {
                 var body = JSON.parse(bodyRaw);
-                drug.adverseEvents = body.results;
+                var adverseEvents = _.map(body.results, function(event) {
+                    switch(event.term) {
+                        case 1:
+                            event.display = "Recovered/Resolved";
+                            break;
+                        case 2:
+                            event.display = "Recovering/Resolving";
+                            break;
+                        case 3:
+                            event.display = "Not Recovered/Not Resolved";
+                            break;
+                        case 4:
+                            event.display = "Recovered/Resolved with Chronic Condition";
+                            break;
+                        case 5:
+                            event.display = "Fatal";
+                            break;
+                        case 6:
+                            event.display = "Unknown";
+                            break;
+                    }
+                    return event;
+                })
+                drug.adverseEvents = adverseEvents;
                 done();
             });
         })
