@@ -80,7 +80,7 @@ function UserService(UserModel) {
     };
 
     pub.getUserByToken = function(token, callback) {
-        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+        UserModel.findOne({ 'token' : token }, '-password', function(err, userDoc) {
             if(userDoc)
             {
                 addFdaDrugInfo(userDoc, callback);
@@ -93,7 +93,7 @@ function UserService(UserModel) {
     };
 
     pub.authenticateUser = function(email, password, callback) {
-        UserModel.findOne({ 'email' : email }, function(err, userDoc) {
+        UserModel.findOne({ 'email' : email }, '-password', function(err, userDoc) {
             if(userDoc)
             {
                 // compare the password
@@ -129,15 +129,15 @@ function UserService(UserModel) {
 
     pub.updateUser = function(token, params, callback) {
         var updateObj = _.pick(params, ['firstName', 'lastName', 'email']);
-        UserModel.findOneAndUpdate({ 'token': token }, updateObj, callback);
+        UserModel.findOneAndUpdate({ 'token': token }, { select: '-password' }, updateObj, callback);
     };
 
     pub.deleteUser = function(token, callback) {
-        UserModel.findOneAndRemove({ 'token' : token }, callback);
+        UserModel.findOneAndRemove({ 'token' : token }, { select: '-password' }, callback);
     };
 
     pub.addUserDrug = function(token, params, callback) {
-        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+        UserModel.findOne({ 'token' : token }, '-password', function(err, userDoc) {
             if(userDoc)
             {
                 userDoc.drugs = userDoc.drugs || [];
@@ -155,7 +155,7 @@ function UserService(UserModel) {
     };
 
     pub.updateUserDrug = function(token, fdaId, params, callback) {
-        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+        UserModel.findOne({ 'token' : token }, '-password', function(err, userDoc) {
             if(userDoc) {
                 var userDrugToUpdate = _.find(userDoc.drugs, { 'fdaId' : fdaId });
                 if(userDrugToUpdate) {
@@ -173,7 +173,7 @@ function UserService(UserModel) {
     };
 
     pub.deleteUserDrug = function(token, fdaId, callback) {
-        UserModel.findOne({ 'token' : token }, function(err, userDoc) {
+        UserModel.findOne({ 'token' : token }, '-password', function(err, userDoc) {
             if(userDoc) {
                 var userDrugToRemove = _.find(userDoc.drugs, { 'fdaId' : fdaId });
                 if(userDrugToRemove) {
