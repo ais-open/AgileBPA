@@ -5,3 +5,6 @@ applications:
   path: ./server
   env:
     NODE_ENV: production
+- name: AgileBPA-ui
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
+  path: ./ui/dist

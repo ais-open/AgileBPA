@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fNavbarController', function($scope, SignInService) {
+angular.module('18f').controller('18fNavbarController', function($scope, $location, SignInService) {
     'use strict';
 
     $scope.menuOn = false;
@@ -20,6 +20,9 @@ angular.module('18f').controller('18fNavbarController', function($scope, SignInS
 
     var refreshProfile = function() {
         $scope.profile = SignInService.getProfile();
+        if ($scope.profile === null) {
+            $location.path('/');
+        }
     };
     var initialize = function() {
         SignInService.registerObserver('signin', refreshProfile);

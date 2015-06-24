@@ -10,6 +10,10 @@ var Hapi = require('hapi');
 var server = new Hapi.Server();
 server.connection({ port: config.port });
 
+// require https in production
+if(config.env === 'production')
+    server.register(require('hapi-require-https').register, function(err) { if(err) console.log('failed to load hapi-require-https'); });
+
 server.route(require('./routes'));
 
 server.start(function() {
