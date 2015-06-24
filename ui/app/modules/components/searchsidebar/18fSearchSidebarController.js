@@ -8,25 +8,22 @@ angular.module('18f').controller('18fSearchSidebarController', function($scope,S
         $scope.results = [];
     };
 
-    $scope.search = function(){
-        $scope.drug = null;
-        $scope.showSearching = true;
-        $scope.showResults = false;
-        $scope.results = SearchService.search({ term: $scope.searchTerm },function(){
-            $scope.showSearching = false;
-            $scope.showResults = true;
-        },function(){
-            console.log('Error searching.');
-        });
+    $scope.search = function(term){
+        // $scope.drug = null;
+        // $scope.showSearching = true;
+        // $scope.showResults = false;
+
+        return SearchService.search({ term: term }).$promise;
     };
 
     $scope.addUserDrug = function(drug){
+        debugger;
         if($scope.profile){
             var payload = {
                 fdaId: drug.fdaId,
                 userComments: 'added via Search'
             };
-            ProfileService.addUserDrug({ user: $scope.profile.token}, payload).$promise.then(function(){            
+            ProfileService.addUserDrug({ user: $scope.profile.token}, payload).$promise.then(function(){
                 $scope.drug = drug;
                 $scope.showSearching = false;
                 $scope.showResults = false;
