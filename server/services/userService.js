@@ -93,12 +93,14 @@ function UserService(UserModel) {
     };
 
     pub.authenticateUser = function(email, password, callback) {
-        UserModel.findOne({ 'email' : email }, '-password', function(err, userDoc) {
+        UserModel.findOne({ 'email' : email }, function(err, userDoc) {
             if(userDoc)
             {
                 // compare the password
                 if(bcrypt.compareSync(password, userDoc.password))
                 {
+                    // after verifying the password, remove it from the record so it is not returned
+                    userDoc.password = undefined;
                     addFdaDrugInfo(userDoc, callback);
                 }
                 else
