@@ -2,7 +2,8 @@
   "firstName": "Joe",
   "lastName": "User",
   "email": "foo@bar.com",
-  "password": "p@ssw0rd",
+  "password": "$2a$10$hMPfhB5zPm076UBemFgvL.b6.qraWb.Y4.vnJAjaomUZOlyJ1qxxC",
+  "passwordUnencrypted": "p@ssw0rd",
   "token": "12345",
   "drugs": [
     {

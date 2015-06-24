@@ -11,7 +11,7 @@ script:
   - gulp test
   - gulp dist
   - cd $TRAVIS_BUILD_DIR/server
-  #- npm test
+  - gulp test
   - cd $TRAVIS_BUILD_DIR
 sudo: required
 deploy:
