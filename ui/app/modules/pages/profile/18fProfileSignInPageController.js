@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileSignInPageController', function($scope, SignInService) {
+angular.module('18f').controller('18fProfileSignInPageController', function($scope, $location, SignInService) {
     'use strict';
 
     $scope.inputs = {
@@ -41,12 +41,18 @@ angular.module('18f').controller('18fProfileSignInPageController', function($sco
         if(!$scope.isInputValid()) {
             return;
         }
-
+        var page = this;
         SignInService.authenticate({
             email: $scope.inputs.email.value,
             password: $scope.inputs.password.value
         }).then(function(result) {
             console.log('Got response: ' + JSON.stringify(result));
+            if (result) {
+                $location.path('/');
+            }
+            else {
+                page.authError = 'Email/Password combination does not match.';
+            }
         });
     };
 

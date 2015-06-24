@@ -1,6 +1,14 @@
 
 <h2>Sign In to Your Account</h2>
 <div class="row">
+    <div class="col-xs-12">
+        <strong><span class="text-danger"
+            ng-if="authError">
+            {{ authError }}
+        </span></strong>
+    </div>
+</div>
+<div class="row">
     <div class="col-lg-6">
         <div class="form-group">
             <label for="inputProfileEmail">

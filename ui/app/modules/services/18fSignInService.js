@@ -6,21 +6,31 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
 
     this.authenticate = function(obs) {
         var deferred = $q.defer();
+        var svc = this;
         var url = appConfig.api + 'user/authenticate';
-
-        $http.post(url).success(function(data, status, headers, config) {
-            deferred.resolve(data);
+        $http.post(url, obs).success(function(data, status, headers, config) {
+            ProfileService.get({
+                user: data.token
+            }, function(u) {
+                svc.signIn(u);
+                deferred.resolve(true);
+            });
         }).error(function(data, status, headers, config) {
-            deferred.resolve(data);
+            deferred.resolve(false);
         });
 
         return deferred.promise;
     };
 
     this.signIn = function(userIn) {
-        localStorage[this.USER_KEY] = userIn.token;
-        user = userIn;
-        this.notifyObservers('signin');
+        if (typeof userIn === 'undefined' || typeof userIn.token === 'undefined') {
+            this.signOut();
+        }
+        else {
+            localStorage[this.USER_KEY] = userIn.token;
+            user = userIn;
+            this.notifyObservers('signin');
+        }
     };
 
     this.signOut = function() {
@@ -29,8 +39,13 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
         this.notifyObservers('signout');
     };
 
-    this.getProfile = function() {
+    this.getProfileByToken = function(token) {
+        return ProfileService.get({
+            user: token
+        });
+    };
 
+    this.getProfile = function() {
         if (user == null) {
             var userId = localStorage[this.USER_KEY];
             if (typeof userId === 'undefined') {
@@ -39,14 +54,11 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
             }
 
             // get it from the server
-            user = ProfileService.get({
-                user: userId
-            });
+            user = this.getProfileByToken(userId);
             if (user == null) {
                 this.signOut();
             }
         }
-
         return user;
     };
 
