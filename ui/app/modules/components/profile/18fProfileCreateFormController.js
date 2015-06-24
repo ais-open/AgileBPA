@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileCreateFormController', function($scope, ProfileService, SignInService) {
+angular.module('18f').controller('18fProfileCreateFormController', function($scope, $location, ProfileService, SignInService) {
     'use strict';
 
     $scope.inputs = {
@@ -106,6 +106,7 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             'password': $scope.inputs.password.value
         }, function(result) {
             SignInService.signIn(result);
+            $location.path('/');
         });
     };
 

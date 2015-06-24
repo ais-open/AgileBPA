@@ -46,7 +46,6 @@ angular.module('18f').controller('18fProfileSignInPageController', function($sco
             email: $scope.inputs.email.value,
             password: $scope.inputs.password.value
         }).then(function(result) {
-            console.log('Got response: ' + JSON.stringify(result));
             if (result) {
                 $location.path('/');
             }

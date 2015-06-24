@@ -20,19 +20,22 @@
 
             <ul class="nav navbar-nav">
                 <li><a href="#/">Home</a></li>
-                <li ng-show="profile"><a href="#/meds">My Medications</a></li>
-                <li ng-hide="profile"><a href="#/profile/create">My Medications</a></li>
+                <li ng-show="SignInService.user"><a href="#/meds">My Medications</a></li>
+                <li ng-hide="SignInService.user"><a href="#/profile/create">My Medications</a></li>
                 <li><a href="#/about">About</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right"
-                ng-show="profile">
-                <li><a href="#/profile">{{ profile.firstName }} {{ profile.lastName }}</a></li>
-                <li><a ng-click="signOut()">Sign Out</a></li>
+                ng-show="SignInService.user">
+                <li><a href="#/profile">
+                    {{ SignInService.user.firstName }}
+                    {{ SignInService.user.lastName }}
+                </a></li>
+                <li><a ng-click="SignInService.signOut()">Sign Out</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right"
-                ng-hide="profile">
+                ng-hide="SignInService.user">
 
                 <li><a href="#/profile/signin">Sign In</a></li>
                 <li><a href="#/profile/create">Create Profile</a></li>

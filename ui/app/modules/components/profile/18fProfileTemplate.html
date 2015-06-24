@@ -5,15 +5,16 @@
 
             <div class="profile-photo">
                 <img src="images/profile-placeholder.jpg"
-                    alt="{{ profile.firstName }} {{ profile.lastName }}"
-                    title="{{ profile.firstName }} {{ profile.lastName }}" />
+                    alt="{{ SignInService.user.firstName }} {{ SignInService.user.lastName }}"
+                    title="{{ SignInService.user.firstName }} {{ SignInService.user.lastName }}" />
             </div>
             <div class="profile-info">
                 <p class="name">
-                    {{ profile.firstName }} {{ profile.lastName }}
+                    {{ SignInService.user.firstName }}
+                    {{ SignInService.user.lastName }}
                 </p>
                 <p class="details">
-                    {{ profile.email }}
+                    {{ SignInService.user.email }}
                 </p>
 
                 <p class="tools" ng-show="showTools">

@@ -2,7 +2,7 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
 
     this.USER_KEY = 'ais.user.token';
 
-    var user = null;
+    this.user = null;
 
     this.authenticate = function(obs) {
         var deferred = $q.defer();
@@ -28,58 +28,41 @@ angular.module('18f').service('SignInService', function(ProfileService, appConfi
         }
         else {
             localStorage[this.USER_KEY] = userIn.token;
-            user = userIn;
-            this.notifyObservers('signin');
+            this.user = userIn;
         }
     };
 
     this.signOut = function() {
-        user = null;
+        this.user = null;
         localStorage.removeItem(this.USER_KEY);
-        this.notifyObservers('signout');
     };
 
-    this.getProfileByToken = function(token) {
-        return ProfileService.get({
-            user: token
+    this.loadServerProfile = function() {
+        var deferred = $q.defer();
+        var userId = localStorage[this.USER_KEY];
+        if (typeof userId === 'undefined') {
+            deferred.resolve(null);
+        }
+
+        ProfileService.get({
+            user: userId
+        }, function(result) {
+            deferred.resolve(result);
         });
+
+        return deferred.promise;
+    }
+
+    this.refreshProfile = function() {
+        console.log('refreshing profile...');
+        var deferred = $q.defer();
+        var svc = this;
+        svc.loadServerProfile().then(function(u) {
+            svc.user = u;
+            deferred.resolve(svc.user);
+        });
+        return deferred.promise;
     };
+    this.refreshProfile();
 
-    this.getProfile = function() {
-        if (user == null) {
-            var userId = localStorage[this.USER_KEY];
-            if (typeof userId === 'undefined') {
-                // no cached user and no user token
-                return null;
-            }
-
-            // get it from the server
-            user = this.getProfileByToken(userId);
-            if (user == null) {
-                this.signOut();
-            }
-        }
-        return user;
-    };
-
-    this.observers = {};
-
-    this.registerObserver = function(event, callback) {
-        if (typeof this.observers[event] === 'undefined') {
-            this.observers[event] = [];
-        }
-        this.observers[event].push(callback);
-    };
-
-    this.notifyObservers = function(event) {
-        if (typeof this.observers[event] === 'undefined') {
-            return; // nobody to notify
-        }
-        var len = this.observers[event].length;
-        var i;
-        for (i = 0; i < len; i++) {
-            // execute each callback
-            this.observers[event][i]();
-        }
-    };
 });

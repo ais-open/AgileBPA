@@ -1,0 +1,16 @@
+
+<h2>
+    Current Medications
+    <span ng-show="SignInService.user.drugs">({{ SignInService.user.drugs.length }})</span>
+</h2>
+
+<!-- No medications for user -->
+<p ng-hide="SignInService.user.drugs">
+    None
+</p>
+
+<ul class="medications">
+    <li ng-repeat="drug in SignInService.user.drugs">
+        {{ drug.brandName[0] }}
+    </li>
+</ul>
