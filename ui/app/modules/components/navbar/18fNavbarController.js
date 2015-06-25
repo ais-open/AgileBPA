@@ -7,6 +7,11 @@ angular.module('18f').controller('18fNavbarController', function($scope, $locati
         $scope.menuOn = !$scope.menuOn;
     };
 
+    $scope.signOut = function() {
+        SignInService.signOut();
+        $location.path('/');
+    };
+
     var initialize = function() {
         $scope.SignInService = SignInService;
     };

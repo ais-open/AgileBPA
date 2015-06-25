@@ -1,4 +1,58 @@
+.navbar-inverse {
+	&:after {
+		content: '';
+		display: block;
+		height: 10px;
+		width: 100%;
+		border-top: 3px solid darken($brand-teal, 3%);
+		background: url('../images/pattern-bg-diagonal-dark.png') repeat;
+	}
+}
 
-.navbar-brand img {
-    height: 24px;
+.navbar .fa {
+	margin-right: 7px;
+}
+
+
+.navbar-inverse .navbar-brand {
+	display: block;
+	width: 40px;
+	background: #fff url('../images/logo-mark-mmc.png') center no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	position: absolute;
+	z-index: 10;
+	height: 41px;
+	top: 5px;
+	left: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	padding: 7px;
+
+	&:hover,
+	&:active,
+	&:visited,
+	&:focus {
+		background-color: #fff;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-inverse .navbar-brand {
+		width: 170px;
+		height: 65px;
+		background: #fff url('../images/logo-mmc.png') center no-repeat;
+		background-size: contain;
+		top: 0;
+		left: 50%;
+		margin-left: -85px !important;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar-inverse .navbar-brand {
+		width: 250px;
+		margin-left: -125px !important;
+	}
 }

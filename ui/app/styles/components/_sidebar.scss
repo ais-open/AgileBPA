@@ -1,0 +1,36 @@
+.sidebar ais-sidebar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+  	border-top: 1px solid #CCC;
+  	margin-top: 60px;
+}
+
+.sidebar ais-search-sidebar {
+	padding-bottom: 30px;
+  	border-bottom: 1px solid #CCC;
+  	margin-bottom: 60px;
+
+  	.input-group {
+  		margin: 30px 0;
+  	}
+
+  	.input-group-btn {
+  		button {
+  			height: 34px;
+  		}
+  	}
+}
+
+@media (min-width: 1200px) {
+	.sidebar ais-sidebar {
+		padding-top: 0;
+		margin-top: 0;
+		border: 0;
+	}
+
+	.sidebar ais-search-sidebar {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border: 0;
+	}
+}

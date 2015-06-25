@@ -10,8 +10,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/">
-                <img src="images/logo.png" alt="AgileBPA Logo" title="AIS Agile BPA" />
+            <a class="navbar-brand" href="/">
+                My Medicine Cabinet
             </a>
         </div>
 
@@ -28,10 +28,16 @@
             <ul class="nav navbar-nav navbar-right"
                 ng-show="SignInService.user">
                 <li><a href="#/profile">
+                    <i class="fa fa-user"></i>
                     {{ SignInService.user.firstName }}
                     {{ SignInService.user.lastName }}
                 </a></li>
-                <li><a ng-click="SignInService.signOut()">Sign Out</a></li>
+                <li>
+                    <a ng-click="signOut()">
+                        <i class="fa fa-sign-out"></i>
+                        Sign Out
+                    </a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right"
