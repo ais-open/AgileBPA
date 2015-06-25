@@ -48,8 +48,9 @@
     &.focus,
     &:active,
     &.active {
-      background-color: $background;
-          border-color: $border;
+      background-color: $input-bg-disabled;
+          border-color: darken($input-bg-disabled, 10%);
+          color: $gray;
     }
   }
 

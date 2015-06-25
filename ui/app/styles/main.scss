@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 @import 'bootstrap/bootstrap';
-@import 'bootstrap/bootstrap/theme';
 @import 'font-awesome';
 
 @import 'defaults/colors',
@@ -9,8 +8,11 @@
         'defaults/defaults',
         'defaults/bsoverrides',
         'defaults/forms',
-        'components/medlist',
         'components/navbar',
+        'components/sidebar',
+        'components/footer',
+        'components/news-items',
+        'components/adverse-events',
         'components/profile',
         'pages/main'
 ;

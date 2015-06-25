@@ -1,0 +1,21 @@
+footer, .site-footer {
+	color: white;
+	text-align: center;
+	padding: 0 20px 40px;
+	text-shadow: 1px 1px 1px #171717;
+
+	a {
+		color: white;
+
+		&:hover {
+			text-decoration: underline;;
+		}
+	}
+
+	span {
+		&:after {
+			content: "\007C";
+			margin: 0 7px;
+		}
+	}
+}
