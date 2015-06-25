@@ -1,12 +1,16 @@
 <h3>Add Medication</h3>
 
 <div>
-    To add a new medication, enter the name of the medicine in the search box. Once you find the medicine you are looking for,
-    click the Add medication button.
+    <p>
+        To add a new medication, enter the name of the medicine in the search
+        box. Once you find the medicine you are looking for,
+        click the Add medication button.
+    </p>
+
+
+    <label>Search</label>
     <div class="input-group">
-        <!-- <input type="text" class="form-control" placeholder="Search"
-            name="inputSearchTerm" id="inputSearchTerm" ng-model="searchTerm" /> -->
-        <input type="text" ng-model="drug" placeholder="Search"
+        <input type="text" ng-model="drug" placeholder=""
             typeahead="drug as drug.brandName[0] for drug in search($viewValue) | limitTo:10" typeahead-loading="loadingDrugs" class="form-control">
         <div class="input-group-btn">
             <button class="btn btn-default pull-right"  ng-click="addUserDrug(drug)" ng-disabled="!drug.fdaId">
@@ -14,9 +18,12 @@
             </button>
         </div>
     </div>
+
+
     <div ng-show="loadingDrugs">
         <h4>Searching...</h4>
     </div>
+
     <div ng-show="showResults">
         <h4>Search Results</h4>
         <div ng-repeat="drug in results">
@@ -27,6 +34,5 @@
             </div>
         <div>
     </div>
-
 
 </div>
