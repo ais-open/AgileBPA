@@ -5,17 +5,17 @@
 
             <div class="profile-photo">
                 <!-- img src="images/profile-placeholder.jpg"
-                    alt="{{ SignInService.user.firstName }} {{ SignInService.user.lastName }}"
-                    title="{{ SignInService.user.firstName }} {{ SignInService.user.lastName }}" / -->
+                    alt="{{ ProfileService.user.firstName }} {{ ProfileService.user.lastName }}"
+                    title="{{ ProfileService.user.firstName }} {{ ProfileService.user.lastName }}" / -->
                 <i class="fa fa-user fa-4"></i>
             </div>
             <div class="profile-info">
                 <p class="name">
-                    {{ SignInService.user.firstName }}
-                    {{ SignInService.user.lastName }}
+                    {{ ProfileService.user.firstName }}
+                    {{ ProfileService.user.lastName }}
                 </p>
                 <p class="details">
-                    {{ SignInService.user.email }}
+                    {{ ProfileService.user.email }}
                 </p>
 
                 <p class="tools" ng-show="showTools">

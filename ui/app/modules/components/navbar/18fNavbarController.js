@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fNavbarController', function($scope, $location, SignInService) {
+angular.module('18f').controller('18fNavbarController', function($scope, $location, ProfileService) {
     'use strict';
 
     $scope.menuOn = false;
@@ -8,12 +8,12 @@ angular.module('18f').controller('18fNavbarController', function($scope, $locati
     };
 
     $scope.signOut = function() {
-        SignInService.signOut();
+        ProfileService.signOut();
         $location.path('/');
     };
 
     var initialize = function() {
-        $scope.SignInService = SignInService;
+        $scope.ProfileService = ProfileService;
     };
     initialize();
 

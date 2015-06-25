@@ -19,6 +19,6 @@ describe('18fMainPageController', function() {
     }));
 
     it('should initialize correctly', function() {
-        expect($scope.SignInService).toBeDefined();
+        expect($scope.ProfileService).toBeDefined();
     });
 });

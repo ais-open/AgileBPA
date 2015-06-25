@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-8">
 
-            <div ng-hide="SignInService.user">
+            <div ng-hide="ProfileService.user">
                 <h2>Why My Medicine Cabinet?</h2>
                 <p>
                     Looking for a way to stay up to date on the latest drug information?
@@ -21,7 +21,7 @@
 
                 <ais-profile-create-form></ais-profile-create-form>
             </div>
-            <div ng-show="SignInService.user">
+            <div ng-show="ProfileService.user">
                 <ais-profile show-tools="true"></ais-profile>
             </div>
 

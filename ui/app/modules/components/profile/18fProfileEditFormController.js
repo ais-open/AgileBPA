@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileEditFormController', function($scope, $location, ProfileService, SignInService) {
+angular.module('18f').controller('18fProfileEditFormController', function($scope, $location, ProfileApi, ProfileService) {
     'use strict';
 
     $scope.inputs = {
@@ -25,17 +25,17 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
     };
 
     var initialize = function() {
-        $scope.$watch('SignInService.user', function() {
-            if (SignInService.user == null ||
-                typeof SignInService.user === 'undefined' ||
-                typeof SignInService.user.email === 'undefined') {
+        $scope.$watch('ProfileService.user', function() {
+            if (ProfileService.user == null ||
+                typeof ProfileService.user === 'undefined' ||
+                typeof ProfileService.user.email === 'undefined') {
                 return;
             }
 
-            $scope.inputs.firstName.value = SignInService.user.firstName;
-            $scope.inputs.lastName.value = SignInService.user.lastName;
-            $scope.inputs.email.value = SignInService.user.email;
-            $scope.inputs.emailConf.value = SignInService.user.email;
+            $scope.inputs.firstName.value = ProfileService.user.firstName;
+            $scope.inputs.lastName.value = ProfileService.user.lastName;
+            $scope.inputs.email.value = ProfileService.user.email;
+            $scope.inputs.emailConf.value = ProfileService.user.email;
         });
     };
     initialize();
@@ -87,13 +87,13 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
         console.log('Saving profile with inputs: ' +
                     JSON.stringify($scope.inputs));
 
-        ProfileService.patch({
-            'user': SignInService.user.token,
+        ProfileApi.patch({
+            'user': ProfileService.user.token,
             'firstName': $scope.inputs.firstName.value,
             'lastName': $scope.inputs.lastName.value,
             'email': $scope.inputs.email.value
         }, function(result) {
-            SignInService.refreshProfile();
+            ProfileService.refreshProfile();
             swal({
                 title: 'Success!',
                 text: 'Your profile information has been updated.',
@@ -102,7 +102,7 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
                 timer: 3000
             });
         }, function(error) {
-            SignInService.refreshProfile();
+            ProfileService.refreshProfile();
             swal({
                 title: 'Error!',
                 text: error.data.message,

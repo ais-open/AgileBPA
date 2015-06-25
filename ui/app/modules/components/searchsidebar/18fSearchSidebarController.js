@@ -1,5 +1,5 @@
 angular.module('18f').controller('18fSearchSidebarController',
-    function($scope, SearchService, SignInService, ProfileService) {
+    function($scope, SearchApi, ProfileService, ProfileApi) {
 
     'use strict';
 
@@ -10,18 +10,18 @@ angular.module('18f').controller('18fSearchSidebarController',
         $scope.drug = null;
         $scope.results = [];
 
-        $scope.SignInService = SignInService;
+        $scope.ProfileService = ProfileService;
     };
 
     $scope.search = function(term){
         // $scope.drug = null;
         // $scope.showSearching = true;
         // $scope.showResults = false;
-        return SearchService.search({ term: term }).$promise;
+        return SearchApi.search({ term: term }).$promise;
     };
 
     $scope.addUserDrug = function(drug){
-        if (typeof SignInService.user === 'undefined' || SignInService.user == null) {
+        if (typeof ProfileService.user === 'undefined' || ProfileService.user == null) {
             console.log('Tried to add drug to anonymous user!');
             return;
         }
@@ -31,19 +31,19 @@ angular.module('18f').controller('18fSearchSidebarController',
             fdaId: drug.fdaId,
             userComments: 'added via Search'
         };
-        ProfileService.addUserDrug({
-            user: SignInService.user.token
+        ProfileApi.addUserDrug({
+            user: ProfileService.user.token
             }, payload
         ).$promise.then(function(data){
             $scope.drug = drug;
             $scope.showSearching = false;
             $scope.showResults = false;
             swal({   title: "Success!",   text: drug.brandName[0] + " has been added to your list of medications.",   type: "success",   confirmButtonText: "Ok", timer: 3000 });
-            SignInService.refreshProfile();
+            ProfileService.refreshProfile();
         }, function(err) {
             console.log('Error: ' + err.data)
             swal({   title: "Error!", text: err.data, type: "error", confirmButtonText: "Ok" });
-            SignInService.refreshProfile();
+            ProfileService.refreshProfile();
         });
     };
 

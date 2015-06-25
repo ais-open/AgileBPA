@@ -1,16 +1,16 @@
-angular.module('18f').controller('18fMedDetailController', function($scope, $routeParams, $location, SignInService, ProfileService ) {
+angular.module('18f').controller('18fMedDetailController', function($scope, $routeParams, $location, ProfileService, ProfileApi ) {
     'use strict';
 
     var initialize = function() {
-        $scope.SignInService = SignInService;
+        $scope.ProfileService = ProfileService;
 
-        $scope.$watch('SignInService.user', function() {
-            if (SignInService.user == null){
+        $scope.$watch('ProfileService.user', function() {
+            if (ProfileService.user == null){
                 $scope.selectedDrug = null;
                 return;
             }
 
-            $scope.selectedDrug = _.find(SignInService.user.drugs, { 'fdaId' : $routeParams.fdaId });
+            $scope.selectedDrug = _.find(ProfileService.user.drugs, { 'fdaId' : $routeParams.fdaId });
             if(!$scope.selectedDrug){
                 swal({   title: "Error!", text: 'This drug is not associated with your profile.', type: "error", confirmButtonText: "Ok" });
             }
@@ -43,8 +43,8 @@ angular.module('18f').controller('18fMedDetailController', function($scope, $rou
                 fdaId: $scope.selectedDrug.fdaId//,
                 //userComments: 'deleted via Details Page'
             };
-            ProfileService.removeUserDrug({
-                user: SignInService.user.token,
+            ProfileApi.removeUserDrug({
+                user: ProfileService.user.token,
                 fdaId: payload.fdaId
             })
             .$promise.then(function(data){
@@ -59,7 +59,7 @@ angular.module('18f').controller('18fMedDetailController', function($scope, $rou
                     function(){
                         // then redirect to Meds List
                         swal.close();
-                        SignInService.refreshProfile();                      
+                        ProfileService.refreshProfile();
                         $location.path('/meds');
                         if (!$scope.$$phase) {
                            $scope.$apply();
@@ -69,7 +69,7 @@ angular.module('18f').controller('18fMedDetailController', function($scope, $rou
                 debugger;
                 console.log('Error: ' + err.data)
                 swal({   title: "Error!", text: 'Error encountered when removing from your list of medications.', type: "error", confirmButtonText: "Ok" });
-                SignInService.refreshProfile();
+                ProfileService.refreshProfile();
             });
         };
     };

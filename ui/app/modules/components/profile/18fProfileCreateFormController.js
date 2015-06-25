@@ -1,4 +1,4 @@
-angular.module('18f').controller('18fProfileCreateFormController', function($scope, $location, ProfileService, SignInService) {
+angular.module('18f').controller('18fProfileCreateFormController', function($scope, $location, ProfileApi, ProfileService) {
     'use strict';
 
     $scope.inputs = {
@@ -99,13 +99,13 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
         }
         console.log('Saving profile with inputs: ' +
                     JSON.stringify($scope.inputs));
-        ProfileService.save({
+        ProfileApi.save({
             'firstName': $scope.inputs.firstName.value,
             'lastName': $scope.inputs.lastName.value,
             'email': $scope.inputs.email.value,
             'password': $scope.inputs.password.value
         }, function(result) {
-            SignInService.signIn(result);
+            ProfileService.signIn(result);
             $location.path('/');
         });
     };

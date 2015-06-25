@@ -1,12 +1,12 @@
 
-describe('18fProfileService', function() {
+describe('18fProfileApi', function() {
 
     var profileService;
 
     beforeEach(module('18f'));
 
-    beforeEach(inject(function(_ProfileService_) {
-        profileService = _ProfileService_;
+    beforeEach(inject(function(_ProfileApi_) {
+        profileService = _ProfileApi_;
     }));
 
     it('should connect to api', function() {

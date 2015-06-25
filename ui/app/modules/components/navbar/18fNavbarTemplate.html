@@ -20,17 +20,17 @@
 
             <ul class="nav navbar-nav">
                 <li><a href="#/">Home</a></li>
-                <li ng-show="SignInService.user"><a href="#/meds">My Medications</a></li>
-                <li ng-hide="SignInService.user"><a href="#/profile/create">My Medications</a></li>
+                <li ng-show="ProfileService.user"><a href="#/meds">My Medications</a></li>
+                <li ng-hide="ProfileService.user"><a href="#/profile/create">My Medications</a></li>
                 <li><a href="#/about">About</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right"
-                ng-show="SignInService.user">
+                ng-show="ProfileService.user">
                 <li><a href="#/profile">
                     <i class="fa fa-user"></i>
-                    {{ SignInService.user.firstName }}
-                    {{ SignInService.user.lastName }}
+                    {{ ProfileService.user.firstName }}
+                    {{ ProfileService.user.lastName }}
                 </a></li>
                 <li>
                     <a ng-click="signOut()">
@@ -41,7 +41,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right"
-                ng-hide="SignInService.user">
+                ng-hide="ProfileService.user">
 
                 <li><a href="#/profile/signin">Sign In</a></li>
                 <li><a href="#/profile/create">Create Profile</a></li>

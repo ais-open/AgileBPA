@@ -1,4 +1,4 @@
-angular.module('18f').factory('SearchService', function($resource, appConfig) {
+angular.module('18f').factory('SearchApi', function($resource, appConfig) {
     var url = appConfig.api + 'drug?term=:term';
     return $resource(url, null,
     {

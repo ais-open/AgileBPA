@@ -1,17 +1,17 @@
 
 <h2>
     Current Medications
-    <span ng-show="SignInService.user.drugs">({{ SignInService.user.drugs.length }})</span>
+    <span ng-show="ProfileService.user.drugs">({{ ProfileService.user.drugs.length }})</span>
 </h2>
 
 <div class="medlist">
     <!-- No medications for user -->
-    <p ng-hide="SignInService.user.drugs">
+    <p ng-hide="ProfileService.user.drugs">
         None
     </p>
 
 
-    <!-- div class="medication" ng-repeat="drug in SignInService.user.drugs">
+    <!-- div class="medication" ng-repeat="drug in ProfileService.user.drugs">
         <h3><a href="#/meds/{{drug.fdaId}}">{{ drug.brandName[0] }}</a></h3>
         <div class="med-info">
             <p>
@@ -21,7 +21,7 @@
 
         </div>
     </div -->
-    <div class="medication container-fluid" ng-repeat="drug in SignInService.user.drugs">
+    <div class="medication container-fluid" ng-repeat="drug in ProfileService.user.drugs">
         <div class="row">
             <div class="col-xs-12">
                 <h3><a href="#/meds/{{drug.fdaId}}">{{ drug.brandName[0] }}</a></h3>
