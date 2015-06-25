@@ -62,4 +62,15 @@ describe('UserService', function() {
         });
     });
 
+    it('should sort drugs by brand name', function(done) {
+        // Act
+        userService.getUserByToken(userFixture.token, function(data) {
+            // Assert
+            data.drugs[0].fdaId.should.equal('1f1e2252-f884-4294-a0e5-6c4ea7d03c3d'); // Aleve
+            data.drugs[1].fdaId.should.equal('2ba90e61-fe6b-487c-8fbc-847211595345'); // Infants Tylenol
+            data.drugs[2].fdaId.should.equal('44e1e7b4-d867-4aab-9a51-7a72456eeaa0'); // Theraflu
+            done();
+        });
+    });
+
 });

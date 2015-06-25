@@ -7,8 +7,16 @@
   "token": "12345",
   "drugs": [
     {
+      "fdaId" : "2ba90e61-fe6b-487c-8fbc-847211595345",
+      "userComments" : "Infants Tylenols"
+    },
+    {
+      "fdaId" : "44e1e7b4-d867-4aab-9a51-7a72456eeaa0",
+      "userComments" : "Theraflu"
+    },
+    {
       "fdaId" : "1f1e2252-f884-4294-a0e5-6c4ea7d03c3d",
-      "userComments" : "Back pain"
+      "userComments" : "Aleve"
     }
   ]
 }
