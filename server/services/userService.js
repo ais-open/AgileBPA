@@ -43,6 +43,9 @@ function UserService(UserModel) {
                     match.drugInteractions = result.drug_interactions;
                 });
 
+                // after we have pulled all the drug names, sort the list
+                user.drugs = _.sortBy(user.drugs, 'brandName');
+
                 done();
             });
 
