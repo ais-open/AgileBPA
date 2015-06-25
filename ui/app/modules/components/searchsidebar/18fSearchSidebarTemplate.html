@@ -9,7 +9,7 @@
         <input type="text" ng-model="drug" placeholder="Search"
             typeahead="drug as drug.brandName[0] for drug in search($viewValue) | limitTo:10" typeahead-loading="loadingDrugs" class="form-control">
         <div class="input-group-btn">
-            <button class="btn btn-default"  ng-click="addUserDrug(drug)" ng-disabled="!drug.fdaId">
+            <button class="btn btn-default pull-right"  ng-click="addUserDrug(drug)" ng-disabled="!drug.fdaId">
                 Add
             </button>
         </div>
