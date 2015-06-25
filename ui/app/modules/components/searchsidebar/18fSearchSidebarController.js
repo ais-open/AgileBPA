@@ -40,7 +40,6 @@ angular.module('18f').controller('18fSearchSidebarController',
             $scope.showResults = false;
             swal({   title: "Success!",   text: drug.brandName[0] + " has been added to your list of medications.",   type: "success",   confirmButtonText: "Cool", timer: 2000 });
         }, function(err) {
-            debugger;
             console.log('Error: ' + err.data)
             swal({   title: "Error!", text: err.data, type: "error", confirmButtonText: "Ok" });
             SignInService.refreshProfile();
