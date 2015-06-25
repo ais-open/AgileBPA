@@ -29,7 +29,9 @@
                     Generic Names:
                     <span ng-repeat="nm in drug.genericName">{{ nm }}</span>
                 </p>
-                <button class="btn btn-default pull-right">
+                <button
+                    class="btn btn-default pull-right"
+                    ng-click="goTo(drug.fdaId)">
                     View Details
                 </button>
             </div>
