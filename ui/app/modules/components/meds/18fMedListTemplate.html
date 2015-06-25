@@ -11,19 +11,28 @@
     </p>
 
 
-    <div class="medication" ng-repeat="drug in SignInService.user.drugs">
-        <h3><a href="#/meds/{{drug.fdaId}}">Select {{ drug.brandName[0] }}</a></h3>
+    <!-- div class="medication" ng-repeat="drug in SignInService.user.drugs">
+        <h3><a href="#/meds/{{drug.fdaId}}">{{ drug.brandName[0] }}</a></h3>
         <div class="med-info">
             <p>
                 Generic Names:
                 <span ng-repeat="nm in drug.genericName">{{ nm }}</span>
             </p>
 
-            <!-- <h4>Adverse Events</h4>
-            <div class="ae" ng-repeat="adverseEvent in drug.adverseEvents">
-                <span class="ae-count">{{ adverseEvent.count }}</span>
-                <span class="ae-name">{{ adverseEvent.display }}</span>
-            </div> -->
+        </div>
+    </div -->
+    <div class="medication container-fluid" ng-repeat="drug in SignInService.user.drugs">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3><a href="#/meds/{{drug.fdaId}}">{{ drug.brandName[0] }}</a></h3>
+                <p>
+                    Generic Names:
+                    <span ng-repeat="nm in drug.genericName">{{ nm }}</span>
+                </p>
+                <button class="btn btn-default pull-right">
+                    View Details
+                </button>
+            </div>
         </div>
     </div>
 
