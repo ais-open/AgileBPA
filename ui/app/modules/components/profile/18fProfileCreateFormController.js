@@ -105,8 +105,22 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
             'email': $scope.inputs.email.value,
             'password': $scope.inputs.password.value
         }, function(result) {
+            swal({
+                title: 'Success!',
+                text: 'Profile created. Signing you in...',
+                type: 'success',
+                confirmButtonText: 'Ok',
+                timer: 3000
+            });
             ProfileService.signIn(result);
             $location.path('/');
+        }, function(error) {
+            swal({
+                title: 'Error',
+                text: 'We are unable to create a profile for you at this time.',
+                type: 'error',
+                confirmButtonText: 'Ok'
+            });
         });
     };
 
