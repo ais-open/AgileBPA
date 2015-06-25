@@ -139,7 +139,7 @@ function UserService(UserModel) {
 
     pub.updateUser = function(token, params, callback) {
         var updateObj = _.pick(params, ['firstName', 'lastName', 'email']);
-        UserModel.findOneAndUpdate({ 'token': token }, { select: '-password' }, updateObj, callback);
+        UserModel.findOneAndUpdate({ 'token': token }, updateObj, { select: '-password' }, callback);
     };
 
     pub.deleteUser = function(token, callback) {
