@@ -1,3 +1,7 @@
+notifications:
+  slack:
+    rooms:
+      - appliedis:uVEqM1cN6Vowz0OpaXWN7pCa#18fagilebpa
 language: node_js
 install:
   - cd $TRAVIS_BUILD_DIR/ui
