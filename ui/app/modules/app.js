@@ -27,7 +27,11 @@ app.config(function($routeProvider) {
     })
     .when('/meds', {
         controller: '18fMedsPageController',
-        templateUrl: 'modules/pages/18fMedsPageTemplate.html'
+        templateUrl: 'modules/pages/meds/18fMedsPageTemplate.html'
+    })
+    .when('/meds/:fdaId', {
+        controller: '18fMedsDetailPageController',
+        templateUrl: 'modules/pages/meds/18fMedsDetailPageTemplate.html'
     })
     .when('/profile/create', {
         controller: '18fProfileCreatePageController',

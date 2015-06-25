@@ -12,7 +12,7 @@
 
 
     <div class="medication" ng-repeat="drug in SignInService.user.drugs">
-        <h3>{{ drug.brandName[0] }}</h3>
+        <h3><a href="#/meds/{{drug.fdaId}}">{{ drug.brandName[0] }}</a></h3>
         <div class="med-info">
             <p>
                 Generic Names:

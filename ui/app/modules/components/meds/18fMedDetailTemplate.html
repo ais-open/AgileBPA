@@ -1,0 +1,22 @@
+
+<h2>
+    Medication Detail
+</h2>
+<div class="medlist" ng-show="drug">
+    <div class="medication">
+        <h3>{{ selectedDrug.brandName[0] }}</h3>
+        <div class="med-info">
+            <p>
+                Generic Names:
+                <span ng-repeat="nm in selectedDrug.genericName">{{ nm }}</span>
+            </p>
+
+            <h4>Adverse Events</h4>
+            <div class="ae" ng-repeat="adverseEvent in selectedDrug.adverseEvents">
+                <span class="ae-count">{{ adverseEvent.count }}</span>
+                <span class="ae-name">{{ adverseEvent.display }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
