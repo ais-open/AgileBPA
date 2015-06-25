@@ -4,6 +4,7 @@ angular.module('18f').factory('ProfileService', function($resource, appConfig) {
         user: '@user'
     },{
         'addUserDrug': { method: 'POST', url: url + '/drug' },
-        'removeUserDrug': { method: 'DELETE', url: url + '/drug/:fdaId' }
+        'removeUserDrug': { method: 'DELETE', url: url + '/drug/:fdaId' },
+        'patch': { method: 'PATCH' }
     });
 });
