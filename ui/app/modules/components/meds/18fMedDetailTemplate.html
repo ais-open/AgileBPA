@@ -14,10 +14,46 @@
                 <span ng-repeat="nm in selectedDrug.genericName">{{ nm }}</span>
             </p>
 
-            <h4>Adverse Events</h4>
-            <div class="ae" ng-repeat="adverseEvent in selectedDrug.adverseEvents">
-                <span class="ae-count">{{ adverseEvent.count }}</span>
-                <span class="ae-name">{{ adverseEvent.display }}</span>
+            <div ng-show="selectedDrug.manufacturer">
+                <h4>Manufacturer</h4>
+                <p ng-repeat="i in selectedDrug.manufacturer">{{ i }}</p>
+            </div>
+
+            <div ng-show="selectedDrug.purpose">
+                <h4>Purpose</h4>
+                <p ng-repeat="i in selectedDrug.purpose">{{ i }}</p>
+            </div>
+
+            <div ng-show="selectedDrug.usage">
+                <h4>Usage</h4>
+                <p ng-repeat="i in selectedDrug.usage">{{ i }}</p>
+
+                <div ng-show="selectedDrug.whenUsing">
+                    <p ng-repeat="i in selectedDrug.whenUsing">{{ i }}</p>
+                </div>
+            </div>
+
+            <div ng-show="selectedDrug.dosage">
+                <h4>Dosage</h4>
+                <p ng-repeat="i in selectedDrug.dosage">{{ i }}</p>
+            </div>
+
+            <div ng-show="selectedDrug.warnings">
+                <h4>Warnings</h4>
+                <p ng-repeat="i in selectedDrug.warnings">{{ i }}</p>
+            </div>
+
+            <div ng-show="selectedDrug.activeIngredients">
+                <h4>Active Ingredients</h4>
+                <p ng-repeat="i in selectedDrug.activeIngredients">{{ i }}</p>
+            </div>
+
+            <div ng-show="selectedDrug.adverseEvents">
+                <h4>Adverse Events</h4>
+                <div class="ae" ng-repeat="adverseEvent in selectedDrug.adverseEvents">
+                    <span class="ae-count">{{ adverseEvent.count }}</span>
+                    <span class="ae-name">{{ adverseEvent.display }}</span>
+                </div>
             </div>
         </div>
     </div>
