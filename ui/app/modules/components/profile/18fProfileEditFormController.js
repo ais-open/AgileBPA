@@ -86,10 +86,10 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
         }
         console.log('Saving profile with inputs: ' +
                     JSON.stringify($scope.inputs));
-        SignInService.user.firstName = $scope.inputs.firstName.value;
-        SignInService.user.lastName = $scope.inputs.lastName.value;
-        SignInService.user.email = $scope.inputs.email.value;
-        SignInService.user.$save(function(result, headers) {
+        //SignInService.user.firstName = $scope.inputs.firstName.value;
+        //SignInService.user.lastName = $scope.inputs.lastName.value;
+        //SignInService.user.email = $scope.inputs.email.value;
+        /*SignInService.user.$patch(function(result, headers) {
             console.log('User updated!');
             swal({
                 title: 'Success!',
@@ -100,12 +100,24 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
             });
         }, function(error) {
             console.log('ERROR: ' + JSON.stringify(error.data.message));
+            SignInService.refreshProfile();
             swal({
                 title: 'Error!',
                 text: error.data.message,
                 type: 'error',
                 confirmButtonText: 'Ok'
             });
+        });*/
+        ProfileService.patch({
+            'user': SignInService.user.token,
+            'firstName': $scope.inputs.firstName.value,
+            'lastName': $scope.inputs.lastName.value,
+            'email': $scope.inputs.email.value
+        }, function(result) {
+            console.log('Got back result: ' + JSON.stringify(result));
+            //SignInService.refreshProfile();
+        }, function(error) {
+            console.log('Got back error: ' + JSON.stringify(error));
         });
     };
 
