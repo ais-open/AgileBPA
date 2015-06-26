@@ -5,14 +5,25 @@
 <div class="medlist" ng-show="selectedDrug">
     <div class="medication">
         <h3>{{ selectedDrug.brandName[0] }}</h3>
+
         <button class="btn btn-default pull-right" ng-click="confirmRemoval()">
             Remove
         </button>
+
         <div class="med-info">
+
             <p>
                 Generic Names:
                 <span ng-repeat="nm in selectedDrug.genericName">{{ nm }}</span>
             </p>
+
+            <div ng-show="selectedDrug.adverseEvents">
+                <h4>Adverse Events</h4>
+                <div class="ae" ng-repeat="adverseEvent in selectedDrug.adverseEvents">
+                    <span class="ae-count">{{ adverseEvent.count }}</span>
+                    <span class="ae-name">{{ adverseEvent.display }}</span>
+                </div>
+            </div>
 
             <div ng-show="selectedDrug.manufacturer">
                 <h4>Manufacturer</h4>
@@ -48,13 +59,6 @@
                 <p ng-repeat="i in selectedDrug.activeIngredients">{{ i }}</p>
             </div>
 
-            <div ng-show="selectedDrug.adverseEvents">
-                <h4>Adverse Events</h4>
-                <div class="ae" ng-repeat="adverseEvent in selectedDrug.adverseEvents">
-                    <span class="ae-count">{{ adverseEvent.count }}</span>
-                    <span class="ae-name">{{ adverseEvent.display }}</span>
-                </div>
-            </div>
         </div>
     </div>
 
