@@ -98,8 +98,7 @@ angular.module('18f').controller('18fProfileEditFormController', function($scope
                 title: 'Success!',
                 text: 'Your profile information has been updated.',
                 type: 'success',
-                confirmButtonText: 'Ok',
-                timer: 3000
+                confirmButtonText: 'Ok'
             });
         }, function(error) {
             ProfileService.refreshProfile();

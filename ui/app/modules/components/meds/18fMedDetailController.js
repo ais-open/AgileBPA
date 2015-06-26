@@ -54,8 +54,7 @@ angular.module('18f').controller('18fMedDetailController', function($scope, $rou
                     type: "success",
                     confirmButtonText: "Ok",
                     closeOnConfirm: true,
-                    closeOnCancel: true,
-                    timer: 2000 },
+                    closeOnCancel: true},
                     function(){
                         // then redirect to Meds List
                         swal.close();
