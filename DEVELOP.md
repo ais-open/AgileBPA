@@ -6,22 +6,38 @@ Developer Guide
 - /server - Server-side code. The RESTful Node.js application the ui will talk to.
 - /graphics - Any graphic design artifacts. psd/sketch/gimp/illustrator files.
 
+
 ## User Interface
-To work with the user interface code, make sure you have gulp and bower installed
-globally.
+Building the user interface requires node.js, ruby, and git to be installed
+on your system.
+Node.js is available from https://nodejs.org.
+Ruby is available from https://www.ruby-lang.org.
+Git is available from https://git-scm.com.
+Check your installations by opening a terminal and running:
+
+> node --version
+
+> ruby --version
+
+> git --version
+
+Once those are installed, you'll need to install some additional applications
 
 > npm install -g gulp
 
 > npm install -g bower
 
-Then install dependencies by opening a terminal, going into
+> gem install sass
+
+
+Then install project dependencies by opening a terminal, going into
 the ui directory, and executing:
 
 > npm install
 
 > bower install
 
-Finally, you can run the user interface locally by running:
+Finally, you can now run the user interface locally by running:
 
 > gulp
 
