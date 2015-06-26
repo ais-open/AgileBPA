@@ -35,8 +35,17 @@ main {
     min-height: 100% !important;
 }
 
-ais-navbar, 
-ais-sidebar, 
+ais-navbar,
+ais-sidebar,
 ais-search-sidebar {
     display: block;
+}
+
+
+.gray-container {
+    background: #f2f2f2;
+    padding: 5px 15px 5px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
