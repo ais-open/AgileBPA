@@ -107,10 +107,9 @@ angular.module('18f').controller('18fProfileCreateFormController', function($sco
         }, function(result) {
             swal({
                 title: 'Success!',
-                text: 'Profile created. Signing you in...',
+                text: 'Congratulations, You have successfully created a Profile.',
                 type: 'success',
-                confirmButtonText: 'Ok',
-                timer: 3000
+                confirmButtonText: 'Ok'
             });
             ProfileService.signIn(result);
             $location.path('/');
