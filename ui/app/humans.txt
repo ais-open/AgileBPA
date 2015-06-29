@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    1. Product Manager – Jason McNutt
+    2. Technical Architect – Michael Bowman
+    3. Interation Designer/User Researcher/Usability Tester – Allison Christman
+    4. Visual Designer – Shannon Gray
+    5. Back End Web Developer – Kyle Linden
+    6. Front End Web Developer – Chris Dickman
+
+# THANKS
+
+    Applied Information Sciences, 18F
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, JavaScript, Sass
+    AngularJS, Bootstrap, Font Awesome, Sweet Alert, lodash, jQuery
+    Node.js, Gulp, Bower, Browser Sync, Jasmine, Karma, Ruby, Sass
+    GitHub, Travis CI, Pivotal Cloud Foundry
