@@ -1,0 +1,104 @@
+[
+  {
+    "id": "fd896d7d-6d31-4738-b7df-e1f2b0427621",
+    "brand_name": "Phentermine Hydrochloride",
+    "generic_name": "PHENTERMINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "49b5de8f-1a37-4d82-7d6d-ab8ab0d57e66",
+    "brand_name": "Istalol",
+    "generic_name": "TIMOLOL MALEATE",
+    "manufacturer_name": "ISTA PHARMACEUTICALS, INC."
+  },
+  {
+    "id": "435f79a7-c085-40e5-a2f7-2870dc6195e5",
+    "brand_name": "Captopril",
+    "generic_name": "CAPTOPRIL",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "f0646bea-d356-441c-8b53-a89245a3762c",
+    "brand_name": "Cenestin",
+    "generic_name": "SYNTHETIC CONJUGATED ESTROGENS, A",
+    "manufacturer_name": "Physicians Total Care, Inc."
+  },
+  {
+    "id": "dad5c28b-695e-4bc1-8d0b-be04b355e568",
+    "brand_name": "Cymbalta",
+    "generic_name": "DULOXETINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "22d181d1-1e10-4fd0-a11b-def9e9434b37",
+    "brand_name": "Cymbalta",
+    "generic_name": "DULOXETINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "12ebabb0-074a-ca50-13ec-0c6ebca9d1d9",
+    "brand_name": "MetroLotion",
+    "generic_name": "METRONIDAZOLE",
+    "manufacturer_name": "Galderma Laboratories, L.P."
+  },
+  {
+    "id": "89642fa4-c030-0bcd-eb35-c139285d0d8e",
+    "brand_name": "citalopram hydrobromide",
+    "generic_name": "CITALOPRAM HYDROBROMIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "348768a6-a23b-421f-8831-4a63f23be087",
+    "brand_name": "BENZOYL PEROXIDE",
+    "generic_name": "BENZOYL PEROXIDE",
+    "manufacturer_name": "TriMarc Labs"
+  },
+  {
+    "id": "496b1b6a-72a1-b825-e3c3-2655a8c20c42",
+    "brand_name": "Mydfrin",
+    "generic_name": "PHENYLEPHRINE HYDROCHLORIDE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "cd268401-396a-44bc-a14b-2888ed86ab05",
+    "brand_name": "Metolazone",
+    "generic_name": "METOLAZONE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "4bf8ed7b-1486-42be-8401-ab91ce2e5a95",
+    "brand_name": "BENZOYL PEROXIDE",
+    "generic_name": "BENZOYL PEROXIDE",
+    "manufacturer_name": "TriMarc Labs"
+  },
+  {
+    "id": "8b08f442-5483-4d46-a981-b89227b597f8",
+    "brand_name": "BENZOYL PEROXIDE",
+    "generic_name": "BENZOYL PEROXIDE",
+    "manufacturer_name": "TriMarc Labs"
+  },
+  {
+    "id": "c7564424-fd93-4aba-96ac-617494f9dd7c",
+    "brand_name": "BENZOYL PEROXIDE",
+    "generic_name": "BENZOYL PEROXIDE",
+    "manufacturer_name": "TriMarc Labs"
+  },
+  {
+    "id": "a6909571-0b84-f0b4-8df2-0b143c407482",
+    "brand_name": "Bupropion Hydrochloride",
+    "generic_name": "BUPROPION HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "815a92c2-db1c-f1fe-d065-f2a6bb621ad9",
+    "brand_name": "Mydfrin",
+    "generic_name": "PHENYLEPHRINE HYDROCHLORIDE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "9e090d7a-7e02-4aec-b71f-daded0620ed6",
+    "brand_name": "Metolazone",
+    "generic_name": "METOLAZONE",
+    "manufacturer_name": "Carilion Materials Management"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "5585711c-4a25-4b91-ab53-3fd2ff096054",
+    "brand_name": "Good Sense All Day Pain Relief",
+    "generic_name": "NAPROXEN SODIUM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "64bd3a24-ec9f-4f9b-8739-30abcca9aed0",
+    "brand_name": "Amitriptyline Hydrochloride",
+    "generic_name": "AMITRIPTYLINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "09df946d-2930-9002-2ea6-80f0993d45dd",
+    "brand_name": "Oxybutynin Chloride",
+    "generic_name": "OXYBUTYNIN CHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "0acbbfe7-2497-3d7c-cdc6-a39c1a4db7d5",
+    "brand_name": "Ranitidine Hydrochloride",
+    "generic_name": "RANITIDINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

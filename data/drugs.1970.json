@@ -1,0 +1,56 @@
+[
+  {
+    "id": "f84b6693-8849-45c8-9395-681ff5885c5b",
+    "brand_name": "Orajel Maximum Strength",
+    "generic_name": "BENZOCAINE AND MENTHOL",
+    "manufacturer_name": "Church & Dwight Co., Inc."
+  },
+  {
+    "id": "cfd29d52-2541-45db-8ee5-15670b676663",
+    "brand_name": "Milk of Magnesia Mint",
+    "generic_name": "MAGNESIUM HYDROXIDE",
+    "manufacturer_name": "Select Brand"
+  },
+  {
+    "id": "6e07664e-1e21-4551-9b4b-868f344dd972",
+    "brand_name": "Paromomycin Sulfate",
+    "generic_name": "PAROMOMYCIN SULFATE",
+    "manufacturer_name": "Caraco Pharmaceutical Laboratories, Ltd."
+  },
+  {
+    "id": "faa27470-f1a4-461b-b2ae-4ae04a2f271a",
+    "brand_name": "GONGJINHYANG SEOL WHITENING JINAEK PROGRAM",
+    "generic_name": "DIACETYL BENZOYL LATHYROL",
+    "manufacturer_name": "LG Household and Healthcare, Inc."
+  },
+  {
+    "id": "7153bb12-c97e-46e8-83e3-ee919d9df9c9",
+    "brand_name": "Original Antiseptic",
+    "generic_name": "EUCALYPTOL",
+    "manufacturer_name": "Topco Associates, LLC"
+  },
+  {
+    "id": "ef02c797-de2b-bcd8-2c38-899ee3f1d49f",
+    "brand_name": "Secura Personal Cleanser",
+    "generic_name": "BENZETHONIUM CHLORIDE",
+    "manufacturer_name": "Smith & Nephew, Inc."
+  },
+  {
+    "id": "ebd6ebfb-bfc5-40be-a2a4-5e169d8bca02",
+    "brand_name": "Prandin",
+    "generic_name": "REPAGLINIDE",
+    "manufacturer_name": "Lake Erie Medical DBA Quality Care Products LLC"
+  },
+  {
+    "id": "8cbddfdb-d9f4-4d4a-b3e4-121e48c5adba",
+    "brand_name": "FIREFLY Pediatric",
+    "generic_name": "SODIUM MONOFLUOROPHOSPHATE",
+    "manufacturer_name": "Dr. Fresh, Inc."
+  },
+  {
+    "id": "8321224c-f3bf-4150-9e5b-6f0f2a9382df",
+    "brand_name": "Nitrofurantoin (monohydrate/macrocrystals)",
+    "generic_name": "NITROFURANTOIN (MONOHYDRATE/MACROCRYSTALS)",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

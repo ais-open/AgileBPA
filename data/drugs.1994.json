@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dae2150b-341a-4904-828e-31ac62e2cbda",
+    "brand_name": "DPT TOX",
+    "generic_name": "HYPERICUM,ECHINACEA,MEZEREUM,DROSERA,THUJA,KALI MURIATICUM,,SILICA,",
+    "manufacturer_name": "WHITE MANUFACTURING INC. DBA MICRO WEST"
+  },
+  {
+    "id": "009a7004-d6f0-4dfc-2763-6c5370c6dc68",
+    "brand_name": "Methotrexate Sodium",
+    "generic_name": "METHOTREXATE SODIUM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "32aa1074-1b00-5d7c-b1b0-3c0cc9720fd3",
+    "brand_name": "Childrens Silapap",
+    "generic_name": "ACETAMINOPHEN",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "98171975-cfa7-43f7-8301-9ca58e3eaa1e",
+    "brand_name": "laxative",
+    "generic_name": "BISACODYL",
+    "manufacturer_name": "Meijer Distribution Inc"
+  }
+]
