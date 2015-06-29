@@ -3,11 +3,11 @@
     Medication Detail
 </h2>
 <div class="medlist" ng-show="selectedDrug">
-    <div class="medication">
+    <div class="medication gray-container">
         <h3>{{ selectedDrug.brandName[0] }}</h3>
 
         <button class="btn btn-default pull-right" ng-click="confirmRemoval()">
-            Remove
+            <i class="fa fa-minus-circle"></i> Remove
         </button>
 
         <div class="med-info">
