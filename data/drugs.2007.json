@@ -1,0 +1,230 @@
+[
+  {
+    "id": "76d3c42c-12e8-4135-8ccf-3f3cb2d49de0",
+    "brand_name": "Bactroban",
+    "generic_name": "MUPIROCIN CALCIUM",
+    "manufacturer_name": "Physicians Total Care, Inc."
+  },
+  {
+    "id": "b863c65a-c72a-41e0-bd9a-ad26bcb80048",
+    "brand_name": "Fluorouracil",
+    "generic_name": "FLUOROURACIL",
+    "manufacturer_name": "GeneraMedix"
+  },
+  {
+    "id": "cc7edb93-c277-4960-891f-e0fcc4b390a3",
+    "brand_name": "Meloxicam",
+    "generic_name": "MELOXICAM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "0910da56-7686-0abd-5fe2-8976742db705",
+    "brand_name": "Paroxetine",
+    "generic_name": "PAROXETINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "6e8c4d20-7f6e-5278-06cb-d3c9e99a0173",
+    "brand_name": "Ondansetron Hydrochloride",
+    "generic_name": "ONDANSETRON",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "8cd2dd6e-40ca-4e4c-a2a3-a7b2f4224333",
+    "brand_name": "Clomipramine Hydrochloride",
+    "generic_name": "CLOMIPRAMINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "ee6d626a-cd50-d93e-fd02-448390e8320c",
+    "brand_name": "Paroxetine",
+    "generic_name": "PAROXETINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "35e46b99-7858-7e94-9e55-abce25b57a28",
+    "brand_name": "Isopto Carbachol",
+    "generic_name": "CARBACHOL",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "f666a739-fe1e-42ed-befc-5fd758afd859",
+    "brand_name": "Alprazolam",
+    "generic_name": "ALPRAZOLAM",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "ef0317d3-49c1-5afa-7edd-1aad10a20235",
+    "brand_name": "Isopto Homatropine",
+    "generic_name": "HOMATROPINE HYDROBROMIDE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "1acdc98b-2ac1-00da-2bc6-d3ec78b5b015",
+    "brand_name": "Naproxen Sodium",
+    "generic_name": "NAPROXEN SODIUM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "8b39fc1e-fb01-4f77-8f9a-9fe5d07b1555",
+    "brand_name": "Tri-Norinyl",
+    "generic_name": "NORETHINDRONE AND ETHINYL ESTRADIOL",
+    "manufacturer_name": "Watson Pharma, Inc."
+  },
+  {
+    "id": "1969d6f2-3f37-4317-a73b-09158f83e59c",
+    "brand_name": "dextroamphetamine sulfate",
+    "generic_name": "DEXTROAMPHETAMINE SULFATE",
+    "manufacturer_name": "Ethex Corporation"
+  },
+  {
+    "id": "b75e6570-c96a-4362-b1e6-2690b859816a",
+    "brand_name": "Furosemide",
+    "generic_name": "FUROSEMIDE",
+    "manufacturer_name": "DAVA Pharmaceuticals, Inc."
+  },
+  {
+    "id": "04b3b2ab-e575-0b38-e2dd-8e7627f58894",
+    "brand_name": "Isopto Hyoscine",
+    "generic_name": "SCOPOLAMINE HYDROBROMIDE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "8438b307-82f8-406a-a32e-d0c8a41527f7",
+    "brand_name": "Doxepin Hydrochloride",
+    "generic_name": "DOXEPIN HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "7a62cb1f-0cd0-44b5-9c73-b2a10914036e",
+    "brand_name": "Tretinoin",
+    "generic_name": "TRETINOIN",
+    "manufacturer_name": "Valeant Pharmaceuticals North America LLC"
+  },
+  {
+    "id": "4d57a23d-ee3b-47ea-a823-4f28e90fb98a",
+    "brand_name": "Hydrochlorothiazide",
+    "generic_name": "HYDROCHLOROTHIAZIDE",
+    "manufacturer_name": "DAVA Pharmaceuticals, Inc."
+  },
+  {
+    "id": "c421f83e-0afd-4fcc-9a4a-5491809923b0",
+    "brand_name": "Dicloxacillin Sodium",
+    "generic_name": "DICLOXACILLIN SODIUM",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "b1a220cd-5b4e-2660-4728-73b07ce5ed4e",
+    "brand_name": "Amlodipine Besylate",
+    "generic_name": "AMLODIPINE BESYLATE",
+    "manufacturer_name": "Dr Reddy's Laboratories"
+  },
+  {
+    "id": "592041a1-4cac-006d-16bc-bc05066ab0c2",
+    "brand_name": "Baclofen",
+    "generic_name": "BACLOFEN",
+    "manufacturer_name": "Bryant Ranch Rrepack"
+  },
+  {
+    "id": "f6b006d5-2fd8-44c1-a6d4-0c7317fd51f3",
+    "brand_name": "Doxepin Hydrochloride",
+    "generic_name": "DOXEPIN HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "31dd2d9c-b965-4bc3-9ab9-afdf4112fd48",
+    "brand_name": "Sulfamylon",
+    "generic_name": "MAFENIDE ACETATE",
+    "manufacturer_name": "Mylan Institutional Inc."
+  },
+  {
+    "id": "29d42c05-aff6-45ed-bc26-014e56345a51",
+    "brand_name": "Promethazine hydrochloride and phenylephrine hydrochloride",
+    "generic_name": "PROMETHAZINE HYDROCHLORIDE AND PHENYLEPHRINE HYDROCHLORIDE",
+    "manufacturer_name": "Actavis Mid Atlantic LLC"
+  },
+  {
+    "id": "f1aa17b3-43c4-4bc8-8fe7-705cf1d23e4b",
+    "brand_name": "Doxepin Hydrochloride",
+    "generic_name": "DOXEPIN HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "0b16af18-1f0f-4d35-93e0-73615c8dbb06",
+    "brand_name": "Doxepin Hydrochloride",
+    "generic_name": "DOXEPIN HYDROCHLORIDE",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "63386e33-7f14-5d5f-b789-6be6bd151049",
+    "brand_name": "Calcium Disodium Versenate",
+    "generic_name": "EDETATE CALCIUM DISODIUM",
+    "manufacturer_name": "Graceway Pharmaceuticals, LLC"
+  },
+  {
+    "id": "3aab3b39-52b6-4a79-9a5c-7baa7574f24f",
+    "brand_name": "Cystagon",
+    "generic_name": "CYSTEAMINE BITARTRATE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "0642ef5e-7eff-4117-a0df-4bd15d7b7d63",
+    "brand_name": "Ampicillin",
+    "generic_name": "AMPICILLIN SODIUM",
+    "manufacturer_name": "APP Pharmaceuticals, Inc."
+  },
+  {
+    "id": "d8dc77f4-d42f-4a5c-a4f7-cb001e6e3560",
+    "brand_name": "Doxepin Hydrochloride",
+    "generic_name": "DOXEPIN HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "b652fca3-30d3-463b-845f-109ce59b5e3c",
+    "brand_name": "MAT LUMIERE LONG-LASTING SOFT MATTE MAKEUP",
+    "generic_name": "TITANIUM DIOXIDE",
+    "manufacturer_name": "CHANEL PARUMS BEAUTE"
+  },
+  {
+    "id": "ad9473e3-81b6-431b-b8d7-5be9c8ad729b",
+    "brand_name": "Atenolol",
+    "generic_name": "ATENOLOL",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "7a7a6041-f76c-4507-bf58-99e119328991",
+    "brand_name": "Ampicillin and Sulbactam",
+    "generic_name": "AMPICILLIN SODIUM AND SULBACTAM SODIUM",
+    "manufacturer_name": "APP Pharmaceuticals, LLC"
+  },
+  {
+    "id": "604504a7-81e9-4d19-a161-96ee509f0d81",
+    "brand_name": "Microgestin Fe",
+    "generic_name": "NORETHINDRONE ACETATE AND ETHINYL ESTRADIOL AND FERROUS FUMARATE",
+    "manufacturer_name": "Actavis Pharma, Inc."
+  },
+  {
+    "id": "9adad150-da57-4281-bfab-7780c25f26a6",
+    "brand_name": "Esmolol Hydrochloride",
+    "generic_name": "ESMOLOL HYDROCHLORIDE",
+    "manufacturer_name": "West Ward Pharmaceutical Corporation"
+  },
+  {
+    "id": "c68d2338-c43e-4a64-8da4-c93873c5a3c8",
+    "brand_name": "Ampicillin and Sulbactam",
+    "generic_name": "AMPICILLIN SODIUM AND SULBACTAM SODIUM",
+    "manufacturer_name": "APP Pharmaceuticals, LLC"
+  },
+  {
+    "id": "67202808-6a4f-05ba-60cf-60f5a1b2ff57",
+    "brand_name": "Sertraline Hydrochloride",
+    "generic_name": "SERTRALINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "751fb29f-16b5-4fd8-9fee-d1fa5cb2db92",
+    "brand_name": "Atenolol",
+    "generic_name": "ATENOLOL",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

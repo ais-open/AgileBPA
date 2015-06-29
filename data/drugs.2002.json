@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b9aed06d-6fd4-37bb-215d-dae20a72fdc8",
+    "brand_name": "Lexapro",
+    "generic_name": "ESCITALOPRAM OXALATE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "5909fa53-4fa0-78de-e99b-9d5c5edf1d6e",
+    "brand_name": "Tizanidine",
+    "generic_name": "TIZANIDINE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "804a4d12-fb9c-857d-11d4-f9ed26b40a9c",
+    "brand_name": "Lexapro",
+    "generic_name": "ESCITALOPRAM OXALATE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "6c379f2d-7ef1-0030-ed0d-d3227c602964",
+    "brand_name": "Tizanidine",
+    "generic_name": "TIZANIDINE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

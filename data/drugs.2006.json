@@ -1,0 +1,284 @@
+[
+  {
+    "id": "dc06b24f-2ac9-440e-92b4-8e575d2dfcee",
+    "brand_name": "PlusPHARMA",
+    "generic_name": "SIMETHICONE",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "f7f0c289-9fed-40e8-b9ca-d1281b1123d6",
+    "brand_name": "Probenecid",
+    "generic_name": "PROBENECID",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "8a8d1d28-d779-492c-9671-20d94c36a0d1",
+    "brand_name": "Plus Pharma Senna Standardized Senna Concentrate 8.6 mg Sennosides Each",
+    "generic_name": "SENNOSIDES",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "57a46a6a-3434-4dbe-82d6-794c9ad50038",
+    "brand_name": "Daily Fade SPF15",
+    "generic_name": "SUNSCREEN",
+    "manufacturer_name": "Biocosetic Research Labs"
+  },
+  {
+    "id": "fda60e8e-d746-4087-99c9-c39c79e93966",
+    "brand_name": "Plus Pharma Pain Reliever,Fever Reducer 325 mg",
+    "generic_name": "ACETAMINOPHEN",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "127d67c5-eb2c-4062-8bc9-99700096cec5",
+    "brand_name": "Plus Pharma NSAID 325 mg",
+    "generic_name": "ASPIRIN",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "38db7765-dbeb-463a-a064-ece0c613780f",
+    "brand_name": "Probenecid",
+    "generic_name": "PROBENECID",
+    "manufacturer_name": "Carilion Materials Management"
+  },
+  {
+    "id": "0d2db84b-5c4d-4cfb-953d-654f669e2b84",
+    "brand_name": "Pentazocine and naloxone",
+    "generic_name": "PENTAZOCINE HYDROCHLORIDE AND NALOXONE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "69a911e4-927e-4953-af34-0ad2cef1eec9",
+    "brand_name": "Nystatin",
+    "generic_name": "NYSTATIN",
+    "manufacturer_name": "Actavis Mid Atlantic LLC"
+  },
+  {
+    "id": "41a98c36-0d72-4cfe-a5fa-ba39df58439b",
+    "brand_name": "Nystatin",
+    "generic_name": "NYSTATIN",
+    "manufacturer_name": "Actavis Mid Atlantic LLC"
+  },
+  {
+    "id": "d1e0020c-2fd3-920a-f196-2e1079eae8f4",
+    "brand_name": "Minitran",
+    "generic_name": "NITROGLYCERIN",
+    "manufacturer_name": "Graceway Pharmaceuticals, LLC"
+  },
+  {
+    "id": "7121273d-b9b1-47cf-8d44-5ddd2bf61cc9",
+    "brand_name": "PlusPharma Extra Strength PAIN RELIEVER,FEVER REDUCER 500 mg",
+    "generic_name": "ACETAMINOPHEN",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "eaf9aea0-3a5a-475b-a402-86a62a30fc85",
+    "brand_name": "Plus Pharma Extra Strength PM",
+    "generic_name": "ACETAMINOPHEN,DIPHENHYDRAMINE HCL",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "d916f2ab-5567-4b41-ae3f-0ab409d016f6",
+    "brand_name": "PlusPharma Extra Strength PAIN RELIEVER,FEVER REDUCER 500 mg",
+    "generic_name": "ACETAMINOPHEN",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "41f85c2b-59e8-4afd-9e0c-e14692d5c727",
+    "brand_name": "Chlorothiazide",
+    "generic_name": "CHLOROTHIAZIDE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "3f830175-e2d8-410d-b25a-49e4cc3c97e4",
+    "brand_name": "Captopril and Hydrochlorothiazide",
+    "generic_name": "CAPTOPRIL AND HYDROCHLOROTHIAZIDE",
+    "manufacturer_name": "Mylan Phamaceuticals Inc."
+  },
+  {
+    "id": "ba62a8ba-657c-4ce0-859f-fe75d36d5e4c",
+    "brand_name": "PlusPHARMA Stool Softener 100 mg",
+    "generic_name": "DOCUSATE SODIUM",
+    "manufacturer_name": "Gemini Pharmaceuticals, Inc. dba Plus Pharma"
+  },
+  {
+    "id": "baa9a202-e9cd-4995-8d8a-6a4abf66e0d4",
+    "brand_name": "Clonazepam",
+    "generic_name": "CLONAZEPAM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "4dd38d9b-c5cf-450a-8c78-0ba312bdbf6f",
+    "brand_name": "Ampicillin",
+    "generic_name": "AMPICILLIN TRIHYDRATE",
+    "manufacturer_name": "DAVA Pharmaceuticals, Inc."
+  },
+  {
+    "id": "9f40f44a-a64e-4015-a31c-99b3c241d0cf",
+    "brand_name": "Fexofenadine Hydrochloride",
+    "generic_name": "FEXOFENADINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "6413fd5c-f403-4e6c-95e5-a8774f305ede",
+    "brand_name": "MICRELL Antibacterial Foam Handwash",
+    "generic_name": "CHLOROXYLENOL",
+    "manufacturer_name": "GOJO Industries, Inc."
+  },
+  {
+    "id": "7ebadcb8-7c7b-4409-8653-900b361ecc54",
+    "brand_name": "Skin Perfecting Acne and Blemish Wash",
+    "generic_name": "SALICYLIC ACID",
+    "manufacturer_name": "Biocosmetics Research Labs"
+  },
+  {
+    "id": "38129a3d-8de8-4028-91bf-8e69fa98df46",
+    "brand_name": "Warfarin Sodium",
+    "generic_name": "WARFARIN SODIUM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "30d54796-9513-4a40-8710-929fc64801f8",
+    "brand_name": "Prometh with Dextromethorphan",
+    "generic_name": "PROMETHAZINE HYDROCHLORIDE, DEXTROMETHORPHAN HYDROBROMIDE",
+    "manufacturer_name": "Actavis Mid Atlantic LLC"
+  },
+  {
+    "id": "469fcc0f-5813-4fcc-87ae-773130d936a2",
+    "brand_name": "Hydrocortisone",
+    "generic_name": "HYDROCORTISONE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "5d57c2f5-1287-4d58-98d5-b441c78e6d82",
+    "brand_name": "Diltiazem Hydrochloride",
+    "generic_name": "DILTIAZEM HYDROCHLORIDE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "934e68b3-4b24-4c40-b45c-c06dc1daf24c",
+    "brand_name": "Loperamide Hydrochloride",
+    "generic_name": "LOPERAMIDE HYDROCHLORIDE",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "e0433fa2-3f9d-4f22-bd66-f6ad0640d240",
+    "brand_name": "GABAPENTIN",
+    "generic_name": "GABAPENTIN",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "f4918c15-5eb0-474d-a54e-979f09523eb1",
+    "brand_name": "Loperamide Hydrochloride",
+    "generic_name": "LOPERAMIDE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "cb884a5e-bc13-43d8-9b2f-f3ee50db896c",
+    "brand_name": "Timolol Maleate",
+    "generic_name": "TIMOLOL MALEATE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "282cc55b-b17e-42ee-8b13-ac6393ebb6de",
+    "brand_name": "Loperamide Hydrochloride",
+    "generic_name": "LOPERAMIDE HYDROCHLORIDE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "e1d1e1da-81dc-4fb1-a9af-8d8d5af67a34",
+    "brand_name": "Verapamil Hydrochloride",
+    "generic_name": "VERAPAMIL HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "fc7b7123-1b57-4010-a534-3e3adc5a75ce",
+    "brand_name": "Permethrin",
+    "generic_name": "PERMETHRIN",
+    "manufacturer_name": "Actavis Mid Atlantic LLC"
+  },
+  {
+    "id": "f176c516-e0bc-411c-959c-0773c00b5140",
+    "brand_name": "Clonidine Hydrochloride",
+    "generic_name": "CLONIDINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "2e7c1e97-b8b2-44c0-aeac-18f9142a522b",
+    "brand_name": "Albuterol",
+    "generic_name": "ALBUTEROL",
+    "manufacturer_name": "UDL Laboratories, Inc."
+  },
+  {
+    "id": "356497f6-3447-4c65-9c81-6a78542a37e8",
+    "brand_name": "Leader Sinus and Allergy PE",
+    "generic_name": "CHLORPHENIRAMINE MALEATE, PHENYLEPHRINE HCL",
+    "manufacturer_name": "Cardinal Health"
+  },
+  {
+    "id": "241de6c7-7b96-481f-afc5-820b36ff2f2d",
+    "brand_name": "Normosol-R",
+    "generic_name": "SODIUM CHLORIDE, SODIUM ACETATE ANHYDROUS, SODIUM GLUCONATE, POTASSIUM CHLORIDE, AND MAGNESIUM CHLORIDE",
+    "manufacturer_name": "Hospira, Inc."
+  },
+  {
+    "id": "f57dd9e8-d54e-43db-a263-73ffef7d9e84",
+    "brand_name": "Nitrofurantoin (macrocrystals)",
+    "generic_name": "NITROFURANTOIN (MACROCRYSTALS)",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "3ab6149e-1782-4e22-8f55-b581909cd2e2",
+    "brand_name": "Care One Sinus and Allergy PE",
+    "generic_name": "CHLORPHENIRAMINE MALEATE, PHENYLEPHRINE HCL",
+    "manufacturer_name": "American Sales Company"
+  },
+  {
+    "id": "1552e82c-55d9-4f87-84e8-4e4c0ff6218c",
+    "brand_name": "Clonidine Hydrochloride",
+    "generic_name": "CLONIDINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "96bba317-77a9-42f7-8a00-24b67d25b8d2",
+    "brand_name": "Nitrofurantoin",
+    "generic_name": "NITROFURANTOIN",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "cf4e81fa-b24d-f099-6fd0-45120fe48bd7",
+    "brand_name": "Metronidazole",
+    "generic_name": "METRONIDAZOLE",
+    "manufacturer_name": "G & W Laboratories, Inc."
+  },
+  {
+    "id": "1354f842-5a09-4a4c-afef-5ba0574fe9d8",
+    "brand_name": "Clonidine Hydrochloride",
+    "generic_name": "CLONIDINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "608d08b0-6a4e-412a-b82f-4341fac5f473",
+    "brand_name": "ACETAMINOPHEN and CODEINE",
+    "generic_name": "ACETAMINOPHEN AND CODEINE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "dc23a304-c10e-48f0-8414-9d2c485f7406",
+    "brand_name": "Clonidine Hydrochloride",
+    "generic_name": "CLONIDINE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "505555b2-7534-4269-9569-638814a7b8d1",
+    "brand_name": "Nizatidine",
+    "generic_name": "NIZATIDINE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "bc616aad-0be0-bd23-58d2-cf727aa9bb2a",
+    "brand_name": "BSS PLUS",
+    "generic_name": "BALANCED SALT SOLUTION ENRICHED WITH BICARBONATE, DEXTROSE, AND GLUTATHIONE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  }
+]

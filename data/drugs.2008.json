@@ -1,0 +1,332 @@
+[
+  {
+    "id": "1d33bb86-a544-4fdc-9f16-c76b848ab303",
+    "brand_name": "Anti-acne",
+    "generic_name": "SALICYLIC ACID",
+    "manufacturer_name": "Biocosmetics Research Labs"
+  },
+  {
+    "id": "cb67c67c-56b3-4683-b448-5f3d4173e787",
+    "brand_name": "Indomethacin",
+    "generic_name": "INDOMETHACIN",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "4ce2b8a7-5adb-4a07-8886-7e8ab0b7125c",
+    "brand_name": "Indomethacin",
+    "generic_name": "INDOMETHACIN",
+    "manufacturer_name": "Physicians Total Care, Inc."
+  },
+  {
+    "id": "f49baf56-9d2b-4873-9d61-104e08e8c152",
+    "brand_name": "Indomethacin",
+    "generic_name": "INDOMETHACIN",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "d8eb58b1-5963-45ae-80c9-af5c92b4fffa",
+    "brand_name": "TRAZODONE",
+    "generic_name": "TRAZODONE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "966c5301-f99b-4cac-965d-17c92a48ec3e",
+    "brand_name": "Diethylpropion HCl Controlled-Release",
+    "generic_name": "DIETHYLPROPION HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "a08ebf5b-4c33-4191-bc46-2925d7c4957c",
+    "brand_name": "Indomethacin",
+    "generic_name": "INDOMETHACIN",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "64c527ca-3cba-423e-aa5d-ea261984f3a2",
+    "brand_name": "Temazepam",
+    "generic_name": "TEMAZEPAM",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "b2af33bd-d84c-45e9-ad52-c4a892d9afa1",
+    "brand_name": "TRAZODONE",
+    "generic_name": "TRAZODONE HYDROCHLORIDE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "4a0da02d-fde4-4483-bbff-43943a40b8b7",
+    "brand_name": "simvastatin",
+    "generic_name": "SIMVASTATIN",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "cbf45a6c-a73a-4e3f-bc2a-627af8b046d0",
+    "brand_name": "Temazepam",
+    "generic_name": "TEMAZEPAM",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "feb24692-8b43-4789-b895-0a78bee50338",
+    "brand_name": "ZALEPLON",
+    "generic_name": "ZALEPLON",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "dcfbdc70-fd2d-40f0-b43d-8141cb0b96fc",
+    "brand_name": "COLAZAL",
+    "generic_name": "BALSALAZIDE DISODIUM",
+    "manufacturer_name": "Salix Pharmaceuticals, Inc."
+  },
+  {
+    "id": "66ee4852-e2c9-462f-9659-c365546b3cbd",
+    "brand_name": "TACLONEX SCALP",
+    "generic_name": "CALCIPOTRIENE 0.005% AND BETAMETHASONE DIPROPIONATE 0.064%",
+    "manufacturer_name": "Warner Chilcott (US), LLC"
+  },
+  {
+    "id": "f1d13e20-d413-412e-85d5-1384c69d4d6c",
+    "brand_name": "Tolmetin Sodium",
+    "generic_name": "TOLMETIN SODIUM",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "a2957c48-05ee-4300-b55a-11461b4a9548",
+    "brand_name": "Betoptic S",
+    "generic_name": "BETAXOLOL HYDROCHLORIDE",
+    "manufacturer_name": "Alcon Laboratories, Inc."
+  },
+  {
+    "id": "bda3ab19-f62f-451f-85de-b4bb55275a6b",
+    "brand_name": "LIFT LUMIERE FIRMING AND SMOOTHING FLUID MAKEUP SPF 15",
+    "generic_name": "OCTINOXATE, TITANIUM DIOXIDE",
+    "manufacturer_name": "CHANEL PARFUMS BEAUTE"
+  },
+  {
+    "id": "cd2ad627-d618-43b7-9bb5-e460a99d796b",
+    "brand_name": "Nisoldipine",
+    "generic_name": "NISOLDIPINE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "ed3d0907-14e3-41a5-8afb-6d7cd4edca4b",
+    "brand_name": "Tolmetin Sodium",
+    "generic_name": "TOLMETIN SODIUM",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "df43f3a8-a58f-4225-a730-d6d23c339415",
+    "brand_name": "Naproxen",
+    "generic_name": "NAPROXEN",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "7eae31cb-8683-4eb0-9dfa-57bfa0a1b29d",
+    "brand_name": "PROVIGIL",
+    "generic_name": "MODAFINIL",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "0b12c46c-f046-4cb1-a290-4795b196e2ff",
+    "brand_name": "Iodent Fluoride Mint",
+    "generic_name": "SODIUM MONOFLUOROPHOSPHATE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "f403a903-8263-cfed-3956-a246eae740b0",
+    "brand_name": "Halobetasol Propionate",
+    "generic_name": "HALOBETASOL PROPIONATE",
+    "manufacturer_name": "GW Laboratories, Inc."
+  },
+  {
+    "id": "e02e81ac-3c13-4aa1-9777-8cb6ddc1a3ea",
+    "brand_name": "Ketorolac Tromethamine",
+    "generic_name": "KETOROLAC TROMETHAMINE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "77714ef0-e991-4294-9566-9117cf851d6d",
+    "brand_name": "Freshmint Anticavity Fluoride Gel Toothpaste",
+    "generic_name": "FLUORIDE TOOTHPASTE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "be20e36e-0b6e-7b05-82ac-7078b2befd03",
+    "brand_name": "Albumin (Human)",
+    "generic_name": "ALBUMIN HUMAN",
+    "manufacturer_name": "Octapharma Pharmazeutika Produktionsgesellschaft m.b.H."
+  },
+  {
+    "id": "77eb7770-e405-4fac-8c93-931ed015ddbd",
+    "brand_name": "Indomethacin",
+    "generic_name": "INDOMETHACIN",
+    "manufacturer_name": "Mylan Institutional Inc."
+  },
+  {
+    "id": "10d1656a-3d9e-495b-89a1-c6f4bc16a995",
+    "brand_name": "Furosemide",
+    "generic_name": "FUROSEMIDE",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "83da6c1d-bb8e-430a-87fe-93b4bc22420d",
+    "brand_name": "Diamox Sequels",
+    "generic_name": "ACETAZOLAMIDE",
+    "manufacturer_name": "Duramed Pharmaceuticals, Inc."
+  },
+  {
+    "id": "3161f610-bf6e-45ee-89b4-10f65c908c61",
+    "brand_name": "Iodent Fluoride Toothpaste",
+    "generic_name": "FLUORIDE TOOTHPASTE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "7bbd3de6-b26b-49bf-80e8-717d6b33ed17",
+    "brand_name": "Freshmint Sensitive Toothpaste",
+    "generic_name": "FLUORIDE TOOTHPASTE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "7fc09e55-b28d-9197-a808-a6b341102f06",
+    "brand_name": "Albumin (Human)",
+    "generic_name": "ALBUMIN HUMAN",
+    "manufacturer_name": "Octapharma Pharmazeutika Produktionsgesellschaft m.b.H."
+  },
+  {
+    "id": "8eea2823-e207-4870-b9f9-25eae9637a7c",
+    "brand_name": "Maxixum Security Gel Toothpaste",
+    "generic_name": "FLUORIDE TOOTHPASTE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "c136259c-ec90-4347-92a7-663430bd3014",
+    "brand_name": "Clinpro 5000",
+    "generic_name": "SODIUM FLUORIDE",
+    "manufacturer_name": "3M ESPE Dental Products"
+  },
+  {
+    "id": "0115cedc-4781-0619-f8c9-82e8199df443",
+    "brand_name": "Albumin (Human)",
+    "generic_name": "ALBUMIN HUMAN",
+    "manufacturer_name": "Octapharma Pharmazeutika Produktionsgesellschaft m.b.H."
+  },
+  {
+    "id": "1f6b419d-7178-4d78-9005-4847c7d8b44f",
+    "brand_name": "Lice Treatment",
+    "generic_name": "PERMETHRIN",
+    "manufacturer_name": "McKesson"
+  },
+  {
+    "id": "1c7b06b3-33df-4423-8ca2-c2327db50038",
+    "brand_name": "Divalproex Sodium",
+    "generic_name": "DIVALPROEX SODIUM",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "f1be53e3-f694-47b0-9652-f33ae84b1aa1",
+    "brand_name": "Alvesco",
+    "generic_name": "CICLESONIDE",
+    "manufacturer_name": "Physicians Total Care, Inc."
+  },
+  {
+    "id": "f1e99169-7809-3ffe-9e1c-ee8f98fed4cd",
+    "brand_name": "Fluticasone Propionate",
+    "generic_name": "FLUTICASONE PROPIONATE",
+    "manufacturer_name": "GW Laboratories, Inc"
+  },
+  {
+    "id": "0da6f122-92ec-4282-a423-ca28d60ddbf7",
+    "brand_name": "Ketorolac Tromethamine",
+    "generic_name": "KETOROLAC TROMETHAMINE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "0595271e-2083-4c54-9201-ec3a7672dad7",
+    "brand_name": "Bee Smart",
+    "generic_name": "SODIUM MONOFLUOROPHOSPHATE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "7b64f179-d501-48d7-80d6-40485dda052d",
+    "brand_name": "Maxixum Security Gel Toothpaste",
+    "generic_name": "FLUORIDE TOOTHPASTE",
+    "manufacturer_name": "Dabur India Limited"
+  },
+  {
+    "id": "3cba65f5-8804-11d0-b97e-62b284597f87",
+    "brand_name": "FLUOXETINE",
+    "generic_name": "FLUOXETINE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "f94091aa-1ed9-463a-92a5-71136ae0af11",
+    "brand_name": "Primaquine Phosphate",
+    "generic_name": "PRIMAQUINE PHOSPHATE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "d454c75f-0e59-a40f-9ad9-d7fab0da0390",
+    "brand_name": "Metoclopramide Hydrochloride",
+    "generic_name": "METOCLOPRAMIDE HYDROCHLORIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "babb21b0-2ea1-4cb5-a232-d161254fb6d1",
+    "brand_name": "Rescriptor",
+    "generic_name": "DELAVIRDINE MESYLATE",
+    "manufacturer_name": "AGOURON"
+  },
+  {
+    "id": "50ce7901-3328-49fe-a773-ed3ca33e6320",
+    "brand_name": "femhrt",
+    "generic_name": "NORETHINDRONE ACETATE/ETHINYL ESTRADIOL",
+    "manufacturer_name": "Physicians Total Care, Inc."
+  },
+  {
+    "id": "1ff481d5-133f-441f-9634-65b48eb2d23a",
+    "brand_name": "Chlorzoxazone",
+    "generic_name": "CHLORZOXAZONE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "60009529-60fa-4c14-9abf-d812a161f92a",
+    "brand_name": "AVONEX",
+    "generic_name": "INTERFERON BETA-1A",
+    "manufacturer_name": "Biogen Idec MA Inc."
+  },
+  {
+    "id": "66713426-d736-4bf2-9878-c655dc9a4902",
+    "brand_name": "Oxycodone and Acetaminophen",
+    "generic_name": "OXYCODONE AND ACETAMINOPHEN",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "6dd1a001-9fbb-4247-59ab-aa31e5283a05",
+    "brand_name": "ZOMIG",
+    "generic_name": "ZOLMITRIPTAN",
+    "manufacturer_name": "AstraZeneca Pharmaceuticals LP"
+  },
+  {
+    "id": "c4b826b8-4079-4e08-b9eb-6c5306abb339",
+    "brand_name": "Equaline muscle rub ultra strength",
+    "generic_name": "CAMPHOR, MENTHOL, METHYL SALICYLATE",
+    "manufacturer_name": "Supervalu Inc"
+  },
+  {
+    "id": "132b3818-681a-4369-b606-b95b0f2486c6",
+    "brand_name": "Nitroglycerin",
+    "generic_name": "NITROGLYCERIN",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "c775bdd4-b389-4b09-ab68-75fcd73e29bf",
+    "brand_name": "Voltaren",
+    "generic_name": "DICLOFENAC SODIUM",
+    "manufacturer_name": "Unit Dose Services"
+  },
+  {
+    "id": "0caf812b-a1c7-4f82-d797-3d13071f7e80",
+    "brand_name": "ZOMIG ZMT",
+    "generic_name": "ZOLMITRIPTAN",
+    "manufacturer_name": "AstraZeneca Pharmaceuticals LP"
+  }
+]

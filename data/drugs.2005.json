@@ -1,0 +1,44 @@
+[
+  {
+    "id": "330a17a1-029d-4dd7-8203-c5bd9b79ce29",
+    "brand_name": "Tussin CF Dextromethorphan HBr, Guaifenesin, Phenylephrine HCL",
+    "generic_name": "ROBITUSSIN CF",
+    "manufacturer_name": "Aaron Industries Inc"
+  },
+  {
+    "id": "a0bf36b3-e4d5-4f67-907f-4110d21dbd83",
+    "brand_name": "Hexabrix",
+    "generic_name": "IOXAGLATE MEGLUMINE AND IOXAGLATE SODIUM",
+    "manufacturer_name": "Mallinckrodt Inc."
+  },
+  {
+    "id": "ca386c45-4609-4bff-9bab-bdf0b879a7e4",
+    "brand_name": "Lunesta",
+    "generic_name": "ESZOPICLONE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "2611d6ae-c91b-4eb0-9908-51e6ffb20e86",
+    "brand_name": "Nizatidine",
+    "generic_name": "NIZATIDINE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "b1270af1-47f9-4339-8046-74b3dbc0c0ec",
+    "brand_name": "Cimetidine",
+    "generic_name": "CIMETIDINE",
+    "manufacturer_name": "PD-Rx Pharmaceuticals, Inc."
+  },
+  {
+    "id": "bc1ef0b4-9ca2-414b-9984-7c033fd54e09",
+    "brand_name": "Allopurinol",
+    "generic_name": "ALLOPURINOL",
+    "manufacturer_name": "Mylan Pharmaceuticals Inc."
+  },
+  {
+    "id": "452ed884-fdec-4717-a320-0abf94e0922a",
+    "brand_name": "Glimepiride",
+    "generic_name": "GLIMEPIRIDE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

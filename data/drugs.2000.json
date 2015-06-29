@@ -1,0 +1,20 @@
+[
+  {
+    "id": "bc619ce2-35ee-4373-b56b-21d7d96e21fd",
+    "brand_name": "DHS TAR",
+    "generic_name": "COAL TAR",
+    "manufacturer_name": "Person and Covey"
+  },
+  {
+    "id": "f23998a2-de80-4ffb-9241-11c609a14632",
+    "brand_name": "Phenobarbital",
+    "generic_name": "PHENOBARBITAL",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "5e8a172f-839a-4e30-9598-f79e1a564990",
+    "brand_name": "Diphenoxylate Hydrochloride and Atropine Sulfate",
+    "generic_name": "DIPHENOXYLATE HYDROCHLORIDE AND ATROPINE SULFATE",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]

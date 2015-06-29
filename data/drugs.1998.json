@@ -1,0 +1,20 @@
+[
+  {
+    "id": "136d8d98-acb0-4cc9-aee3-0cbe3921e6f1",
+    "brand_name": "Rifampin",
+    "generic_name": "RIFAMPIN",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  },
+  {
+    "id": "cffd71e1-3019-4372-aaa9-46ca2b4cc68b",
+    "brand_name": "Methadone Hydrochloride",
+    "generic_name": "METHADONE HYDROCHLORIDE",
+    "manufacturer_name": "Mallinckrodt, Inc."
+  },
+  {
+    "id": "d0efddfc-344e-4fa4-b750-62d86d83a46b",
+    "brand_name": "CELEBREX",
+    "generic_name": "CELECOXIB",
+    "manufacturer_name": "Bryant Ranch Prepack"
+  }
+]
