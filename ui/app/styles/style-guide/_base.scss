@@ -1,0 +1,331 @@
+// Style Guide Overrides
+body.style-guide {
+  background: #f2f2f2;
+  overflow-x: hidden;
+  padding-top: 0;
+}
+
+.style-guide {
+        
+        .navbar {
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+                box-shadow: 0 1px 2px 0px rgba(0,0,0,.2);
+                a.logo {
+                        display: inline-block;
+                        padding-top: 2px;
+                        background: #FFF url('../images/logo-mark-mmc.png') center no-repeat;
+                        background-size: contain;
+                        text-indent: -9999px;
+                        width: 40px;
+                        height: 45px;
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        vertical-align: middle;
+                }
+        }
+
+        .ampersand {
+                color: $brand-red;
+        }
+
+        .library-container {
+                width: 96%;
+                margin: 0 auto;
+                background: white;
+
+                &.nav {
+                        padding: 0;
+                }
+        }
+
+        .content-container {
+                background: white;
+                padding-top: 15px;
+        }
+
+        .group {
+                margin-top: 35px;
+                padding-bottom: 35px;
+
+                &:first-of-type {
+                        margin-top: 0;
+                        padding-bottom: 15px;
+                }
+        } 
+
+        .pattern {
+                margin: 25px 0 0;
+                padding: 10px;
+                border: 1px solid $gray-lighter;
+                border-radius: 4px;
+
+                h2 {
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                }
+                
+                .primer {
+                        margin-bottom: 20px;
+                }
+        }
+
+        .primer h2 {
+                font-family: "Lato", Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                color: $text-color;
+                font-weight: 700;
+        }
+
+        h6 {
+                margin-top: 20px;
+                margin-bottom: 0;
+        }
+
+        .dropdown-header {
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                padding-left: 0;
+        }
+
+        // Remove negative margins for .row in Pattern Library 
+        .row {
+                margin-left: 0;
+                margin-right: 0;
+        }
+
+        .navbar-header.pl .logo {
+                font-size: 20px;
+        }
+
+        .subname {
+                margin-bottom: 15px;
+                display: inline-block;
+                vertical-align: 1px;
+                color: $brand-blue;
+        }
+
+        .navbar.pl {
+                background: white;
+                border: 0;
+                margin-bottom: 0;
+                position: relative;
+                z-index: 1030;
+        }
+
+        .navbar-header.pl {
+                padding-top: 10px;
+        }
+
+        .navbar-toggle.pl {
+                background: $brand-teal;
+                color: white;
+                position: absolute;
+                top: 13px;
+                right: 0;
+                border: 0;
+        }
+
+        .navbar-toggle.pl .icon-bar {
+                background: white;
+        }
+
+        @media (min-width: 768px) {
+                .navbar-toggle.pl  {
+                        display: block;
+                }
+        }
+
+        @media (min-width: 1100px) {
+                .navbar-toggle.pl  {
+                        display: none;
+                }
+        }
+
+        @media (min-width: 500px) {
+                .navbar-toggle.pl  {
+                        top: 0;
+                }
+        }
+
+        .nav a.section-list {
+                background: $brand-blue;
+                color: white;
+                position: relative;
+
+                &:hover,
+                &:focus {
+                        background: darken($brand-blue, 10%);
+                }
+        } 
+
+        .nav .open a.section-list {
+                background: darken($brand-blue, 10%);
+                color: white;
+        }
+
+        .sidebar-offcanvas {
+                padding: 15px;
+        }
+
+        .sidebar-offcanvas hr {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-top: 1px solid #e4e4e4;
+        }
+
+        .color-guide h6 {
+                margin-bottom: 0;
+        }
+
+        .color-guide h1 {
+                margin-top: 0;
+        }
+
+        .thumbnail .color-guide {
+                padding: 35px 15px;
+                display: block;
+                font-size: 20px;
+                text-align: center;
+        }
+
+        .blue {
+                background-color: $brand-blue;
+        }
+
+        .teal {
+                background-color: $brand-teal;
+        }
+
+        .light-blue {
+                background-color: $brand-light-blue;
+        }
+
+        .almost-white {
+                background-color: $brand-almost-white;
+        }
+
+        .red {
+                background-color: $brand-red;
+        }
+
+        .text-color {
+                background-color: $text-color;
+        }
+
+        .thumbnail .color-guide.blue,
+        .thumbnail .color-guide.teal,
+        .thumbnail .color-guide.red,
+        .thumbnail .color-guide.text-color {
+                color: white ;
+        }
+
+        .thumbnail small {
+                font-weight: 700;
+                text-transform: uppercase;
+        }                                                
+
+        table .alert {
+                margin-bottom: 0;
+                text-align: center;
+        }
+
+        ol li {
+                margin: 5px 0;
+        }
+
+}
+
+
+// Off Canvas
+@media screen and (max-width: 1099px) {
+  .expand {
+    display: block;
+  }
+
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .expand {
+    display: block;
+  }
+
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -65%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -65%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 65%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 65%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 65%; /* 6 columns */
+  }
+}
+
+
+

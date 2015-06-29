@@ -1,9 +1,9 @@
 body, html {
-//    background: $light;
-//    color: $dark;
-//    font-family: $font-main;
-    height: 100%;
-    background: url('../images/pattern-bg-tissue.png') repeat;
+    height: 100%; 
+}
+
+body {
+    background: $brand-blue url('../images/pattern-bg-tissue.png') repeat;
 }
 
 a {

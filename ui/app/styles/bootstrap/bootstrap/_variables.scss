@@ -18,7 +18,7 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $brand-blue:			#13455e !default;
 $brand-teal:			#59abb3;
 $brand-light-blue:		#dfeef0;
-$brand-almost-white:			#f5f9fa;
+$brand-almost-white:	#f5f9fa;
 $brand-red:				#dc7269;
 
 $brand-primary:         $brand-blue !default; 
@@ -40,9 +40,9 @@ $body-bg:               #fff !default;
 $text-color:            $gray-darker !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            lighten($brand-blue, 15%) !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      lighten($link-color, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -74,10 +74,11 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-serif !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          $brand-blue !default;
+$headings-font-family:    	$font-family-serif !default;
+$headings-font-weight:    	500 !default;
+$headings-line-height:    	1.1 !default;
+$headings-color:          	$brand-blue !default;
+$headings-color-alternate:  $brand-teal !default;
 
 
 //== Iconography

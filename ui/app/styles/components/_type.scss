@@ -1,0 +1,16 @@
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+h3, h4,
+.h3, .h4{
+  font-weight: 700;
+  letter-spacing: 0.0125em;
+  color: $headings-color-alternate;
+}
+
+h6, .h6 {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

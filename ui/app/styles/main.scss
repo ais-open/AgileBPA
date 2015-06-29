@@ -1,19 +1,26 @@
 @charset 'utf-8';
 
+// Framewrok
 @import 'bootstrap/bootstrap';
+
+// Fonts
 @import 'font-awesome';
 
+// My Medicine
 @import 'defaults/colors',
         'defaults/fonts',
         'defaults/defaults',
         'defaults/bsoverrides',
-        'defaults/forms',
         'components/navbar',
         'components/sidebar',
         'components/footer',
         'components/medications',
         'components/news-items',
 	'components/profile',
-	'components/forms',
+	'components/forms',     
+        'components/type',
         'pages/main'
 ;
+
+// Style Guide
+@import 'style-guide/base';                           
