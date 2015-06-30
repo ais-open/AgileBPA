@@ -1,0 +1,25 @@
+.line-divide {
+	margin-top: 40px;
+	padding-top: 25px;
+	border-top: 1px solid $gray-lighter;
+}
+
+.company-logo {
+
+	img {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 25px;
+		margin-top: 15px;
+	}
+}
+
+@media (min-width: 768px) {
+	.company-logo {
+		text-align: center;
+
+		img {
+			margin-top: 0;
+		}
+	}
+}

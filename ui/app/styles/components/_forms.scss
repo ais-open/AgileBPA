@@ -1,3 +1,12 @@
+@media (max-width: 768px) {
+	main {
+		.btn,
+		button {
+			width: 100%;
+		}
+	}
+}
+
 button[ng-click="saveProfile()"] {
 	margin-top: 15px;
 }
@@ -26,7 +35,7 @@ button[ng-click="saveProfile()"] {
 	}
 }
 
-label:after {
+label.required:after {
 	content:"*";
 	color:$brand-red;
 }

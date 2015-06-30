@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" aria-expanded="false"
@@ -20,9 +20,9 @@
 
             <ul class="nav navbar-nav">
                 <li><a href="#/">Home</a></li>
+                <li><a href="#/about">Getting Started</a></li>
                 <li ng-show="ProfileService.user"><a href="#/meds">My Medications</a></li>
                 <li ng-hide="ProfileService.user"><a href="#/profile/create">My Medications</a></li>
-                <li><a href="#/about">About</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right"

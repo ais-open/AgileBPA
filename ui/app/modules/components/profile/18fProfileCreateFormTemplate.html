@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-6">
         <div class="form-group">
-            <label for="inputProfileFirstName">
+            <label class="required" for="inputProfileFirstName">
                 First Name
                 <span class="text-danger"
                     ng-if="inputs.firstName.error">
@@ -21,7 +21,7 @@
     </div>
     <div class="col-lg-6">
         <div class="form-group">
-            <label for="inputProfileLastName">
+            <label class="required" for="inputProfileLastName">
                 Last Name
                 <span class="text-danger"
                     ng-if="inputs.lastName.error">
@@ -42,7 +42,7 @@
     <div class="col-lg-12">
         <!-- Email -->
         <div class="form-group">
-            <label for="inputProfileEmail">
+            <label class="required" for="inputProfileEmail">
                 Email
                 <span class="text-danger"
                     ng-if="inputs.email.error">
@@ -57,7 +57,7 @@
         </div>
         <!-- Email Confirmation -->
         <div class="form-group">
-            <label for="inputProfileEmailConf">
+            <label class="required" for="inputProfileEmailConf">
                 Re-enter Email
                 <span class="text-danger"
                     ng-if="inputs.emailConf.error">
@@ -78,7 +78,7 @@
     <div class="col-lg-12">
         <!-- Email -->
         <div class="form-group">
-            <label for="inputProfilePassword">
+            <label class="required" for="inputProfilePassword">
                 Password
                 <span class="text-danger"
                     ng-if="inputs.password.error">
@@ -93,7 +93,7 @@
         </div>
         <!-- Password Confirmation -->
         <div class="form-group">
-            <label for="inputProfilePasswordConf">
+            <label class="required" for="inputProfilePasswordConf">
                 Re-enter Password
                 <span class="text-danger"
                     ng-if="inputs.passwordConf.error">
@@ -113,7 +113,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="checkbox">
-            <label>
+            <label class="required">
                 <input type="checkbox"
                     id="inputProfileTerms"
                     name="inputProfileTerms"
@@ -131,7 +131,7 @@
 <!-- Submit Button -->
 <div class="row">
     <div class="col-lg-12">
-        <button class="btn btn-default btn-lg pull-right" ng-click="saveProfile()">
+        <button class="btn btn-default pull-right" ng-click="saveProfile()">
             Sign Up
         </button>
     </div>

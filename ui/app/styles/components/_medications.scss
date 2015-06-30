@@ -1,22 +1,78 @@
-.medication {
+.med-list-detail {
+	display: table;
+	padding: 20px 0;
+	width: 100%;
+	border-bottom: 1px solid $gray-light;
 
 	h3 {
-		font-family: $font-family-sans-serif;
-		font-size: 18px;
-  		border-bottom: 1px solid #ddd;
-  		box-shadow: 0 1px 0px #fff;
-  		padding-bottom: 10px;
-  		color: $brand-teal;
-  		margin-top: 0;
+		margin-top: 0;
 	}
 
-	button {
-		margin-bottom: 15px;
+	h6 {
+		margin-top: 30px;
+	}
+
+	.detail-left {
+		display: block;	
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.detail-right {
+		display: block;
+		text-align: left;
+		vertical-align: middle;
+	}
+}
+
+@media (min-width: 768px) {
+	.med-list-detail {
+		.detail-left {
+			display: table-cell;	
+			width: 75%;
+		}
+
+		.detail-right {
+			display: table-cell;
+			text-align: center;
+		}
+	}
+}
+
+.medication {
+	&:last-of-type {
+		.med-list-detail {
+			border: 0;
+		}
+	}
+
+	h3 {
+		font-size: 18px;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.medication {
+		button {
+			margin-top: 15px;
+		}
+	}
+}
+
+.medlist {
+	h1 {
+		margin-top: 0;
+		margin-bottom: 20px;
 	}
 }
 
 .med-info {
 	text-align: center;
+
+	div:first-of-type h4 {
+		margin-top: 0;
+	}
 
 	h4, p {
 		text-align: left;
@@ -29,27 +85,27 @@
 	}
 
 	h4 {
-		font-family: $font-family-sans-serif;
-		font-size: 16px;
 		color: $brand-blue;
 		padding: 10px 10px 0 10px;
-		font-weight: 700;
-		text-transform: uppercase;
-
-		&:after {
-
-		}
 	}
 }
 
 .ae {
-	margin-bottom: 50px;
 	display: inline-block;
 	vertical-align: top;
 	width: 152px;
 	text-align: center;
 	margin-right: 8px;
 	margin-left: 8px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+	.ae {
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
 }
 
 .ae-count {
