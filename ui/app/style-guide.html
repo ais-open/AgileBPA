@@ -34,6 +34,26 @@
   <div class="row row-offcanvas row-offcanvas-right">
     <div class="content-container col-xs-12 col-sm-12 col-md-12 col-lg-10">
       <div class="library-container">
+        <h6>Logo</h6>
+        <a name="logo"></a>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 logo-examples">
+            <a name="combination"></a>
+            <h2>Combination Mark</h2>
+            <img src="images/logo-mmc.png" alt="My Medicine Cabinet">
+          </div>
+          <div class="col-md-12 logo-examples">
+            <a name="logotype"></a>
+            <h2>Logotype</h2>
+            <img src="images/logo-type-mmc-sg.png" alt="My Medicine Cabinet">
+          </div>
+          <div class="col-md-12 logo-examples">
+            <a name="logomark"></a>
+            <h2>Logomark</h2>
+            <img src="images/logo-mark-mmc.png" alt="My Medicine Cabinet">
+          </div>
+        </div>
         <h6>Colors</h6>
         <a name="colors"></a>
         <hr>
@@ -209,6 +229,33 @@
 
         </div>
 
+        <!--Links-->
+        <div class="group">
+          <a name="links"></a>
+          <h1>Links</h1>
+
+          <section class="pattern"> 
+            <div class="primer">
+              <h2 title="Show markup and usage">Text Link</h2>
+                <section>
+<pre>&lt;p&gt;This is an example of a &lt;a href=&quot;http://google.com&quot;&gt;text link&lt;/a&gt;.&lt;/p&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <p>This is an example of a <a href="http://google.com">text link</a>.</p>
+          </section><!--/.pattern--> 
+
+          <section class="pattern"> 
+            <div class="primer">
+              <h2 title="Show markup and usage">Link as a Button</h2>
+                <section>
+<pre>&lt;a class=&quot;btn btn-default&quot; href=&quot;http://google.com&quot;&gt;Link as a Button&lt;/a&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <a class="btn btn-default" href="http://google.com">Link as a Button</a>
+          </section><!--/.pattern-->  
+
+        </div>
+
         <!-- Lists -->
         <div class="group">
           <a name="lists"></a>
@@ -272,10 +319,233 @@
         </div>
 
         <div class="group">
+          <a name="forms"></a>
+          <h1>Forms</h1>
+
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="input-field"></a>
+              <h2 title="Show markup and usage">Input Field</h2>
+                <section>
+                  <pre>
+&lt;div class=&quot;form-group&quot;&gt; 
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;firstName&quot;&gt; 
+&lt;/div&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <div class="form-group">
+              <input type="text" class="form-control" id="firstName" name="firstName">
+            </div>
+          </section><!--/.pattern--> 
+
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="required-field"></a>
+              <h2 title="Show markup and usage">Required Field</h2>
+                <section>
+                  <pre>
+&lt;div class=&quot;form-group&quot;&gt; 
+  &lt;label class=&quot;required&quot; for=&quot;firstName&quot;&gt;First Name&lt;/label&gt; 
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;firstName&quot;&gt; 
+&lt;/div&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <div class="form-group">
+              <label class="required" for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName">
+            </div>
+          </section><!--/.pattern-->  
+
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="button"></a>
+              <h2 title="Show markup and usage">Button</h2>
+                <section>
+                  <pre>
+&lt;button class=&quot;btn btn-default&quot;&gt;Example Button&lt;/button&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <button class="btn btn-default">Example Button</button>
+          </section><!--/.pattern-->  
+          
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="button-icon"></a>
+              <h2 title="Show markup and usage">Button with icon</h2>
+                <section>
+                  <pre>
+&lt;button class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-chevron-circle-left&quot;&gt;&lt;/i&gt; Example Button with icon&lt;/button&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <button class="btn btn-default"><i class="fa fa-chevron-circle-left"></i> Example Button with icon</button>
+          </section><!--/.pattern-->  
+
+        </div><!--/.group Patterns-->
+
+        <div class="group">
+          <a name="global"></a>
+          <h1>Global</h1>
+
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="button"></a>
+              <a name="header"></a>
+              <h2 title="Show markup and usage">Header</h2>
+                <section>
+                  <pre>
+&lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt; 
+  &lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;navbar-header&quot;&gt; 
+      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; aria-expanded=&quot;false&quot; ng-click=&quot;toggleMenu()&quot;&gt; 
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt; 
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; 
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; 
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; 
+        &lt;/button&gt; 
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#/&quot;&gt; My Medicine Cabinet &lt;/a&gt; 
+      &lt;/div&gt; 
+
+      &lt;div class=&quot;collapse navbar-collapse hide&quot;&gt; 
+        &lt;ul class=&quot;nav navbar-nav&quot;&gt; 
+          &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+          &lt;li&gt;&lt;a href=&quot;#/about&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt; 
+        &lt;/ul&gt; 
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt; 
+          &lt;li&gt;&lt;a href=&quot;#/profile/signin&quot;&gt;Sign In&lt;/a&gt;&lt;/li&gt; 
+          &lt;li&gt;&lt;a href=&quot;#/profile/create&quot;&gt;Create Profile&lt;/a&gt;&lt;/li&gt; 
+        &lt;/ul&gt; 
+      &lt;/div&gt; 
+  &lt;/div&gt; 
+&lt;/nav&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" aria-expanded="false" ng-click="toggleMenu()">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#/">
+                            My Medicine Cabinet
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse hide" ng-class="{true:'show', false: 'hide'}[menuOn]">
+                        <ul class="nav navbar-nav">
+                          <li><a href="#/">Home</a></li>
+                          <li><a href="#/about">Getting Started</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="#/profile/signin">Sign In</a></li>
+                          <li><a href="#/profile/create">Create Profile</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+          </section><!--/.pattern--> 
+
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="button"></a>
+              <a name="footer"></a>
+              <h2 title="Show markup and usage">Footer</h2>
+                <section>
+                  <pre>
+&lt;footer class=&quot;site-footer&quot;&gt; 
+  &copy; 2015 &lt;span&gt;My Medicine Cabinet&lt;/span&gt;&lt;a href=&quot;http://appliedis.com&quot; target=&quot;_blank&quot;&gt;Applied Information Sciences, Inc.&lt;/a&gt; 
+&lt;/footer&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <footer class="site-footer">
+              © 2015 <span>My Medicine Cabinet</span><a href="http://appliedis.com" target="_blank">Applied Information Sciences, Inc.</a>
+            </footer>
+          </section><!--/.pattern--> 
+
+        </div><!--/.group Patterns-->
+
+        <div class="group">
           <a name="patterns"></a>
           <h1>Patterns</h1>
 
-          <p><em>Coming Soon...</em></p>
+          <section class="pattern"> 
+            <div class="primer">
+              <a name="gray-container"></a>
+              <h2 title="Show markup and usage">Gray Container</h2>
+                <section>
+                  <pre>
+&lt;div class=&quot;gray-container&quot;&gt;&lt;/div&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <div class="gray-container"></div>
+          </section><!--/.pattern-->  
+
+                    <section class="pattern"> 
+            <div class="primer">
+              <a name="bubble-list"></a>
+              <h2 title="Show markup and usage">Bubble List</h2>
+                <section>
+                  <pre>
+&lt;div class=&quot;med-info&quot;&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;2507&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Unknown&lt;/span&gt; 
+  &lt;/div&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;1352&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Recovered/Resolved&lt;/span&gt; 
+  &lt;/div&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;1173&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Not Recovered/Not Resolved&lt;/span&gt; 
+  &lt;/div&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;604&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Recovering/Resolving&lt;/span&gt; 
+  &lt;/div&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;596&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Fatal&lt;/span&gt; 
+  &lt;/div&gt; 
+  &lt;div class=&quot;ae&quot;&gt; 
+    &lt;span class=&quot;ae-count&quot;&gt;41&lt;/span&gt; 
+    &lt;span class=&quot;ae-name&quot;&gt;Recovered/Resolved with Chronic Condition&lt;/span&gt; 
+  &lt;/div&gt; 
+&lt;/div&gt;</pre>
+                </section>
+            </div><!--/.primer-->
+            <div class="med-info">
+              <div class="ae">
+                  <span class="ae-count">2507</span>
+                  <span class="ae-name">Unknown</span>
+              </div>
+              <div class="ae">
+                  <span class="ae-count">1352</span>
+                  <span class="ae-name">Recovered/Resolved</span>
+              </div>
+              <div class="ae">
+                  <span class="ae-count">1173</span>
+                  <span class="ae-name">Not Recovered/Not Resolved</span>
+              </div>
+              <div class="ae">
+                  <span class="ae-count">604</span>
+                  <span class="ae-name">Recovering/Resolving</span>
+              </div>
+              <div class="ae">
+                  <span class="ae-count">596</span>
+                  <span class="ae-name">Fatal</span>
+              </div>
+              <div class="ae">
+                  <span class="ae-count">41</span>
+                  <span class="ae-name">Recovered/Resolved with Chronic Condition</span>
+              </div>
+            </div>
+          </section><!--/.pattern--> 
         </div><!--/.group Patterns-->
 
       </div><!--/.container-->
@@ -284,6 +554,11 @@
 
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 sidebar-offcanvas" id="sidebar">
       <ul class="list-unstyled" role="menu">
+        <li class="dropdown-header">Logo</li>
+        <li><a href="#combination">Combination Mark</a></li>
+        <li><a href="#logotype">Logotype</a></li>
+        <li><a href="#logomark">Logomark</a></li>
+        <hr>
         <li class="dropdown-header">Colors</li>
         <li><a href="#primary-colors">Primary Colors</a></li>
         <li><a href="#secondary-colors">Secondary Colors</a></li>
@@ -295,9 +570,10 @@
         <li><a href="#lists">Lists</a></li>
         <hr>
         <li class="dropdown-header">Forms</li>
-        <li><a href="#fields">Fields</a></li>
-        <li><a href="#required">Required Fields</a></li>
-        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#input-field">Input Field</a></li>
+        <li><a href="#required-field">Required Field</a></li>
+        <li><a href="#button">Button</a></li>
+        <li><a href="#button-icon">Button with icon</a></li>
         <hr>
         <li class="dropdown-header">Global</li>
         <li><a href="#header">Header</a></li>
@@ -305,7 +581,7 @@
         <hr>
         <li class="dropdown-header">Patterns</li>
         <li><a href="#gray-container">Gray Container</a></li>
-        <li><a href="#circle">Bubble List</a></li>
+        <li><a href="#bubble-list">Bubble List</a></li>
         <hr>
         <li class="dropdown-header">Colophon</li>
         <li>Framework: <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> v3.3.2 w/<a href="http://getbootstrap.com/css/#sass" target="_blank">SASS port</a>.</li>

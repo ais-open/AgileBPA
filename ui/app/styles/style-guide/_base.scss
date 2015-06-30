@@ -28,6 +28,19 @@ body.style-guide {
                 color: $brand-red;
         }
 
+        .logo-examples {
+                margin-bottom: 30px;
+
+                h2 {
+                        margin-bottom: 20px;
+                }
+
+                img {
+                        max-width: 100%;
+                        height: auto;
+                }
+        }
+
         .library-container {
                 width: 96%;
                 margin: 0 auto;
@@ -85,6 +98,7 @@ body.style-guide {
                 letter-spacing: 0.08em;
                 text-transform: uppercase;
                 padding-left: 0;
+                color: #777;
         }
 
         // Remove negative margins for .row in Pattern Library 
@@ -231,6 +245,11 @@ body.style-guide {
 
         ol li {
                 margin: 5px 0;
+        }
+
+        footer, .site-footer {
+                padding-top: 3em;
+                background: $brand-blue url('../images/pattern-bg-tissue.png') repeat;
         }
 
 }
