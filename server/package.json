@@ -23,6 +23,7 @@
     "joi": "^6.4.3",
     "lodash": "^3.9.3",
     "mongoose": "^4.0.5",
+    "newrelic": "^1.20.2",
     "randomstring": "^1.0.6",
     "request": "^2.58.0"
   },
