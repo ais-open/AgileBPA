@@ -14,14 +14,21 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    // order here matters! (that's why they're called out seperately!)
+    // order here matters! (that's why they're called out separately!)
     files: [
       'app/scripts/vendor.min.js',
-      'app/scripts/main.min.js',
-      'app/scripts/config.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'spec/**/*.js'
+      'spec/**/*.js',
+      'app/modules/**/*.js',
+      'app/scripts/config.js'
     ],
+
+
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+      '**/app/modules/**/*.js': ['coverage']
+    },
 
 
     // list of files to exclude
@@ -29,17 +36,18 @@ module.exports = function(config) {
     ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
-
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/',
+      instrumenterOptions: {
+        istanbul: { noCompact: true }
+      }
+    },
 
     // web server port
     port: 9876,
