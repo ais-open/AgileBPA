@@ -38,12 +38,12 @@
         };
 
         pub.searchDrug = function(term, callback) {
-            var results = (function (match) { 
+            var results = (function (match) {
                 var list = [],
                     scores = {};
                 var matchLimit = 20;
 
-                list = _.filter(data, function (item) { 
+                list = _.filter(data, function (item) {
                     var score = 0;
                     _.forEach(confidences, function (confidence) {
                         score += confidence.test(item, match) ? confidence.weight : 0;
@@ -62,12 +62,12 @@
                 return list;
             })(term.toUpperCase());
 
-            var resultsObj = _.map(results, function(result) { 
-                return { 
-                    fdaId: result.id, 
-                    brandName: [result.brand_name], 
-                    genericName: [result.generic_name] 
-                }; 
+            var resultsObj = _.map(results, function(result) {
+                return {
+                    fdaId: result.id,
+                    brandName: [result.brand_name],
+                    genericName: [result.generic_name]
+                };
             });
 
             callback(resultsObj);
@@ -77,7 +77,7 @@
     }
 
     function getData() {
-        var data = require('../../data/drugs-all.min.json');
+        var data = require('../data/drugs-all.min.json');
 
         String.prototype.toTitleCase = function () {
             return this.replace(/\w\S*/g, function (txt) {
