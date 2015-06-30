@@ -4,7 +4,7 @@ build
 dist
 bower_components
 reports
-django/static
+coverage
 **/*.pyc
 .idea/
 .idea/workspace.xml

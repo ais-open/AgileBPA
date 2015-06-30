@@ -28,6 +28,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var uncss       = require('gulp-uncss');
 var url         = require('url');
+var open        = require('gulp-open');
 var wiredep     = require('wiredep').stream;
 
 
@@ -99,7 +100,7 @@ gulp.task('watch', function () {
 gulp.task('browser-sync', function() {
 
     // proxy calls to /api to the server app running on port 3000
-    // (in a seperate terminal, open up the server dir, and run gulp)
+    // (in a separate terminal, open up the server dir, and run gulp)
     var proxyOpts = url.parse('http://localhost:3000/api');
     proxyOpts.route = '/api';
 
@@ -182,7 +183,12 @@ gulp.task('runtests', function() {
         });
 });
 
-// Use seperate config files for prod vs dev.
+gulp.task('show-coverage', function(){
+    gulp.src('./coverage/*/index.html')
+        .pipe(open('<%file.path%>'));
+});
+
+// Use separate config files for prod vs dev.
 gulp.task('config-dev', function() {
     gulp.src('app/scripts/config.dev.js')
         .pipe(rename('config.js'))
