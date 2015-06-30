@@ -39,3 +39,8 @@ label.required:after {
 	content:"*";
 	color:$brand-red;
 }
+
+.red-text {
+	color:$brand-red;
+	display:inline;
+}
