@@ -11,7 +11,7 @@ a {
 }
 
 main {
-    padding: 3em 0;
+    padding: 1em 0 3em;
     background: white;
     border-bottom: 1px solid #ccc;
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -21,6 +21,7 @@ main {
 @media (min-width: 768px) {
     main {
         min-height: 600px;
+        padding: 3em 0;
     }
 }
 

@@ -17,3 +17,4 @@ ui/app/styles/vendor*.css
 ui/app/scripts/main*.js
 ui/app/scripts/vendor*.js
 ui/app/scripts/config.js
+server/newrelic_agent.log
