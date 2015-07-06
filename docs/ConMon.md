@@ -1,0 +1,3 @@
+We implemented a free service offered through Cloud Foundry called New Relic.  See screenshot of it in Action.....  
+
+![New Relic Dashboard](https://github.com/AppliedIS/AgileBPA/blob/master/docs/graphics/CaptureNewRelic.PNG)
