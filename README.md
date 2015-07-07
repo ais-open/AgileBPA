@@ -7,6 +7,7 @@ References:
 | GitHub Main Branch | master |
 | Installation Document | [https://github.com/AppliedIS/AgileBPA/blob/master/INSTALL.md](https://github.com/AppliedIS/AgileBPA/blob/master/INSTALL.md)   |
 | Developer Document | [https://github.com/AppliedIS/AgileBPA/blob/master/DEVELOP.md](https://github.com/AppliedIS/AgileBPA/blob/master/DEVELOP.md) |
+| Style Guide | [http://agilebpa-ui.cfapps.io/style-guide.html](http://agilebpa-ui.cfapps.io/style-guide.html) |
 | Trello Board | [https://trello.com/b/0PNEKo3f/18f-bpa-ideas](https://trello.com/b/0PNEKo3f/18f-bpa-ideas) |
 | GitHub Issue Log | [https://github.com/AppliedIS/AgileBPA/issues?utf8=%E2%9C%93&q=is%3Aissue](https://github.com/AppliedIS/AgileBPA/issues?utf8=%E2%9C%93&q=is%3Aissue) |
 | Travis CI | https://travis-ci.org/AppliedIS/AgileBPA/  |
