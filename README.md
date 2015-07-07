@@ -17,7 +17,6 @@ References:
 | Drug Interaction Research | [https://github.com/AppliedIS/AgileBPA/blob/master/docs/ResearchDrugInter.md](https://github.com/AppliedIS/AgileBPA/blob/master/docs/ResearchDrugInter.md) |
 | Style Tiles | [https://github.com/AppliedIS/AgileBPA/blob/master/docs/StyleTiles.md](https://github.com/AppliedIS/AgileBPA/blob/master/docs/StyleTiles.md) |
 | Color Palette Survey Results | [https://goo.gl/u48GRT](https://goo.gl/u48GRT) |
- |
 | Final Quality Acceptance Test | [https://github.com/AppliedIS/AgileBPA/blob/master/docs/FinalQA.md](https://github.com/AppliedIS/AgileBPA/blob/master/docs/FinalQA.md) |
 | Final Quality Acceptance Test Results | [https://github.com/AppliedIS/AgileBPA/blob/master/docs/FinalQATestResults.xlsx](https://github.com/AppliedIS/AgileBPA/blob/master/docs/FinalQATestResults.xlsx)  |
 | Continuous Monitoring Service | [https://github.com/AppliedIS/AgileBPA/blob/master/docs/ConMon.md](https://github.com/AppliedIS/AgileBPA/blob/master/docs/ConMon.md) |
